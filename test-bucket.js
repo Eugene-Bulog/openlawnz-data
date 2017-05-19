@@ -1,5 +1,6 @@
 // upload a file to an s3 bucket
 // nb - uses default credentials at ~./aws/credentials
+// test
 
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
