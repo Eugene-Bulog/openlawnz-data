@@ -1,0 +1,19 @@
+{
+  "name": "freelaw",
+  "version": "0.0.1",
+  "description": "NZ Case Law and Legislation management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strum3nt/freelaw.git"
+  },
+  "author": "aje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strum3nt/freelaw/issues"
+  },
+  "homepage": "https://github.com/strum3nt/freelaw#readme"
+}
