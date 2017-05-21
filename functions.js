@@ -4,32 +4,47 @@
 
 "use strict";
 
+// VARIABLES, DEPENDENCIES ETC
+// ---------------------------
 var pdftohtml = require('pdftohtmljs');
+var AWS = require('aws-sdk');
 var s3 = require('s3');
 
-// get aws creds
+// get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
-// Convert a file from PDF to HTML
+
+// FUNCTIONS 
+// ---------------------------
+
+// CONVERSION
+// function doConvert converts a file from PDF to HTML
+// takes input fileName, outputs to fileOutput
 function doConvert(fileName, fileOutput){
     console.log("Converting..");    
     var converter = new pdftohtml(fileName, fileOutput);
-    // See presets (ipad, default) 
-    // Feel free to create custom presets 
-    // see https://github.com/fagbokforlaget/pdftohtmljs/blob/master/lib/presets/ipad.js 
+    
+    // preset using 'default' pdf2htmlEX settings
+    // see https://github.com/fagbokforlaget/pdftohtmljs/blob/master/lib/presets/ 
     // convert() returns promise 
-    converter.convert('ipad').then(function() {
+    converter.convert('default').then(function() {
         console.log("Success");
         }).catch(function(err) {
         console.error("Conversion error: " + err);
     });
 }
+
+// call the function to convert - passing input and output paths
 doConvert('../convert/175.pdf', '../conversions/175-2.html');
 
-// create s3 client
 
-function dos3stuff() {
+// AWS S3 THINGS
+// function copytos3
+// creates s3 client
+// authenticates using s3 profile specified in var creds
+// copies file at path localFile to bucket and key defined in s3Params
+function copytos3() {
     var client = s3.createClient({
     maxAsyncS3: 20,     // this is the default 
     s3RetryCount: 3,    // this is the default 
@@ -67,4 +82,4 @@ function dos3stuff() {
 
     }
 
-dos3stuff();
+copytos3();
