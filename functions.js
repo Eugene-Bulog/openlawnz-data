@@ -7,6 +7,10 @@
 var pdftohtml = require('pdftohtmljs');
 var s3 = require('s3');
 
+// get aws creds
+var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
+AWS.config.credentials = creds; 
+
 // Convert a file from PDF to HTML
 function doConvert(fileName, fileOutput){
     console.log("Converting..");    
@@ -33,8 +37,8 @@ function dos3stuff() {
     multipartUploadThreshold: 20971520, // this is the default (20 MB) 
     multipartUploadSize: 15728640, // this is the default (15 MB) 
     s3Options: {
-        accessKeyId: "",
-        secretAccessKey: "",
+        accessKeyId: creds.accessKeyId,
+        secretAccessKey: creds.secretAccessKey,
     },
     });
 
