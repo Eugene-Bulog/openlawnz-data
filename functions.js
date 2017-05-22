@@ -42,7 +42,7 @@ function doConvert(fileName, fileOutput, callback){
     console.log(fileOutput);
     console.log(creds.accessKeyId);
     
-    /* var converter = new pdftohtml(fileName, fileOutput);
+    var converter = new pdftohtml(fileName, fileOutput);
     // preset using 'default' pdf2htmlEX settings
     // see https://github.com/fagbokforlaget/pdftohtmljs/blob/master/lib/presets/ 
     // convert() returns promise 
@@ -52,7 +52,7 @@ function doConvert(fileName, fileOutput, callback){
         console.error("Conversion error: " + err);
     });
     return fileOutput;
-    */
+    
 }
 
 // call the function to convert 
