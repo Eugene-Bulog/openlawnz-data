@@ -2,7 +2,7 @@
 
 var dir = require('node-dir');
 
-dir.files(__dirname, function(err, files) {
+dir.files("pdf", function(err, files) {
     if (err) throw err;
     console.log(files);
 });
