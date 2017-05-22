@@ -19,7 +19,7 @@ function dos3stuff() {
 
     // take the converted file and copy it to s3
     var params = {
-    localFile: 'stamp.pdf',
+    localFile: 'samples/olsson.pdf',
     
     s3Params: {
         Bucket: "nzhc-pdfs",
