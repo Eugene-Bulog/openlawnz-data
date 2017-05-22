@@ -47,25 +47,18 @@ function doConvert(fileName, fileOutput, callback){
         console.log("Success");
         }).catch(function(err) {
         console.error("Conversion error: " + err);
-    });
-    return fileOutput;
-    
+    });    
 }
 
 // call the function to convert 
 
-var convertedFile = doConvert('../convert/175.pdf', '../conversions/175-2.html', function() {console.log('newlog')});
+doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3('../conversions/175-2.html'));
 
 // AWS S3 THINGS
 // function copytos3
-// creates s3 client
-// authenticates using s3 profile specified in var creds
 // copies file at path localFile to bucket and key defined in s3Params
-/* 
-function copytos3(convertedFile) {
 
-   console.log(convertedFile);
-   
+function copytos3(convertedFile) {   
 
     // take the converted file and copy it to s3
     var params = {
@@ -94,4 +87,3 @@ function copytos3(convertedFile) {
     
 
     }
-*/
