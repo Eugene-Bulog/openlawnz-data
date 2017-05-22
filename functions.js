@@ -37,8 +37,7 @@ var client = s3.createClient({
 
 function doConvert(fileName, fileOutput, callback){
     
-    console.log("Converting...");
-    console.log(fileOutput);    
+    console.log("Converting..."); 
     
     var converter = new pdftohtml(fileName, fileOutput);
     // preset using 'default' pdf2htmlEX settings
