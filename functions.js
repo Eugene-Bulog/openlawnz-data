@@ -45,7 +45,7 @@ function process(inputFileName, cb){
 
     var converter = new pdftohtml(inputFile, outputFile);
 
-    converter.convert('default').then(function() {
+    converter.convert('ipad').then(function() {
 
         console.log("Uploading: " + outputFile);
         
