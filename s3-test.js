@@ -17,9 +17,8 @@ function dos3stuff() {
     },
     });
 
-    console.log(creds.accessKeyID);
     // take the converted file and copy it to s3
-    /* var params = {
+    var params = {
     localFile: 'samples/olsson.pdf',
     
     s3Params: {
@@ -40,7 +39,7 @@ function dos3stuff() {
     uploader.on('end', function() {
     console.log("done uploading");
     });
-    */
+    
     }
 
 dos3stuff();
