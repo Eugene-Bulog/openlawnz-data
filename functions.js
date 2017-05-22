@@ -9,6 +9,11 @@
 var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
+
+// get aws creds - set profile, using profile set from ~/.aws/credentials
+var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
+AWS.config.credentials = creds; 
+
 var client = s3.createClient({
     maxAsyncS3: 20,     // this is the default 
     s3RetryCount: 3,    // this is the default 
@@ -20,11 +25,6 @@ var client = s3.createClient({
         secretAccessKey: creds.secretAccessKey,
     },
     });
-
-// get aws creds - set profile, using profile set from ~/.aws/credentials
-var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
-AWS.config.credentials = creds; 
-
 
 // FUNCTIONS 
 // ---------------------------
