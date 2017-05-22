@@ -9,6 +9,17 @@
 var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
+var client = s3.createClient({
+    maxAsyncS3: 20,     // this is the default 
+    s3RetryCount: 3,    // this is the default 
+    s3RetryDelay: 1000, // this is the default 
+    multipartUploadThreshold: 20971520, // this is the default (20 MB) 
+    multipartUploadSize: 15728640, // this is the default (15 MB) 
+    s3Options: {
+        accessKeyId: creds.accessKeyId,
+        secretAccessKey: creds.secretAccessKey,
+    },
+    });
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
@@ -21,7 +32,10 @@ AWS.config.credentials = creds;
 // CONVERSION
 // function doConvert converts a file from PDF to HTML
 // takes input fileName, outputs to fileOutput
-function doConvert(fileName, fileOutput){
+
+
+
+function doConvert(fileName, fileOutput, callback){
     console.log("Converting..");    
     var converter = new pdftohtml(fileName, fileOutput);
     
@@ -35,8 +49,16 @@ function doConvert(fileName, fileOutput){
     });
 }
 
-// call the function to convert - passing input and output paths
-doConvert('../convert/175.pdf', '../conversions/175-2.html');
+// call the function to convert 
+
+var files = [{
+    input: '../convert/175.pdf',
+    output: '../conversions/175-2.html'
+}];
+async.parallel(
+    files.map(function(f.input) {return doConvert.bind(null, files.input, files.output); }), 
+    function(err, results) { console.log("done"); }
+    );
 
 
 // AWS S3 THINGS
@@ -45,17 +67,6 @@ doConvert('../convert/175.pdf', '../conversions/175-2.html');
 // authenticates using s3 profile specified in var creds
 // copies file at path localFile to bucket and key defined in s3Params
 function copytos3() {
-    var client = s3.createClient({
-    maxAsyncS3: 20,     // this is the default 
-    s3RetryCount: 3,    // this is the default 
-    s3RetryDelay: 1000, // this is the default 
-    multipartUploadThreshold: 20971520, // this is the default (20 MB) 
-    multipartUploadSize: 15728640, // this is the default (15 MB) 
-    s3Options: {
-        accessKeyId: creds.accessKeyId,
-        secretAccessKey: creds.secretAccessKey,
-    },
-    });
 
     // take the converted file and copy it to s3
     var params = {
