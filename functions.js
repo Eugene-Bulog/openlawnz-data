@@ -15,7 +15,7 @@ var async = require("async");
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
-var FILES = ["olsson.pdf", "olsson1.pdf", "olsson2.pdf", "olsson3.pdf", "olsson4.pdf", "olsson5.pdf"];
+var FILES = ["walker.pdf", "wheeler.pdf"];
 
 // Needs relative file paths to convert
 var FILE_INPUT_DIR =  "./pdf";
