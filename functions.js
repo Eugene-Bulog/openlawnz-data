@@ -51,26 +51,18 @@ function doConvert(fileName, fileOutput, callback){
 
 // call the function to convert 
 
-var files = [{
-    input: '../convert/175.pdf',
-    output: '../conversions/175-2.html'
-}];
-async.parallel(
-    files.map(function(f.input) {return doConvert.bind(null, files.input, files.output); }), 
-    function(err, results) { console.log("done"); }
-    );
-
+doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3('../conversions/175-2.html'));
 
 // AWS S3 THINGS
 // function copytos3
 // creates s3 client
 // authenticates using s3 profile specified in var creds
 // copies file at path localFile to bucket and key defined in s3Params
-function copytos3() {
+function copytos3(convertedFile) {
 
     // take the converted file and copy it to s3
     var params = {
-    localFile: '../conversions/175-2.html',
+    localFile: convertedFile,
     
     s3Params: {
         Bucket: "nzhc-pdfs",
@@ -92,5 +84,3 @@ function copytos3() {
     });
 
     }
-
-copytos3();
