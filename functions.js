@@ -36,9 +36,10 @@ var client = s3.createClient({
 
 
 function doConvert(fileName, fileOutput, callback){
-    console.log("Converting..");    
-    var converter = new pdftohtml(fileName, fileOutput);
     
+    console.log("Converting..." + fileOutput);    
+    
+    var converter = new pdftohtml(fileName, fileOutput);
     // preset using 'default' pdf2htmlEX settings
     // see https://github.com/fagbokforlaget/pdftohtmljs/blob/master/lib/presets/ 
     // convert() returns promise 
@@ -47,11 +48,12 @@ function doConvert(fileName, fileOutput, callback){
         }).catch(function(err) {
         console.error("Conversion error: " + err);
     });
+    return fileOutput;
 }
 
 // call the function to convert 
 
-doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3('../conversions/175-2.html'));
+doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3(fileOutput));
 
 // AWS S3 THINGS
 // function copytos3
