@@ -9,10 +9,17 @@
 var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
+var async = require("async");
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
+
+var FILES = ["olsson.pdf", "olsson1.pdf", "olsson2.pdf", "olsson3.pdf", "olsson4.pdf", "olsson5.pdf"];
+
+// Needs relative file paths to convert
+var FILE_INPUT_DIR =  "./pdf";
+var FILE_OUTPUT_DIR = "./html";
 
 var client = s3.createClient({
     maxAsyncS3: 20,     // this is the default 
@@ -24,66 +31,62 @@ var client = s3.createClient({
         accessKeyId: creds.accessKeyId,
         secretAccessKey: creds.secretAccessKey,
     },
-    });
-
-// FUNCTIONS 
-// ---------------------------
-
-// CONVERSION
-// function doConvert converts a file from PDF to HTML
-// takes input fileName, outputs to fileOutput
+});
 
 
+function process(inputFileName, cb){
 
-function doConvert(fileName, fileOutput, callback){
+    console.log("Converting:"); 
     
-    console.log("Converting..."); 
-    
-    var converter = new pdftohtml(fileName, fileOutput);
-    // preset using 'default' pdf2htmlEX settings
-    // see https://github.com/fagbokforlaget/pdftohtmljs/blob/master/lib/presets/ 
-    // convert() returns promise 
+    var inputFile = FILE_INPUT_DIR + "/" + inputFileName;
+    var outputFile = FILE_OUTPUT_DIR + "/" + inputFileName + ".html";
+
+    console.log(inputFile + " =>\n\t " + outputFile);
+
+    var converter = new pdftohtml(inputFile, outputFile);
+
     converter.convert('default').then(function() {
-        console.log("Success");
-        }).catch(function(err) {
-        console.error("Conversion error: " + err);
+
+        console.log("Uploading: " + outputFile);
+        
+        var uploader = client.uploadFile({
+            localFile: outputFile,
+            s3Params: {
+                Bucket: "nzhc-pdfs",
+                Key: inputFileName + ".html"
+            },
+        });
+
+        uploader.on('error', function(err) {
+            cb("unable to upload:", err.stack);
+        });
+
+        uploader.on('progress', function() {
+            console.log("progress", uploader.progressMd5Amount, uploader.progressAmount, uploader.progressTotal);
+        });
+    
+        uploader.on('end', function() {
+            cb(null);
+        });
+
+
+
+    }).catch(function(err) {
+        console.log(err["code"]);
+        cb("Conversion error: " + err)
+
     });    
 }
 
-// call the function to convert 
+// Run the process for each FILES item
 
-doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3('../conversions/175-2.html'));
+async.parallel(FILES.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
 
-// AWS S3 THINGS
-// function copytos3
-// copies file at path localFile to bucket and key defined in s3Params
-
-function copytos3(convertedFile) {   
-
-    // take the converted file and copy it to s3
-    var params = {
-    localFile: convertedFile,
-    
-    s3Params: {
-        Bucket: "nzhc-pdfs",
-        Key: "file-upload-test/175-2.html",
-        // other options supported by putObject, except Body and ContentLength. 
-        // See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property 
-    },
-    };
-    var uploader = client.uploadFile(params);
-    uploader.on('error', function(err) {
-    console.error("unable to upload:", err.stack);
-    });
-    uploader.on('progress', function() {
-    console.log("progress", uploader.progressMd5Amount,
-                uploader.progressAmount, uploader.progressTotal);
-    });
-    uploader.on('end', function() {
-    console.log("done uploading");
-    });
-
-
-    
-
+    if(err) {
+        console.log(err);
+        return;
     }
+
+    console.log("Done broooo");
+
+} );
