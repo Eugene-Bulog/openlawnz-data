@@ -38,8 +38,6 @@ var client = s3.createClient({
 function doConvert(fileName, fileOutput, callback){
     
     console.log("Converting..."); 
-    console.log("File Input: " + fileInput);
-    console.log("File Output: " + fileOutput);
     
     var converter = new pdftohtml(fileName, fileOutput);
     // preset using 'default' pdf2htmlEX settings
@@ -50,18 +48,20 @@ function doConvert(fileName, fileOutput, callback){
         }).catch(function(err) {
         console.error("Conversion error: " + err);
     });
+    return fileOutput;
     
 }
 
 // call the function to convert 
 
-doConvert('../convert/175.pdf', '../conversions/175-2.html', copytos3('../conversions/175-2.html'));
+var convertedFile = doConvert('../convert/175.pdf', '../conversions/175-2.html', function() {console.log('newlog')});
 
 // AWS S3 THINGS
 // function copytos3
 // creates s3 client
 // authenticates using s3 profile specified in var creds
 // copies file at path localFile to bucket and key defined in s3Params
+/* 
 function copytos3(convertedFile) {
 
    console.log(convertedFile);
@@ -94,3 +94,4 @@ function copytos3(convertedFile) {
     
 
     }
+*/
