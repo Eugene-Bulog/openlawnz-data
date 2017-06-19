@@ -48,14 +48,25 @@ function scan(dir, suffix, callback) {
   });
 };
 
-var FILES = scan('pdf', 'pdf', function(err, fileList) {
+scan('pdf', 'pdf', function(err, fileList) {
   console.log(fileList);
+
+  async.parallel(fileList.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
+
+        if(err) {
+            console.log(err);
+            return;
+        }
+
+        console.log("Done broooo");
+
+    } );
+
 });
 
 
-
 // Needs relative file paths to convert
-var FILE_INPUT_DIR =  "../convert";
+var FILE_INPUT_DIR =  "./pdf";
 var FILE_OUTPUT_DIR = "./html";
 
 var client = s3.createClient({
@@ -117,14 +128,4 @@ function process(inputFileName, cb){
 
 // Run the process for each FILES item
 
-async.parallel(fileList.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
-
-    if(err) {
-        console.log(err);
-        return;
-    }
-
-    console.log("Done broooo");
-
-} );
 
