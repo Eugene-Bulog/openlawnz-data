@@ -17,7 +17,7 @@ var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
 /// function scan gets array of files in first arg with suffix of second arg 
-var scan = function(dir, suffix, callback) {
+function scan(dir, suffix, callback) {
   fs.readdir(dir, function(err, files) {
     var returnFiles = [];
     async.each(files, function(file, next) {
@@ -51,6 +51,8 @@ var scan = function(dir, suffix, callback) {
 var FILES = scan('pdf', 'pdf', function(err, fileList) {
   console.log(fileList);
 });
+
+
 
 // Needs relative file paths to convert
 var FILE_INPUT_DIR =  "../convert";
@@ -115,7 +117,7 @@ function process(inputFileName, cb){
 
 // Run the process for each FILES item
 
-async.parallel(FILES.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
+async.parallel(fileList.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
 
     if(err) {
         console.log(err);
@@ -125,3 +127,4 @@ async.parallel(FILES.map(function(f) { return process.bind(null, f ); } ), funct
     console.log("Done broooo");
 
 } );
+
