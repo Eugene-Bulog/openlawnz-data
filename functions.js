@@ -10,63 +10,16 @@ var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
 var async = require("async");
-var fs = require('fs');
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
-/// function scan gets array of files in first arg with suffix of second arg 
-function scan(dir, suffix, callback) {
-  fs.readdir(dir, function(err, files) {
-    var returnFiles = [];
-    async.each(files, function(file, next) {
-      var filePath = dir + '/' + file;
-      fs.stat(filePath, function(err, stat) {
-        if (err) {
-          return next(err);
-        }
-        if (stat.isDirectory()) {
-          scan(filePath, suffix, function(err, results) {
-            if (err) {
-              return next(err);
-            }
-            returnFiles = returnFiles.concat(results);
-            next();
-          })
-        }
-        else if (stat.isFile()) {
-          if (file.indexOf(suffix, file.length - suffix.length) !== -1) {
-            returnFiles.push(filePath);
-          }
-          next();
-        }
-      });
-    }, function(err) {
-      callback(err, returnFiles);
-    });
-  });
-};
-
-scan('pdf', 'pdf', function(err, fileList) {
-  console.log(fileList);
-
-  async.parallel(fileList.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
-
-        if(err) {
-            console.log(err);
-            return;
-        }
-
-        console.log("Done broooo");
-
-    } );
-
-});
-
+/// get an array of pdf files from dir 
+var FILES = ["1000.pdf", "1002.pdf", "1004.pdf", "236.pdf", "299.pdf", "412.pdf", "765.pdf", "879.pdf", "1001.pdf", "1003.pdf", "1005.pdf", "262.pdf", "411.pdf", "445.pdf", "7.pdf", "887.pdf"];
 
 // Needs relative file paths to convert
-var FILE_INPUT_DIR =  "./pdf";
+var FILE_INPUT_DIR =  "../convert";
 var FILE_OUTPUT_DIR = "./html";
 
 var client = s3.createClient({
@@ -128,4 +81,13 @@ function process(inputFileName, cb){
 
 // Run the process for each FILES item
 
+async.parallel(FILES.map(function(f) { return process.bind(null, f ); } ), function(err, results) {
 
+    if(err) {
+        console.log(err);
+        return;
+    }
+
+    console.log("Done broooo");
+
+} );
