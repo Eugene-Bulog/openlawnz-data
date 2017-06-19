@@ -10,6 +10,7 @@ var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
 var async = require("async");
+var fs = require('fs');
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
