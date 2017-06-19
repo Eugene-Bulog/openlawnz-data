@@ -10,17 +10,44 @@ var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
 var async = require("async");
-var lib = require('./files.js');
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
-/// get an array of pdf files from dir 
-
+/// function scan gets array of files in first arg with suffix of second arg 
+var scan = function(dir, suffix, callback) {
+  fs.readdir(dir, function(err, files) {
+    var returnFiles = [];
+    async.each(files, function(file, next) {
+      var filePath = dir + '/' + file;
+      fs.stat(filePath, function(err, stat) {
+        if (err) {
+          return next(err);
+        }
+        if (stat.isDirectory()) {
+          scan(filePath, suffix, function(err, results) {
+            if (err) {
+              return next(err);
+            }
+            returnFiles = returnFiles.concat(results);
+            next();
+          })
+        }
+        else if (stat.isFile()) {
+          if (file.indexOf(suffix, file.length - suffix.length) !== -1) {
+            returnFiles.push(filePath);
+          }
+          next();
+        }
+      });
+    }, function(err) {
+      callback(err, returnFiles);
+    });
+  });
+};
 
 var FILES = scan('pdf', 'pdf', function(err, fileList) {
-  // Do something with files that ends in '.ext'.
   console.log(fileList);
 });
 
