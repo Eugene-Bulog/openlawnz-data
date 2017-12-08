@@ -1,15 +1,17 @@
+"use strict";
 var fs = require("fs");
 var _=require("underscore");
 var mysql = require('mysql');
 var limits = require('limits.js');
 
-const newLocal = '';
+// load creds
+require('dotenv').config();
 
 // mysql connects
 var connection = mysql.createConnection({
-  host  : 'localhost',
-  user  : 'root',
-  password  : newLocal,
+  host  : process.env.DB_HOST,
+  user  : process.env.DB_USER,
+  password  : process.env.DB_PASS,
   database  : 'caselaw'
 });
 
