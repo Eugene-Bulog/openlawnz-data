@@ -8,7 +8,7 @@
     "aws-sdk": "^2.54.0",
     "pdftohtmljs": "^0.4.2",
     "s3": "4.4.0",
-    "node-dir":"^0.1.16"
+    "node-dir": "^0.1.16"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/strum3nt/freelaw/issues"
   },
-  "homepage": "https://github.com/strum3nt/freelaw#readme"
+  "homepage": "https://github.com/strum3nt/freelaw#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "law",
+    "research",
+    "data"
+  ]
 }
