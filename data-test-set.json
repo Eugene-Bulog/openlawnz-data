@@ -2883,13 +2883,7 @@
     "id": "jdo/a8/alfresco/service/api/node/content/workspace/SpacesStore/3bc133b4-e6db-4aea-82dd-36b94cd8579a/3bc133b4-e6db-4aea-82dd-36b94cd8579a.pdf",
     "score": 1.0
   },
-  {
-    "JudgmentDate": "2017-06-23T13:00:01Z",
-    "DocumentName": "1974588a-a52c-46fc-aad1-1d29e8ec075e.pdf",
-    "CaseName": "",
-    "id": "jdo/b8/alfresco/service/api/node/content/workspace/SpacesStore/1974588a-a52c-46fc-aad1-1d29e8ec075e/1974588a-a52c-46fc-aad1-1d29e8ec075e.pdf",
-    "score": 1.0
-  },
+
   {
     "JudgmentDate": "2017-06-23T13:00:01Z",
     "DocumentName": "20cc03aa-4724-4150-a7ca-3b195e582cb1.pdf",

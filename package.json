@@ -8,7 +8,11 @@
     "aws-sdk": "^2.54.0",
     "pdftohtmljs": "^0.4.2",
     "s3": "4.4.0",
-    "node-dir": "^0.1.16"
+    "node-dir": "^0.1.16",
+    "underscore": "^1.8.3",
+    "mysql": "^2.15.0",
+    "limits.js": "^0.1.4",
+    "dotenv": "^4.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
