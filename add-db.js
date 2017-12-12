@@ -32,7 +32,7 @@ loadJSON.then(function(result) {
     _.map(result, function(data) {
       _.map(data, function(cases) {
           
-          // regex
+          // if json casename data exists (some moj long names ie case and citation are "")
           if(cases.CaseName) {
           
             var str = cases.CaseName;
@@ -43,13 +43,13 @@ loadJSON.then(function(result) {
             const regName = /^(.*?)\ \[/;
             var caseName = str.match(regName);
               
-            // fyi str.match() is array of all matches combined and then each individual group - [0] is all
+            // str.match() is array of all matches combined and then each individual group - [0] is all
             // extracted case name is caseName[1] and extracted citation is citation[0] since will only be one citation match
 
             // generate URL from cases.id
             var url = 'https://forms.justice.govt.nz/search/Documents/pdf/' + cases.id;
 
-            // set downloaded to false
+            // set downloaded to false for now
             var downloaded = false;
             
             // put case name, citation, url and downloaded status into database

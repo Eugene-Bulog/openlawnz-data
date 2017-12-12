@@ -16,7 +16,7 @@ var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
 /// get an array of pdf files from dir 
-var FILES = ["1000.pdf", "1002.pdf", "1004.pdf", "236.pdf", "299.pdf", "412.pdf", "765.pdf", "879.pdf", "1001.pdf", "1003.pdf", "1005.pdf", "262.pdf", "411.pdf", "445.pdf", "7.pdf", "887.pdf"];
+var FILES = ["1.pdf"];
 
 // Needs relative file paths to convert
 var FILE_INPUT_DIR =  "../convert";
@@ -33,7 +33,6 @@ var client = s3.createClient({
         secretAccessKey: creds.secretAccessKey,
     },
 });
-
 
 function process(inputFileName, cb){
 
