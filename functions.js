@@ -10,12 +10,36 @@ var pdftohtml = require('pdftohtmljs');
 var AWS = require('aws-sdk');
 var s3 = require('s3');
 var async = require("async");
+var mysql = require('mysql');
+var limits = require('limits.js');
+
+// load creds
+require('dotenv').config();
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
 var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
 AWS.config.credentials = creds; 
 
-/// get an array of pdf files from dir 
+/// get an array of pdf files from database
+var connection = mysql.createConnection({
+    host  : process.env.DB_HOST,
+    user  : process.env.DB_USER,
+    password  : process.env.DB_PASS,
+    database  : 'caselaw'
+  });
+
+for(var caseid = 1; caseid < 5; caseid++) {
+
+connection.query('SELECT case_name_full, url from caseinfo where caseid = ?', caseid, function(err, rows, fields) {
+    if (!err) console.log("Downloading: " + rows[0].case_name_full); 
+    else console.log("Error getting database info: " + err);
+    }); 
+
+}
+
+connection.end();
+
+    /*
 var FILES = ["1.pdf"];
 
 // Needs relative file paths to convert
@@ -90,3 +114,5 @@ async.parallel(FILES.map(function(f) { return process.bind(null, f ); } ), funct
     console.log("Done broooo");
 
 } );
+
+*/
