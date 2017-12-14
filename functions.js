@@ -31,7 +31,10 @@ var connection = mysql.createConnection({
 for(var caseid = 1; caseid < 5; caseid++) {
 
 connection.query('SELECT case_name_full, url from caseinfo where caseid = ?', caseid, function(err, rows, fields) {
-    if (!err) console.log("Downloading: " + rows[0].case_name_full); 
+    if (!err) {
+        console.log("Downloading: " + rows[0].case_name_full);
+         
+    }
     else console.log("Error getting database info: " + err);
     }); 
 

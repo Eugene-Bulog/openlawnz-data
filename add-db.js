@@ -2,7 +2,6 @@
 var fs = require("fs");
 var _=require("underscore");
 var mysql = require('mysql');
-var limits = require('limits.js');
 
 // load creds
 require('dotenv').config();
@@ -60,7 +59,7 @@ loadJSON.then(function(result) {
             }
           else {
            
-            var citation = "[0000] NZLR X"
+            var citation = "[0000] NZLR X";
 
             var caseName = "Unknown";
 
