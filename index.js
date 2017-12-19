@@ -1,65 +1,103 @@
-var fs = require("fs");
-var _=require("underscore");
-const download = require("download");
-var mysql = require('mysql');
-var limits = require('limits.js');
+// this app should convert pdf to html and store in a bucket
+// next step - get pdf from bucket, convert to html, store in bucket
+// then - get lots of pdfs from bucket, convert each, store in bucket
 
-// mysql connects
+"use strict";
+
+// VARIABLES, DEPENDENCIES ETC
+// ---------------------------
+const   pdftohtml = require('pdftohtmljs'),
+        AWS = require('aws-sdk'),
+        s3 = require('s3'),
+        async = require("async"),
+        mysql = require('mysql'),
+        limits = require('limits.js'),
+        download = require('download'),
+        fs = require('fs');
+
+// load creds
+require('dotenv').config();
+
+// get aws creds - set profile, using profile set from ~/.aws/credentials
+var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
+AWS.config.credentials = creds; 
+
+// open s3 connection
+var client = s3.createClient({
+    maxAsyncS3: 20,     // this is the default 
+    s3RetryCount: 3,    // this is the default 
+    s3RetryDelay: 1000, // this is the default 
+    multipartUploadThreshold: 20971520, // this is the default (20 MB) 
+    multipartUploadSize: 15728640, // this is the default (15 MB) 
+    s3Options: {
+        accessKeyId: creds.accessKeyId,
+        secretAccessKey: creds.secretAccessKey,
+    },
+});
+
+/// open database
 var connection = mysql.createConnection({
-  host  : 'localhost',
-  user  : 'root',
-  password  : '',
-  database  : 'caselaw'
-});
+    host  : process.env.DB_HOST,
+    user  : process.env.DB_USER,
+    password  : process.env.DB_PASS,
+    database  : 'caselaw'
+  });
 
-connection.connect(function(err){});
+// for testing - just do 1 cases
+for(var caseid = 16; caseid < 21; caseid++) {
 
-var content = fs.readFileSync("data-limited.json", 'utf8');
-var jsonContent = JSON.parse(content);
+var downloadCase = new Promise(function(resolve, reject) {
 
-// service defines paramaters for limits.js
-// currently - limit will be one call per second
-var service = limits({
-  secondly: 1,
-});
+    connection.query('SELECT case_name_full, url from caseinfo where caseid = ?', caseid, function(err, rows, fields) {
+        if (!err) {
+            console.log("Downloading: " + rows[0].case_name_full);
+            // download the case and save locally
+            download(rows[0].url).then(data => {
+                fs.writeFileSync(rows[0].case_name_full + '.pdf', data);
 
-
-// map the json array and for each object, download it
-// url is https://forms.justice.govt.nz/search/Documents/pdf/ plus the ID of the case
-     
-      _.map(jsonContent, function(data) {
-        _.map(data, function(cases) {
-          
-          // queue mapped function using limits.js to rate limit
-          var downloadFile = service.push(function() {
-            // download the case
-            download('https://forms.justice.govt.nz/search/Documents/pdf/' + cases.id, 'downloads/', { filename: cases.CaseName + '.pdf'}).then(() => {
-            
-            console.log("Downloaded " + cases.CaseName + "\n"); 
-            var str = cases.CaseName;
-            
-            // Get netural citation 
-            const regCite = /(\[?\d{4}\]?) NZ(D|F|H|C|S|L)(A|C|R) (\d+)/;
-            var citation = str.match(regCite);
-            
-            // Get casename
-            const regName = /^(.*?)\ \[/;
-            var caseName = str.match(regName);
-              
-            // str.match() is array of all matches combined and then each individual group - [0] is all
-            // extracted case name is caseName[1] and extracted citation is citation[0] since will only be one citation match
-            var url = 'https://forms.justice.govt.nz/search/Documents/pdf/' + cases.id;
-            var downloaded = true;
-              
-            connection.query('INSERT into caseinfo (case_name_full, citation, url, downloaded) VALUES (?, ?, ?, ?)', [caseName[1], citation[0], url, downloaded], function(err, rows, fields) {
-              if (!err) console.log("Inserted into database: " + caseName[1] + "\n"); 
-              else console.log("Error: " + err);
-            });  
+                // upload to bucket
+                var params = {
+                    localFile: rows[0].case_name_full + '.pdf',
+                    s3Params: {
+                    Bucket: "nzhc-pdfs",
+                    Key: rows[0].case_name_full + ".pdf",
+                    },
+                };
+                var uploader = client.uploadFile(params);
+                uploader.on('error', function(err) {
+                    console.error("unable to upload:", err.stack);
+                });
+                uploader.on('progress', function() {
+                    console.log("Upload progress", (uploader.progressAmount / uploader.progressTotal) * 100);
+                });
+                uploader.on('end', function() {
+                    console.log("Done uploading " + rows[0].case_name_full);
+                    var filetoDelete = rows[0].case_name_full + '.pdf'; 
+                    // success for this file, so resolve promise
+                    resolve(filetoDelete);
             });
-          });       
         });
-      });
+        }
+        else {
+            console.log("Error getting database info: " + err);
+            reject(err);
+        }
+        }); 
+    });
+}
 
+downloadCase
+    .then(function (resolve) {
+        // if promise resolved, file has downloaded locally, and uploaded to bucket, so delete
+        fs.unlink(resolve, function(error) {
+            if(error) { throw error; }
+            console.log("Deleted");
+        });
+    })
+    .catch(function(error) {
+        // promise rejected, log error
+        console.log(error);
+    });
 
-// next steps:
-// save each pdf to bucket instead of locally
+// close db connnection
+connection.end();
