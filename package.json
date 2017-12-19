@@ -29,7 +29,7 @@
     "type": "git",
     "url": "git+https://github.com/strum3nt/freelaw.git"
   },
-  "author": "aje",
+  "author": "Andrew Easterbrook",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/strum3nt/freelaw/issues"
@@ -42,5 +42,6 @@
     "law",
     "research",
     "data"
-  ]
+  ],
+  "devDependencies": {}
 }
