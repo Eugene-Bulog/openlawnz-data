@@ -1,7 +1,3 @@
-// this app should convert pdf to html and store in a bucket
-// next step - get pdf from bucket, convert to html, store in bucket
-// then - get lots of pdfs from bucket, convert each, store in bucket
-
 "use strict";
 
 // VARIABLES, DEPENDENCIES ETC
