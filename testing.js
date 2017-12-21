@@ -39,11 +39,6 @@ var connection = mysql.createConnection({
   database  : 'caselaw'
 });
 
-// set rate limiting params
-var queue = limits({
-    minutely: 10  // allow 10 calls per minute 
-  });
-
 var testPromise = new Promise(function(resolve, reject) {
 
     var query = connection.query('SELECT case_name_full, url, unique_id from caseinfo where caseid > 20 AND caseid < 26');
@@ -54,10 +49,13 @@ var testPromise = new Promise(function(resolve, reject) {
             reject(err);
         })
         .on('result', function(rows) {
-            
-            queue.push(function() {
+
+            setTimeout(function() {
 
                 download(rows.url).then(data => {
+
+                    var caseid = rows.unique_id;
+
                     fs.writeFileSync(rows.case_name_full + '.pdf', data);
                     
                     // upload to bucket
@@ -86,10 +84,15 @@ var testPromise = new Promise(function(resolve, reject) {
                         fs.unlink(filetoDelete, function(error) {
                         if(error) { throw error; } 
                         })
+//                        var update = "UPDATE caseinfo SET downloaded = 1 WHERE unique_id = ?";
+//                        connection.query(update, caseid, function(err, rows, fields) {
+//                            if (!err) console.log("Recorded file as downloaded. \n"); 
+//                            else console.log("Error recording file as downloaded: " + err);
+//                            });  
                     });
                 });
-            });
-        })
+            }, 5000); 
+            })
         .on('end', function() {    
             resolve();
         });
