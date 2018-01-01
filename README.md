@@ -9,14 +9,16 @@ This will be a free legal research website, providing fast access to and searchi
 
 ***Plan of attack:***
 
-**Obtaining case law database **
+** Obtaining case law database **
+
 Case law in NZ is mostly available in PDF form via judicial decisions online (JDO - https://forms.justice.govt.nz/jdo/Search.jsp) and the District Court website (http://www.districtcourts.govt.nz/). JDO's search can be used to generate a JSON file of all cases, and urls to each pdf can be generated from that information. Therefore a script can iterate through the JSON file and download each PDF (ease of doing the same with District Court website - unsure at this point, needs to be investigated)
 
 
 End goal in this are is an application that will take a JSON file generated from either JDO or the District Court website, enter basic case law info into a database, download its PDF, and send it on for data processsing. There should also be a script that checks for and obtains any new cases from either source regularly (say once per day).
 
 
-**Processing case law information **
+** Processing case law information **
+
 We need software to extract text from each PDF, for two purposes: (1) fast search and (2) displaying the cases in HTML. Modern (last ~15 years) cases are properly formatted PDFs with searchable text, but older cases are not. Therefore the software needs to be able to handle OCR, so that older cases can be uploaded and entered into the database. 
 
 
