@@ -14,6 +14,9 @@ limits = require('limits.js'),
 download = require('download'),
 fs = require('fs');
 
+// set delay for downloads in milliseconds:
+var delay = 1000;
+
 // load creds
 require('dotenv').config();
 
@@ -62,7 +65,7 @@ function doDownload (row) {
           if(err) {
               return console.log("Error uploading: ", err.message);
           }
-          console.log("Success");
+          console.log("Success uploading " + row.case_name_full + '\n');
         }
       )
     })
@@ -89,7 +92,7 @@ function lookupURLs () {
     .on('error', reject)
 
     .on('result', (row) => promises.push(
-      sleep(1000 * n++).then(() => doDownload(row))
+      sleep(delay * n++).then(() => doDownload(row))
       ))
 
     .on('end', () => {
@@ -99,9 +102,9 @@ function lookupURLs () {
   }
 
 lookupURLs()
-    .then() // should be able to close mysql here
+    .then() // should be able to close mysql here but can't ??
     .catch(function (error) {
-      console.error("Error at end promise" + error)
+      console.error("Error: " + error)
     })
 
 
