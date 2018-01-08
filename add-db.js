@@ -28,10 +28,9 @@ connection.connect(function(err){});
 // format at http://jsonviewer.stack.hu/
 // MOJ case ids and therefore urls subject to change retrospectively, links can break - get new JSON before any mass update
 
-
 var loadJSON = new Promise(
   function(fulfill, reject) {
-   fulfill(JSON.parse(fs.readFileSync('data-test-set.json', 'utf8')));
+   fulfill(JSON.parse(fs.readFileSync('data-errors.json', 'utf8')));
    reject(Error("Error loading JSON"));
   });
 
@@ -67,7 +66,7 @@ loadJSON.then(function(result) {
               var downloaded = false;
               
               // put case name, citation, url and downloaded status into database
-              var insert = "INSERT into caseinfo (case_name_full, citation, url, downloaded, unique_id) VALUES (?, ?, ?, ?, ?)";
+              var insert = "INSERT into downloads (case_name_full, citation, url, downloaded, unique_id) VALUES (?, ?, ?, ?, ?)";
               connection.query(insert, [caseName[1], citation[0], url, downloaded, cases.id], function(err, rows, fields) {
                 if (!err) console.log("Inserted into database: " + caseName[1] + "\n"); 
                 else console.log("Error: " + err);

@@ -8,7 +8,6 @@
 // ---------------------------
 const   pdftohtml = require('pdftohtmljs'),
 AWS = require('aws-sdk'),
-s3 = require('s3'),
 async = require("async"),
 mysql = require('mysql'),
 limits = require('limits.js'),
@@ -19,20 +18,12 @@ fs = require('fs');
 require('dotenv').config();
 
 // get aws creds - set profile, using profile set from ~/.aws/credentials
-var creds = new AWS.SharedIniFileCredentials({profile: 'freelaw-s3'});
+var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3'});
 AWS.config.credentials = creds; 
 
 // open s3 connection
-var client = s3.createClient({
-  maxAsyncS3: 20,     // this is the default 
-  s3RetryCount: 3,    // this is the default 
-  s3RetryDelay: 1000, // this is the default 
-  multipartUploadThreshold: 20971520, // this is the default (20 MB) 
-  multipartUploadSize: 15728640, // this is the default (15 MB) 
-  s3Options: {
-    accessKeyId: creds.accessKeyId,
-    secretAccessKey: creds.secretAccessKey,
-  },
+var s3 = new AWS.S3({
+  params: {Bucket: 'freelaw-pdfs'}
 });
 
 // open database
@@ -40,85 +31,77 @@ var connection = mysql.createConnection({
   host  : process.env.DB_HOST,
   user  : process.env.DB_USER,
   password  : process.env.DB_PASS,
-  database  : 'caselaw'
+  database  : 'caselaw',
+  charset : 'UTF8MB4_UNICODE_CI'
 });
 
 connection.connect(function(err){});
 
-// set rate limiting params
-var queue = limits({
-  minutely: 10  // allow 10 calls per minute 
-});
-
-// for testing - just do 10 cases
-for(var caseid = 30; caseid < 40; caseid++) {
-  
-  var downloadUploadDelete = new Promise(function(resolve, reject) {
-    
-    connection.query('SELECT case_name_full, url, unique_id from caseinfo where caseid = ?', caseid, function(err, rows, fields) {
-      if (!err) {
-        console.log("Downloading: " + rows[0].case_name_full);
-        
-        // download file 
-        // rate limit - queue.push the download function
-        queue.push(function() {
-          download(rows[0].url).then(data => {
-            fs.writeFileSync(rows[0].case_name_full + '.pdf', data);
-            // upload to bucket
-            var params = {
-              localFile: rows[0].case_name_full + '.pdf',
-              s3Params: {
-                Bucket: "nzhc-pdfs",
-                Key: "2017/" + rows[0].case_name_full + ".pdf",
-              },
-            };
-            var uploader = client.uploadFile(params);
-            uploader.on('error', function(err) {
-              console.error("unable to upload: " + rows[0].case_name_full, err.stack);
-            });
-            uploader.on('progress', function() {
-              console.log("Upload progress for " + rows[0].case_name_full, (uploader.progressAmount / uploader.progressTotal) * 100);
-            });
-
-            // once done:
-            uploader.on('end', function() {
-              console.log("Done uploading " + rows[0].case_name_full);
-
-              // delete local file
-              var filetoDelete = rows[0].case_name_full + '.pdf'; 
-              fs.unlink(filetoDelete, function(error) {
-                if(error) { throw error; }
-
-              // set downloaded = true in database (once local file deleted)
-              var update = "UPDATE caseinfo SET downloaded = 1 WHERE caseid = ?";
-              connection.query(update, caseid, function(err, rows, fields) {
-                  if (!err) console.log("Recorded file as downloaded. \n"); 
-                  else console.log("Error recording file as downloaded: " + err);
-                  });  
-                console.log("Deleted " + rows[0].case_name_full);
-              });
-
-            });
-          });
-        });
-      }
-      else {
-        console.log("Error getting database info: " + err);
-        reject(err);
-      }
-    }); 
-  });
+function sleep (millis) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, millis)
+  })
 }
 
-downloadUploadDelete
-.then(function (resolve) {
-  // if promise resolved, all done
-  console.log("All done");
-  connection.end();
-})
-.catch(function(error) {
-  // promise rejected, log error
-  console.log("Unable to complete: " + error);
-});
-// close db connnection
+function doDownload (row) {
+  
+  return download(row.url)
+  .then(data => {
+    console.log("Downloading " + row.case_name_full + "\n");
+    fs.writeFileSync(row.case_name_full + '.pdf', data);
+    })
+  
+  .then(data => {
+    // upload to bucket
+      s3.upload(
+          {
+            Key: row.case_name_full + '.pdf', 
+            Body: fs.readFileSync(row.case_name_full + '.pdf')
+          }, 
+        function(err, data) {
+          if(err) {
+              return console.log("Error uploading: ", err.message);
+          }
+          console.log("Success");
+        }
+      )
+    })
+    
+  .then(data => {
+      var filetoDelete = row.case_name_full + '.pdf'; 
+      fs.unlink(filetoDelete, function(error) {
+        if(error) { throw error; }
+      // set downloaded to true
+      // problem - must leave mysql connection open
+      connection.query('UPDATE downloads SET downloaded = 1 WHERE unique_id = ?', row.unique_id);
+      });
+    });
+  }
+
+      
+function lookupURLs () {
+  return new Promise((resolve, reject) => {
+    // Bag of promises we'll fill up
+    const promises = [];
+    let n = 0;
+
+    connection.query('SELECT case_name_full, url, unique_id from downloads')
+    .on('error', reject)
+
+    .on('result', (row) => promises.push(
+      sleep(1000 * n++).then(() => doDownload(row))
+      ))
+
+    .on('end', () => {
+      resolve(Promise.all(promises))
+      })
+    });
+  }
+
+lookupURLs()
+    .then() // should be able to close mysql here
+    .catch(function (error) {
+      console.error("Error at end promise" + error)
+    })
+
 

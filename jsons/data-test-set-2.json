@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "JudgmentDate": "2017-08-09T13:00:01Z",
+      "DocumentName": "f79ec071-6fd0-437e-8b7c-0d5c62094b93.pdf",
+      "CaseName": "LANT v TE RUNANGANUI O NGĀTI POROU [2017] NZHC 1915 [9 August 2017]",
+      "id": "jdo/bd/alfresco/service/api/node/content/workspace/SpacesStore/f79ec071-6fd0-437e-8b7c-0d5c62094b93/f79ec071-6fd0-437e-8b7c-0d5c62094b93.pdf",
+      "score": 1.0
+    },
+    {
+    "JudgmentDate": "2017-08-21T13:00:01Z",
+    "DocumentName": "79cfe258-df70-4b87-b687-7552f485f3d0.pdf",
+    "CaseName": "IA v RRN [2017] NZHC 1997 [21 August 2017]",
+    "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/79cfe258-df70-4b87-b687-7552f485f3d0/79cfe258-df70-4b87-b687-7552f485f3d0.pdf",
+    "score": 1.0
+},
+ {
+      "JudgmentDate": "2017-08-21T13:00:01Z",
+      "DocumentName": "764d5e8e-d6be-403b-a380-325cccf72928.pdf",
+      "CaseName": "NEHEMIA v THE AUCKLAND DISTRICT MĀORI COUNCIL [2017] NZHC 1998 [21 August 2017]",
+      "id": "jdo/99/alfresco/service/api/node/content/workspace/SpacesStore/764d5e8e-d6be-403b-a380-325cccf72928/764d5e8e-d6be-403b-a380-325cccf72928.pdf",
+      "score": 1.0
+    },
+    {
+      "JudgmentDate": "2017-08-22T13:00:01Z",
+      "DocumentName": "cb356fb4-b104-494d-80fb-51b78334dfd4.pdf",
+      "CaseName": "NGĀTI TAMA KI TE WAIPOUNAMU TRUST v TASMAN DISTRICT COUNCIL [2017] NZHC 2010 [22 August 2017]",
+      "id": "jdo/23/alfresco/service/api/node/content/workspace/SpacesStore/cb356fb4-b104-494d-80fb-51b78334dfd4/cb356fb4-b104-494d-80fb-51b78334dfd4.pdf",
+      "score": 1.0
+    },
+    {
+      "JudgmentDate": "2017-08-30T13:00:01Z",
+      "DocumentName": "d574e02a-7a45-4f7e-969c-ffc4a8bfe181.pdf",
+      "CaseName": "PERRY v OʼNEILLS BUILDING REMOVALS LTD [2017] NZHC 2060 [30 August 2017]",
+      "id": "jdo/4c/alfresco/service/api/node/content/workspace/SpacesStore/d574e02a-7a45-4f7e-969c-ffc4a8bfe181/d574e02a-7a45-4f7e-969c-ffc4a8bfe181.pdf",
+      "score": 1.0
+    }
+  ]
+}
