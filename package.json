@@ -4,7 +4,7 @@
   "description": "NZ Case Law and Legislation management",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.4.1",
+    "async": "^2.6.0",
     "aws-sdk": "^2.54.0",
     "dotenv": "^4.0.0",
     "download": "^6.2.5",
