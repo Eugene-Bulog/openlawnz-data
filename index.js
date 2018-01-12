@@ -10,7 +10,7 @@ const fs = require('fs');
 const lib = require('./lib/functions.js');
 const {execSync} = require('child_process');
 
-const jsonData = JSON.parse(fs.readFileSync('jsons/data-limited.json'))
+const jsonData = JSON.parse(fs.readFileSync('jsons/data-test-set.json'))
 
 require('dotenv').config();
 
@@ -79,21 +79,18 @@ function processCase(caseData, cb) {
     function(cb) {
       console.log("deleting");
       // do you want to use fs.unlinkSync()?
-      fs.unlink('./cache/' + caseItem.bucket_key);
+      fs.unlinkSync('./cache/' + caseItem.bucket_key);
+      const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
+      fs.unlinkSync("./cache/" + noExtension + ".txt");
       cb();
     },
-// dick
+
     // tidy up object
      function(cb) {
-       // This might need to be a mysql formatted date YYYY-MM-DD
-       // do u need time
+
       caseItem.pdf_fetch_date = new Date();
-
-      caseItem.case_name = caseData.caseName ? lib.formatName(caseData.caseName) : "Unknown case";
-
-      caseItem.case_neutral_citation = caseData.caseName ? lib.getCitation(caseData.caseName) : "";
-      // ok lets just put it in this table since we have the info, we can always delete it from this table later if it makes sense
-
+      caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
+      caseItem.case_neutral_citation = caseData.CaseName ? lib.getCitation(caseData.CaseName) : "";
 
       cb();
   },
@@ -121,47 +118,6 @@ async.series(jsonData.cases.map(caseItem => {
 
 }), (err, results) => {
 
-  console.log("results", results)
+  console.log("Done");
 
 })
-
-
-/*
-loadJSON.then(function(fulljson) {
-    console.log("JSON Loaded. Processing Data.")
-    // map json file
-    // here
-    _.map(fulljson, function(cases) {
-        // here, var fulljson is whole file so cases =  [{cases[0], cases[1], etc}]
-        // map again to iterate through each case
-        _.map(cases, function(singleCase) {
-            // add fields we need to case object
-
-            singleCase.pdf_fetch_date = new Date();
-            // nb singleCase.CaseName = long string case name plus citation in MOJ JSON - so separate:
-            // sometimes "" so check exists first
-            if(singleCase.CaseName) {singleCase.case_name = lib.getName(singleCase.CaseName);}
-            else {singleCase.case_name = "Unknown case";} // need to add error handling
-
-            singleCase.bucket_ref = lib.slashToDash(singleCase.id);
-            singleCase.mojPDFURL = lib.getMOJURL(singleCase.id);
-
-            if(singleCase.CaseName) {singleCase.case_neutral_citation = lib.getCitation(singleCase.CaseName);}
-
-            else {singleCase.case_neutral_citation = "[0000] NZXX 0";}
-
-            // probably unnecessary - just making new case_date field same as JudgmentDate:
-            singleCase.case_date = singleCase.JudgmentDate;
-            // get case fulltext to be done later
-            // something like singleCase.full_text = child_process.exec('~./xpdf-tools-linux-4.00/bin64/pdftotext [PDF NAME]') but that will save to text file in same dir not save text to object
-            singleCase.full_text = "";
-
-            console.log(singleCase);
-        });
-    });
-});
-
-
-
-
-*/
