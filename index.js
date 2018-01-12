@@ -28,7 +28,8 @@ loadJSON.then(function(fulljson) {
         // here, var fulljson is whole file so cases =  [{cases[0], cases[1], etc}]
         // map again to iterate through each case
         _.map(cases, function(singleCase) {
-            // add fields we need to object
+            // add fields we need to case object
+
             singleCase.pdf_fetch_date = new Date();
             singleCase.case_name = lib.getName(singleCase.CaseName);
             singleCase.bucket_ref = lib.slashToDash(singleCase.id);
@@ -36,9 +37,9 @@ loadJSON.then(function(fulljson) {
             singleCase.case_neutral_citation = lib.getCitation(singleCase.CaseName);
             // probably unnecessary - just making new case_date field same as JudgmentDate:
             singleCase.case_date = singleCase.JudgmentDate;
-
-            // get case fulltext tbc
-            // something like child_process.exec('~./xpdf-tools-linux-4.00/bin64/pdftotext [PDF NAME]') but that will save to text file in same dir not save text to object
+            // get case fulltext to be done later
+            // something like singleCase.full_text = child_process.exec('~./xpdf-tools-linux-4.00/bin64/pdftotext [PDF NAME]') but that will save to text file in same dir not save text to object
+            singleCase.full_text = "";
 
             console.log(singleCase);
         });
