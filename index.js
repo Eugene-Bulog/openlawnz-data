@@ -25,7 +25,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3-laptop'});
+var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3'});
 AWS.config.credentials = creds;
 
 var s3 = new AWS.S3({
@@ -34,7 +34,7 @@ var s3 = new AWS.S3({
 
 function processCase(caseData, cb) {
 
-  let cases = {};
+  let caseItem = {};
 
   console.log("processing case", caseData);
 
@@ -45,23 +45,21 @@ function processCase(caseData, cb) {
 
         const url = lib.getMOJURL(caseData.id)
         const bucket_key = lib.slashToDash(caseData.id);
-        cases.bucket_key = bucket_key;
+        caseItem.bucket_key = bucket_key;
 
         download(url).then(data => {
           fs.writeFileSync('./cache/' + bucket_key, data);
           cb();
         })
-
-
     },
 
     // Run program text extract
     function(cb) {
-
-      const child = execSync("/mnt/c/Users/Andrew/Desktop/openlaw-data/xpdf/bin64/pdftotext /mnt/c/Users/Andrew/Desktop/openlaw-data/cache/" + cases.bucket_key);
-      const noExtension = cases.bucket_key.replace(/\.pdf/g, '');
+// path.resolve here
+      const child = execSync("/mnt/i/Dev/openlaw-data/xpdf/bin64/pdftotext /mnt/i/Dev/openlaw-data/cache/" + caseItem.bucket_key);
+      const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
       const case_text = fs.readFileSync("./cache/" + noExtension + ".txt");
-      cases.case_text = case_text;
+      caseItem.case_text = case_text;
       cb();
 
 
@@ -71,33 +69,43 @@ function processCase(caseData, cb) {
     function(cb) {
       console.log("s3");
       s3.upload({
-        Key: cases.bucket_key,
-        Body: fs.readFileSync('./cache/' + cases.bucket_key)
+        Key: caseItem.bucket_key,
+        Body: fs.readFileSync('./cache/' + caseItem.bucket_key)
       }, cb);
 
     },
 
-    // tidy up object
-    /* function(cb) {
-      cases.pdf_fetch_date = new Date();
-      if(cases.CaseName) {cases.case_name = lib.getName(cases.CaseName);}
-      else {cases.case_name = "Unknown case";}
-      if(cases.CaseName) {cases.case_neutral_citation = lib.getCitation(cases.CaseName);}
-      else {cases.case_neutral_citation = "[0000] NZXX 0";}
-      delete cases.id;
-      delete cases.DocumentName;
-      delete cases.score;
+    // delete local readFileSync
+    function(cb) {
+      console.log("deleting");
+      // do you want to use fs.unlinkSync()?
+      fs.unlink('./cache/' + caseItem.bucket_key);
       cb();
-    }, */
+    },
+// dick
+    // tidy up object
+     function(cb) {
+       // This might need to be a mysql formatted date YYYY-MM-DD
+       // do u need time
+      caseItem.pdf_fetch_date = new Date();
+
+      caseItem.case_name = caseData.caseName ? lib.formatName(caseData.caseName) : "Unknown case";
+
+      caseItem.case_neutral_citation = caseData.caseName ? lib.getCitation(caseData.caseName) : "";
+      // ok lets just put it in this table since we have the info, we can always delete it from this table later if it makes sense
+
+
+      cb();
+  },
 
     // insert case into database
-     function(cb) {
+      function(cb) {
       console.log("database");
-      connection.query('INSERT INTO cases SET ?', cases, function(err, result) {
+      connection.query('INSERT INTO cases SET ?', caseItem, function(err, result) {
 
         if(err) { cb(err); return; }
 
-        cases.id = result.insertId;
+        caseItem.id = result.insertId;
 
         cb();
 
@@ -107,9 +115,9 @@ function processCase(caseData, cb) {
 
 }
 
-async.series(jsonData.cases.map(cases => {
+async.series(jsonData.cases.map(caseItem => {
 
-  return processCase.bind(null, cases)
+  return processCase.bind(null, caseItem)
 
 }), (err, results) => {
 
