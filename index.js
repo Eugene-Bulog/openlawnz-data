@@ -8,7 +8,7 @@ const mysql = require('mysql');
 const download = require('download');
 const fs = require('fs');
 const lib = require('./lib/functions.js');
-const {spawn} = require('child_process');
+const {execSync} = require('child_process');
 
 const jsonData = JSON.parse(fs.readFileSync('jsons/data-limited.json'))
 
@@ -24,6 +24,9 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
+
+var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3-laptop'});
+AWS.config.credentials = creds;
 
 var s3 = new AWS.S3({
   params: {Bucket: 'freelaw-pdfs'}
@@ -55,18 +58,18 @@ function processCase(caseData, cb) {
     // Run program text extract
     function(cb) {
 
-      const child = spawn("./xpdf/bin64/pdftotext ./cache/" + cases.bucket_key);
-      child.on('exit', function(){
-        const case_text = fs.readFileSync("./cache/" + cases.bucket_key + ".txt");
-        cases.case_text = case_text;
-        cb();
-      });
+      const child = execSync("/mnt/c/Users/Andrew/Desktop/openlaw-data/xpdf/bin64/pdftotext /mnt/c/Users/Andrew/Desktop/openlaw-data/cache/" + cases.bucket_key);
+      const noExtension = cases.bucket_key.replace(/\.pdf/g, '');
+      const case_text = fs.readFileSync("./cache/" + noExtension + ".txt");
+      cases.case_text = case_text;
+      cb();
+
 
     },
 
     // upload to bucket
     function(cb) {
-
+      console.log("s3");
       s3.upload({
         Key: cases.bucket_key,
         Body: fs.readFileSync('./cache/' + cases.bucket_key)
@@ -74,9 +77,22 @@ function processCase(caseData, cb) {
 
     },
 
-    // insert case into database
-    function(cb) {
+    // tidy up object
+    /* function(cb) {
+      cases.pdf_fetch_date = new Date();
+      if(cases.CaseName) {cases.case_name = lib.getName(cases.CaseName);}
+      else {cases.case_name = "Unknown case";}
+      if(cases.CaseName) {cases.case_neutral_citation = lib.getCitation(cases.CaseName);}
+      else {cases.case_neutral_citation = "[0000] NZXX 0";}
+      delete cases.id;
+      delete cases.DocumentName;
+      delete cases.score;
+      cb();
+    }, */
 
+    // insert case into database
+     function(cb) {
+      console.log("database");
       connection.query('INSERT INTO cases SET ?', cases, function(err, result) {
 
         if(err) { cb(err); return; }
@@ -86,8 +102,8 @@ function processCase(caseData, cb) {
         cb();
 
       });
-
-    }], cb)
+    }
+  ], cb)
 
 }
 
