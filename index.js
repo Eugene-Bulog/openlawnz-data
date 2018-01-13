@@ -91,6 +91,7 @@ function processCase(caseData, cb) {
       caseItem.pdf_fetch_date = new Date();
       caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
       caseItem.case_neutral_citation = caseData.CaseName ? lib.getCitation(caseData.CaseName) : "";
+      caseItem.case_date = caseData.JudgmentDate;
 
       cb();
   },
