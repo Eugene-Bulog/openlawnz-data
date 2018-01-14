@@ -1,5 +1,5 @@
 {
-  "name": "freelaw",
+  "name": "openlaw-data",
   "version": "0.0.1",
   "description": "NZ Case Law and Legislation management",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "limits.js": "^0.1.4",
     "mysql": "^2.15.0",
     "node-dir": "^0.1.16",
+    "path": "^0.12.7",
     "pathhash": "^1.0.0",
     "pdf-extract": "^1.0.11",
     "pdftohtmljs": "^0.4.2",
@@ -27,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strum3nt/freelaw.git"
+    "url": "git+https://github.com/openlawnz/openlawnz-data.git"
   },
   "author": "Andrew Easterbrook",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/strum3nt/freelaw/issues"
+    "url": "https://github.com/openlawnz/openlawnz-data/issues"
   },
-  "homepage": "https://github.com/strum3nt/freelaw#readme",
+  "homepage": "https://github.com/openlawnz/openlawnz-data#readme",
   "directories": {
     "lib": "lib"
   },

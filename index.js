@@ -7,13 +7,16 @@ const async = require("async");
 const mysql = require('mysql');
 const download = require('download');
 const fs = require('fs');
+const path = require('path');
 const lib = require('./lib/functions.js');
 const {execSync} = require('child_process');
 
-const jsonData = JSON.parse(fs.readFileSync('jsons/data-test-set.json'))
+const jsonData = JSON.parse(fs.readFileSync('jsons/data-errors.json'))
 
 require('dotenv').config();
 
+// remember, charset should be utf8mb4 in db and connection
+// and edit my.cnf on any new mysql sever https://mathiasbynens.be/notes/mysql-utf8mb4
 //mysql connect
 var connection = mysql.createConnection({
   host      : process.env.DB_HOST,
@@ -42,7 +45,7 @@ function processCase(caseData, cb) {
 
     // download file
     function(cb) {
-
+        console.log('downloading file')
         const url = lib.getMOJURL(caseData.id)
         const bucket_key = lib.slashToDash(caseData.id);
         caseItem.bucket_key = bucket_key;
@@ -51,23 +54,24 @@ function processCase(caseData, cb) {
           fs.writeFileSync('./cache/' + bucket_key, data);
           cb();
         })
-    },
+    }, 
 
     // Run program text extract
     function(cb) {
-// path.resolve here
-      const child = execSync("/mnt/i/Dev/openlaw-data/xpdf/bin64/pdftotext /mnt/i/Dev/openlaw-data/cache/" + caseItem.bucket_key);
+      console.log("extracting text")
+      const pathtopdf = path.resolve('./xpdf/bin64/pdftotext');
+      const pathtocache = path.resolve('./cache/');
+      const child = execSync(pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key);
       const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
       const case_text = fs.readFileSync("./cache/" + noExtension + ".txt");
       caseItem.case_text = case_text;
       cb();
 
-
     },
 
     // upload to bucket
     function(cb) {
-      console.log("s3");
+      console.log("uploading to s3");
       s3.upload({
         Key: caseItem.bucket_key,
         Body: fs.readFileSync('./cache/' + caseItem.bucket_key)
@@ -77,13 +81,12 @@ function processCase(caseData, cb) {
 
     // delete local readFileSync
     function(cb) {
-      console.log("deleting");
-      // do you want to use fs.unlinkSync()?
+      console.log("deleting local file");
       fs.unlinkSync('./cache/' + caseItem.bucket_key);
       const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
       fs.unlinkSync("./cache/" + noExtension + ".txt");
       cb();
-    },
+    }, 
 
     // tidy up object
      function(cb) {
@@ -94,11 +97,11 @@ function processCase(caseData, cb) {
       caseItem.case_date = caseData.JudgmentDate;
 
       cb();
-  },
+  }, 
 
     // insert case into database
       function(cb) {
-      console.log("database");
+      console.log("inserting into database");
       connection.query('INSERT INTO cases SET ?', caseItem, function(err, result) {
 
         if(err) { cb(err); return; }
@@ -120,5 +123,6 @@ async.series(jsonData.cases.map(caseItem => {
 }), (err, results) => {
 
   console.log("Done");
+  connection.end();
 
 })
