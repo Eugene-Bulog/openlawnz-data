@@ -11,7 +11,7 @@ const path = require('path');
 const lib = require('./lib/functions.js');
 const {execSync} = require('child_process');
 
-const jsonData = JSON.parse(fs.readFileSync('jsons/data-errors.json'))
+const jsonData = JSON.parse(fs.readFileSync('jsons/data-test-set.json'))
 
 require('dotenv').config();
 

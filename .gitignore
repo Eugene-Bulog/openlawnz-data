@@ -54,3 +54,7 @@ typings/
 
 # credentials
 credentials/
+
+#cache, test files
+cache/
+test.js
