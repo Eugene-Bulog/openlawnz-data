@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "async": "^2.6.0",
-    "aws-sdk": "^2.54.0",
+    "aws-sdk": "^2.182.0",
     "dotenv": "^4.0.0",
     "download": "^6.2.5",
     "eyespect": "^0.1.10",

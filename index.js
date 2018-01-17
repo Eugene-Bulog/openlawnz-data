@@ -11,7 +11,7 @@ const path = require('path');
 const lib = require('./lib/functions.js');
 const {execSync} = require('child_process');
 
-const jsonData = JSON.parse(fs.readFileSync('jsons/data-test-set.json'))
+const jsonData = JSON.parse(fs.readFileSync('jsons/data-test-set-2.json'))
 
 require('dotenv').config();
 
@@ -28,7 +28,8 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3'});
+// edit for different computers
+var creds = new AWS.SharedIniFileCredentials({profile: 'node-s3-laptop'});
 AWS.config.credentials = creds;
 
 var s3 = new AWS.S3({
@@ -54,18 +55,24 @@ function processCase(caseData, cb) {
           fs.writeFileSync('./cache/' + bucket_key, data);
           cb();
         })
-    }, 
+    },
 
     // Run program text extract
     function(cb) {
       console.log("extracting text")
-      const pathtopdf = path.resolve('./xpdf/bin64/pdftotext');
-      const pathtocache = path.resolve('./cache/');
-      const child = execSync(pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key);
-      const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
-      const case_text = fs.readFileSync("./cache/" + noExtension + ".txt");
-      caseItem.case_text = case_text;
-      cb();
+
+      try {
+        const pathtopdf = path.resolve('./xpdf/bin64/pdftotext');
+        const pathtocache = path.resolve('./cache/');
+        const child = execSync(pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key);
+        const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
+        const case_text = fs.readFileSync("./cache/" + noExtension + ".txt", "utf8");
+        caseItem.case_text = case_text;
+        cb();
+      } catch(ex) {
+        cb(ex);
+
+      }
 
     },
 
@@ -79,28 +86,34 @@ function processCase(caseData, cb) {
 
     },
 
-    // delete local readFileSync
+    // delete local
     function(cb) {
-      console.log("deleting local file");
-      fs.unlinkSync('./cache/' + caseItem.bucket_key);
-      const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
-      fs.unlinkSync("./cache/" + noExtension + ".txt");
-      cb();
-    }, 
+      try {
+        console.log("deleting local file");
+        fs.unlinkSync('./cache/' + caseItem.bucket_key);
+        const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
+        fs.unlinkSync("./cache/" + noExtension + ".txt");
+        cb();
+      } catch(ex) {
+        cb(ex)
+      }
+    },
+
 
     // tidy up object
      function(cb) {
 
       caseItem.pdf_fetch_date = new Date();
       caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
+      // maybe rename table (and this) to be case_initial_citation ie the first citation found (if any)
       caseItem.case_neutral_citation = caseData.CaseName ? lib.getCitation(caseData.CaseName) : "";
       caseItem.case_date = caseData.JudgmentDate;
 
       cb();
-  }, 
+  },
 
     // insert case into database
-      function(cb) {
+    function(cb) {
       console.log("inserting into database");
       connection.query('INSERT INTO cases SET ?', caseItem, function(err, result) {
 
@@ -122,7 +135,10 @@ async.series(jsonData.cases.map(caseItem => {
 
 }), (err, results) => {
 
-  console.log("Done");
+  if(err) {
+    console.log("Error", err) } else {
+      console.log("Done");
+  }
   connection.end();
 
 })
