@@ -58,3 +58,5 @@ credentials/
 #cache, test files
 cache/
 test.js
+
+.scratchpad
