@@ -50,7 +50,7 @@ function processCase(caseData, cb) {
 
 		// download file
 		function (cb) {
-			process.stdout.write('downloading file\n')
+			//process.stdout.write('downloading file\n')
 			const url = lib.getMOJURL(caseData.id)
 			const bucket_key = lib.slashToDash(caseData.id);
 			caseItem.bucket_key = bucket_key;
@@ -63,18 +63,17 @@ function processCase(caseData, cb) {
 
 		// Run program text extract
 		function (cb) {
-			process.stdout.write("extracting text\n")
+			//process.stdout.write("extracting text\n")
 
 			try {
 				const pathtopdf = path.resolve('../xpdf/bin64/pdftotext');
 				const pathtocache = path.resolve('../cache/');
 
-				process.stdout.write("stdout\n" + pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key + "\n")
+				//process.stdout.write("stdout\n" + pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key + "\n")
 
 				const child = execSync(pathtopdf + " " + pathtocache + "/" + caseItem.bucket_key);
-				// ok i gotta sleep anyway ill try running it in unix
 				
-				process.stdout.write(child.toString())
+				//process.stdout.write(child.toString())
 				const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
 				const case_text = fs.readFileSync("../cache/" + noExtension + ".txt", "utf8");
 				caseItem.case_text = case_text;
@@ -88,18 +87,21 @@ function processCase(caseData, cb) {
 
 		// upload to bucket
 		function (cb) {
-			process.stdout.write("uploading to s3");
-			s3.upload({
-				Key: caseItem.bucket_key,
-				Body: fs.readFileSync('../cache/' + caseItem.bucket_key)
-			}, cb);
-
-		},
+			//process.stdout.write("uploading to s3\n");
+			try {					
+					s3.upload({
+					Key: caseItem.bucket_key,
+					Body: fs.readFileSync('../cache/' + caseItem.bucket_key)
+				}, cb) 
+				//process.stdout.write("uploaded\n")
+			}  
+				catch (ex) {cb(ex)} 
+		}, 
 
 		// delete local
 		function (cb) {
 			try {
-				process.stdout.write("deleting local file");
+				//process.stdout.write("deleting local file\n");
 				fs.unlinkSync('../cache/' + caseItem.bucket_key);
 				const noExtension = caseItem.bucket_key.replace(/\.pdf/g, '');
 				// fs.unlinkSync("../cache/" + noExtension + ".txt"); just keep text files while testing? k
@@ -107,12 +109,12 @@ function processCase(caseData, cb) {
 			} catch (ex) {
 				cb(ex)
 			}
-		},
+		}, 
 
 
 		// tidy up object
 		function (cb) {
-
+			//process.stdout.write("tidying object\n");
 			caseItem.pdf_fetch_date = new Date();
 			caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
 			// maybe rename table (and this) to be case_initial_citation ie the first citation found (if any)
@@ -121,11 +123,12 @@ function processCase(caseData, cb) {
 
 			cb();
 		},
-
+		// oh yeah also remember callback in other bit isnt working
 		// insert case into database
 		function (cb) {
-			process.stdout.write("inserting into database");
-			connection.query('INSERT INTO cases SET ?', caseItem, function (err, result) {
+			//process.stdout.write("inserting into database\n");
+			try {
+				connection.query('INSERT INTO cases SET ?', caseItem, function (err, result) {
 
 				if (err) { cb(err); return; }
 
@@ -134,13 +137,14 @@ function processCase(caseData, cb) {
 				cb();
 
 			});
+		} catch (ex) {cb(ex)}
 		}
 	], cb)
 
 }
 
 
-async.series(casesToProcess.map(caseItem => {
+async.parallel(casesToProcess.map(caseItem => {
 
 	return processCase.bind(null, caseItem)
 
@@ -150,10 +154,11 @@ async.series(casesToProcess.map(caseItem => {
 
 	if (err) {
 		process.stderr.write(`[PROCESSOR_RESULT]${err}`);
-	} else {
+	} else { 
 		process.stdout.write(`[PROCESSOR_RESULT]${JSON.stringify(results)}`);
 	}
 
 	process.exit();
 
 })
+

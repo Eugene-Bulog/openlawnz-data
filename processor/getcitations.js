@@ -1,16 +1,12 @@
+// get all citations inside a case
+
+// nb - need to add lookup for each result to see if in database, then add to case-to-case table
+
 "use strict";
 
 // VARIABLES, DEPENDENCIES ETC
 // ---------------------------
-const AWS = require('aws-sdk');
-const async = require("async");
 const mysql = require('mysql');
-const download = require('download');
-const fs = require('fs');
-const path = require('path');
-const lib = require('./lib/functions.js');
-const {execSync} = require('child_process');
-
 require('dotenv').config();
 
 var connection = mysql.createConnection({
@@ -23,9 +19,11 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var getText = "select case_text from cases where id > ?";
+var getText = "select case_name, case_text from cases where id = ?";
 
-var query = connection.query(getText, [2395]);
+var query = connection.query(getText, [738]);
+
+var i = 1;
 
 query
     .on('error', function(err) {
@@ -33,9 +31,11 @@ query
     })
     .on('result', function(row) {
         var case_text = (JSON.stringify(row.case_text));
-        const regNeutralCite = /((?:\[\d{4}\]\s)(?:(NZDC|NZFC|NZHC|NZCA|NZSC))(?:\s(\w{1,6})))/g
-        var citations = case_text.match(regNeutralCite);
+    
+        const RegAllCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)([\s\S]at[\s\S]\d{0,16}(((\]|\.)|\;)|([\s\S]\(.{0,20}\))))?/g;
+        var citations = case_text.match(RegAllCites);
         console.log(citations);
+
     })
     .on('end', function() {
       console.log('end');
