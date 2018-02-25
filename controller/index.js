@@ -31,7 +31,6 @@ const jsonURL = "https://forms.justice.govt.nz/solr/jdo/select?q=*&facet=true&fa
 const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDataFile)).response.docs : []
 
  // called from parallel process
- // it should work
   function spawnCaseProcessors(cases, cb2) {
     console.log('sending ' + cases.length + ' cases')
     const encodedCommand = encodeURIfix(JSON.stringify(cases));
@@ -41,9 +40,9 @@ const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDa
       if (error) {
         console.log('------------- ERROR ------')
         console.log(error)
-        cb2(error) // i don't know why it's still printing the logs
+        cb2(error) 
       }
-      if(!!~(stdout || stderr).indexOf('[PROCESSOR_RESULT')) { // here, you had if(!!~) what is !!~? o
+      if(!!~(stdout || stderr).indexOf('[PROCESSOR_RESULT')) { 
         if (stderr) {
           console.log('>>> stderr', stderr)
           cb2(stderr)
@@ -51,7 +50,6 @@ const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDa
         }
         console.log('======== WAITING =========')
         setTimeout(() => {
-          // ok shall i set 2jsgogo
           cb2(null, stdout)
         }, 10000)
 

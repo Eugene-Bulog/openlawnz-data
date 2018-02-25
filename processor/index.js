@@ -28,7 +28,6 @@ var connection = mysql.createConnection({
 connection.connect();
 
 // edit for different computers
-// we could pass this in as an argument
 var creds = new AWS.SharedIniFileCredentials({ profile: 'node-s3' });
 //var creds = new AWS.SharedIniFileCredentials({profile: argv.s3Profile });
 
@@ -123,7 +122,7 @@ function processCase(caseData, cb) {
 
 			cb();
 		},
-		// oh yeah also remember callback in other bit isnt working
+		
 		// insert case into database
 		function (cb) {
 			//process.stdout.write("inserting into database\n");
@@ -136,7 +135,10 @@ function processCase(caseData, cb) {
 
 				cb();
 
-			});
+				});
+
+				// add id as case_citations.case_id and case_neutral_citation as case_citations.citation to case_citations
+				
 		} catch (ex) {cb(ex)}
 		}
 	], cb)
