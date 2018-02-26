@@ -1,4 +1,6 @@
-// get first neutral citation inside 1000 characters of case text, likely to be this case's neutral citation
+// get first neutral citation inside 100 characters of case text, likely to be this case's neutral citation
+// required because initial import of MOJ .json file sometimes has blank case name and citation data
+// add neutral citation (if found) to case_citations table with id referencing case in cases table
 
 "use strict";
 
@@ -31,7 +33,7 @@ var connection = mysql.createConnection({
     }
     return result;
 
-}).then(function() {
-    connection.end();
+}).then(function(){
+        connection.end();
 });
 

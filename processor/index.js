@@ -27,7 +27,7 @@ var connection = mysql.createConnection({
 
 console.log("host: " + process.env.DB_HOST);
 connection.connect();
-/*
+
 // edit for different computers
 var creds = new AWS.SharedIniFileCredentials({ profile: 'node-s3-laptop' });
 //var creds = new AWS.SharedIniFileCredentials({profile: argv.s3Profile });
@@ -36,7 +36,7 @@ AWS.config.credentials = creds;
 
 var s3 = new AWS.S3({
 	params: { Bucket: 'freelaw-pdfs' }
-});*/
+});
 
 function processCase(caseData, cb) {
 
@@ -50,7 +50,7 @@ function processCase(caseData, cb) {
 
 		// download file
 		function (cb) {
-			process.stdout.write('downloading file\n')
+			// process.stdout.write('downloading file\n')
 			const url = lib.getMOJURL(caseData.id)
 			const bucket_key = lib.slashToDash(caseData.id);
 			caseItem.bucket_key = bucket_key;
@@ -63,7 +63,7 @@ function processCase(caseData, cb) {
 
 		// Run program text extract
 		function (cb) {
-			process.stdout.write("extracting text\n")
+			// process.stdout.write("extracting text\n")
 
 			try {
 				const pathtopdf = path.resolve('../xpdf/bin64/pdftotext');
@@ -137,6 +137,8 @@ function processCase(caseData, cb) {
 				cb();
 
 				});
+							
+				// connection.query('INSERT INTO case_citations values ?', [caseItem.id, caseItem.case_neutral_citation]);
 
 				// add id as case_citations.case_id and case_neutral_citation as case_citations.citation to case_citations
 				

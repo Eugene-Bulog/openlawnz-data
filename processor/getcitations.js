@@ -19,9 +19,9 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var getText = "select case_name, case_text from cases where id = ''";
+var getText = "select case_name, case_text from cases";
 
-var query = connection.query(getText, [1]);
+var query = connection.query(getText);
 
 var i = 1;
 
@@ -31,10 +31,11 @@ query
     })
     .on('result', function(row) {
         var case_text = (JSON.stringify(row.case_text));
-    
+        //get all single citations
         const RegAllCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)([\s\S]at[\s\S]\d{0,16}(((\]|\.)|\;)|([\s\S]\(.{0,20}\))))?/g;
         var citations = case_text.match(RegAllCites);
         console.log(citations);
+
 
     })
     .on('end', function() {
