@@ -1,74 +1,3034 @@
-{
-  "cases": [
-    {
-      "JudgmentDate": "2017-08-21T13:00:01Z",
-      "DocumentName": "764d5e8e-d6be-403b-a380-325cccf72928.pdf",
-      "CaseName": "NEHEMIA v THE AUCKLAND DISTRICT MĀORI COUNCIL [2017] NZHC 1998 [21 August 2017]",
-      "id": "jdo/99/alfresco/service/api/node/content/workspace/SpacesStore/764d5e8e-d6be-403b-a380-325cccf72928/764d5e8e-d6be-403b-a380-325cccf72928.pdf",
-      "score": 1.0
-    },
-    {
-      "JudgmentDate": "2017-09-01T13:00:01Z",
-      "DocumentName": "1b87cd50-2433-4a12-aed1-86ac721f77a6.pdf",
-      "CaseName": "ZHANG AND ORS v KAMAL [2017] NZHC 2120 [1 September 2017]",
-      "id": "jdo/92/alfresco/service/api/node/content/workspace/SpacesStore/1b87cd50-2433-4a12-aed1-86ac721f77a6/1b87cd50-2433-4a12-aed1-86ac721f77a6.pdf",
-      "score": 1.0
-    },
-    {
-    "JudgmentDate": "2017-08-21T13:00:01Z",
-    "DocumentName": "79cfe258-df70-4b87-b687-7552f485f3d0.pdf",
-    "CaseName": "IA v RRN [2017] NZHC 1997 [21 August 2017]",
-    "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/79cfe258-df70-4b87-b687-7552f485f3d0/79cfe258-df70-4b87-b687-7552f485f3d0.pdf",
-    "score": 1.0
-}, 
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "3ac26e17-8671-42e9-b343-2f433faae110.pdf",
-  "CaseName": "Lagocki v Auckland Council[2017] NZHC 2129 [4 September 2017]",
-  "id": "jdo/75/alfresco/service/api/node/content/workspace/SpacesStore/3ac26e17-8671-42e9-b343-2f433faae110/3ac26e17-8671-42e9-b343-2f433faae110.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "72d9d57b-add7-4fc1-8c2b-dff14d993427.pdf",
-  "CaseName": "MARLBOROUGH LINES LIMITED v NEW ZEALAND FIRE SERVICE COMMISSION [2017] NZHC 2127 [1 September 2017]",
-  "id": "jdo/45/alfresco/service/api/node/content/workspace/SpacesStore/72d9d57b-add7-4fc1-8c2b-dff14d993427/72d9d57b-add7-4fc1-8c2b-dff14d993427.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "13fbb147-8b07-4174-9eeb-477748afffd9.pdf",
-  "CaseName": "Jones v NZ Police [2017] NZHC 2133 [1 September 2017]",
-  "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/13fbb147-8b07-4174-9eeb-477748afffd9/13fbb147-8b07-4174-9eeb-477748afffd9.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "db5cf171-f642-440b-a995-4721584d9734.pdf",
-  "CaseName": "VIPASSANA FOUNDATION CHARITABLE TRUST BOARD v AUCKLAND COUNCIL [2017] NZHC 2116 [1 September 2017]",
-  "id": "jdo/50/alfresco/service/api/node/content/workspace/SpacesStore/db5cf171-f642-440b-a995-4721584d9734/db5cf171-f642-440b-a995-4721584d9734.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "d537d9cb-2a3c-431a-be2b-923b5ab00041.pdf",
-  "CaseName": "Tugaga v Westend Painters Limited [2017] NZHC 2130 [1 September 2017]",
-  "id": "jdo/32/alfresco/service/api/node/content/workspace/SpacesStore/d537d9cb-2a3c-431a-be2b-923b5ab00041/d537d9cb-2a3c-431a-be2b-923b5ab00041.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "b2ff961c-8a17-4b50-bff9-bb1f36c1d0a3.pdf",
-  "CaseName": "LIFESTYLES INVESTMENT GROUP v CORAL INVESTMENTS SECURITIES LIMITED  [2017] NZHC 2122 [1 September 2017]",
-  "id": "jdo/f5/alfresco/service/api/node/content/workspace/SpacesStore/b2ff961c-8a17-4b50-bff9-bb1f36c1d0a3/b2ff961c-8a17-4b50-bff9-bb1f36c1d0a3.pdf",
-  "score": 1.0
-},
-{
-  "JudgmentDate": "2017-09-01T13:00:01Z",
-  "DocumentName": "82d8efd0-ea3b-4145-8ea1-67fa78f36e99.pdf",
-  "CaseName": "BROADBENT v THE CHIEF EXECUTIVE OF THE MINISTRY OF SOCIAL DEVELOPMENT  [2017] NZHC 2123 [1 September 2017]",
-  "id": "jdo/5e/alfresco/service/api/node/content/workspace/SpacesStore/82d8efd0-ea3b-4145-8ea1-67fa78f36e99/82d8efd0-ea3b-4145-8ea1-67fa78f36e99.pdf",
-  "score": 1.0
-}
-  ]
-}
+{"cases": [
+        {
+          "JudgmentDate": "2017-12-22T13:00:01Z",
+          "DocumentName": "6b7ee842-9a35-45d8-8b22-24bc89560369.pdf",
+          "CaseName": "WESTERN JOINERY LIMITED v COMMISSIONER OF INLAND REVENUE [2017] NZHC 3297 [22 December 2017]",
+          "id": "jdo/2e/alfresco/service/api/node/content/workspace/SpacesStore/6b7ee842-9a35-45d8-8b22-24bc89560369/6b7ee842-9a35-45d8-8b22-24bc89560369.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-21T13:00:01Z",
+          "DocumentName": "8f382fe1-b1b7-4ee6-838b-669ae6c2220b.pdf",
+          "CaseName": "OKEY v KINGSBEER AND BERNADETTE PLAW IN THE CAPACITY OF TRUSTEES OF THE PAK TRUST [2017] NZCA 625 [21 December 2017]",
+          "id": "jdo/34/alfresco/service/api/node/content/workspace/SpacesStore/8f382fe1-b1b7-4ee6-838b-669ae6c2220b/8f382fe1-b1b7-4ee6-838b-669ae6c2220b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-21T13:00:01Z",
+          "DocumentName": "4896c111-a459-4459-8e90-b53b34340154.pdf",
+          "CaseName": "YOUNG & ANOR v ZHANG [2017] NZCA 622 [21 December 2017]",
+          "id": "jdo/2c/alfresco/service/api/node/content/workspace/SpacesStore/4896c111-a459-4459-8e90-b53b34340154/4896c111-a459-4459-8e90-b53b34340154.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "53c6b4f8-1163-445a-b885-bbf4e02f54e6.pdf",
+          "CaseName": "CAMPBELL v R [2017] NZCA 623 [20 December 2017]",
+          "id": "jdo/bc/alfresco/service/api/node/content/workspace/SpacesStore/53c6b4f8-1163-445a-b885-bbf4e02f54e6/53c6b4f8-1163-445a-b885-bbf4e02f54e6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "5d90f86e-72f4-4818-9e23-4022445ba077.pdf",
+          "CaseName": "BURGESS v MONK [2017] NZHC 3255 [20 December 2017]",
+          "id": "jdo/c9/alfresco/service/api/node/content/workspace/SpacesStore/5d90f86e-72f4-4818-9e23-4022445ba077/5d90f86e-72f4-4818-9e23-4022445ba077.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "0e771423-faa3-4c0d-9e7f-3e5d2587a21d.pdf",
+          "CaseName": "",
+          "id": "jdo/43/alfresco/service/api/node/content/workspace/SpacesStore/0e771423-faa3-4c0d-9e7f-3e5d2587a21d/0e771423-faa3-4c0d-9e7f-3e5d2587a21d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "6fc8228d-e3a0-4cc3-83b4-37fb835d41ed.pdf",
+          "CaseName": "POROS v BURNEY [2017] NZHC 3254 [20 December 2017]",
+          "id": "jdo/e0/alfresco/service/api/node/content/workspace/SpacesStore/6fc8228d-e3a0-4cc3-83b4-37fb835d41ed/6fc8228d-e3a0-4cc3-83b4-37fb835d41ed.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "e326b585-676c-4964-a387-ee60ebf0d613.pdf",
+          "CaseName": "LEE v DISTRICT COURT AT NORTH SHORE [2017] NZCA 616 [20 December 2017]",
+          "id": "jdo/57/alfresco/service/api/node/content/workspace/SpacesStore/e326b585-676c-4964-a387-ee60ebf0d613/e326b585-676c-4964-a387-ee60ebf0d613.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "081a2c39-846d-47aa-9ad4-1abd040193c7.pdf",
+          "CaseName": "EDWARDSON v R [2017] NZCA 618 [20 December 2017]",
+          "id": "jdo/de/alfresco/service/api/node/content/workspace/SpacesStore/081a2c39-846d-47aa-9ad4-1abd040193c7/081a2c39-846d-47aa-9ad4-1abd040193c7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "0dd75a98-98fd-4f7f-b852-5fcabaa93246.pdf",
+          "CaseName": "OʼCONNOR AS LITIGATION GUARDIAN FOR C v CHIEF EXECUTIVE OF THE MINISTRY OF VULNERABLE CHILDREN, ORANGA TAMARIKI [2017] NZCA 617 [20 December 2017]",
+          "id": "jdo/36/alfresco/service/api/node/content/workspace/SpacesStore/0dd75a98-98fd-4f7f-b852-5fcabaa93246/0dd75a98-98fd-4f7f-b852-5fcabaa93246.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-20T13:00:01Z",
+          "DocumentName": "b6603584-03c7-453d-9eca-dfb1807d6653.pdf",
+          "CaseName": "CLEARY v EWART & EWART [2017] NZCA 620 [20 December 2017]",
+          "id": "jdo/d8/alfresco/service/api/node/content/workspace/SpacesStore/b6603584-03c7-453d-9eca-dfb1807d6653/b6603584-03c7-453d-9eca-dfb1807d6653.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "648d1290-2f1d-4afa-ad92-3fb0d38f9750.pdf",
+          "CaseName": "NORTHLAND ENVIRONMENTAL PROTECTION SOCIETY INC v THE CHIEF EXECUTIVE OF THE MINISTRY FOR PRIMARY INDUSTRIES [2017] NZCA 607 [19 December 2017]",
+          "id": "jdo/2e/alfresco/service/api/node/content/workspace/SpacesStore/648d1290-2f1d-4afa-ad92-3fb0d38f9750/648d1290-2f1d-4afa-ad92-3fb0d38f9750.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "85ed9ed4-1d9a-4851-a5b3-fbac9c86762c.pdf",
+          "CaseName": "NGĀI TAI KI TĀMAKI TRIBAL TRUST v MINISTER OF CONSERVATION [2017] NZCA 613 [19 December 2017]",
+          "id": "jdo/1f/alfresco/service/api/node/content/workspace/SpacesStore/85ed9ed4-1d9a-4851-a5b3-fbac9c86762c/85ed9ed4-1d9a-4851-a5b3-fbac9c86762c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "f443208a-82eb-4020-a732-eb0e92447c47.pdf",
+          "CaseName": "GRANT v R [2017] NZCA 614 [19 December 2017]",
+          "id": "jdo/1a/alfresco/service/api/node/content/workspace/SpacesStore/f443208a-82eb-4020-a732-eb0e92447c47/f443208a-82eb-4020-a732-eb0e92447c47.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "f719bb0f-60ca-4145-a3fb-6e41c80e43a8.pdf",
+          "CaseName": "BULLEN v R [2017] NZCA 615 [19 December 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/f719bb0f-60ca-4145-a3fb-6e41c80e43a8/f719bb0f-60ca-4145-a3fb-6e41c80e43a8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "e9a2b102-06b6-476d-a837-53d3c594caf2.pdf",
+          "CaseName": "THOMAS v MACKINTOSH AND HALL AS EXECUTORS AND TRUSTEES OF THE ESTATE OF NORMAN DEAN THOMAS [2017] NZCA 610 [19 December 2017]",
+          "id": "jdo/8d/alfresco/service/api/node/content/workspace/SpacesStore/e9a2b102-06b6-476d-a837-53d3c594caf2/e9a2b102-06b6-476d-a837-53d3c594caf2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "6818a1dd-5fdc-4d39-accc-c8e06944a863.pdf",
+          "CaseName": "UNIVERSAL EDUCATION GROUP LIMITED TRADING AS NEW ZEALAND NATIONAL COLLEGE 2008 v NEW ZEALAND QUALIFICATIONS AUTHORITY [2017] NZHC 3245 [19 December 2017]",
+          "id": "jdo/97/alfresco/service/api/node/content/workspace/SpacesStore/6818a1dd-5fdc-4d39-accc-c8e06944a863/6818a1dd-5fdc-4d39-accc-c8e06944a863.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "8387fae5-6491-4ac9-a563-de2bcbdbe5eb.pdf",
+          "CaseName": "MITCHELL v ZHANG [2017] NZHC 3208 [19 December 2017]",
+          "id": "jdo/c6/alfresco/service/api/node/content/workspace/SpacesStore/8387fae5-6491-4ac9-a563-de2bcbdbe5eb/8387fae5-6491-4ac9-a563-de2bcbdbe5eb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "c5888851-f1f3-427b-ad9d-3e5e4f334c11.pdf",
+          "CaseName": "WATENE v NEW ZEALAND POLICE [2017] NZHC 3252 [19 December 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/c5888851-f1f3-427b-ad9d-3e5e4f334c11/c5888851-f1f3-427b-ad9d-3e5e4f334c11.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "4a23ae28-6c2a-4980-a8b0-96ae9116008e.pdf",
+          "CaseName": "ANNALINGAM v NEW ZEALAND POLICE [2017] NZHC 3207 [19 December 2017]",
+          "id": "jdo/19/alfresco/service/api/node/content/workspace/SpacesStore/4a23ae28-6c2a-4980-a8b0-96ae9116008e/4a23ae28-6c2a-4980-a8b0-96ae9116008e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-19T13:00:01Z",
+          "DocumentName": "62416fe2-a417-4af0-93ed-05af15470ccc.pdf",
+          "CaseName": "NZME LIMITED v FAIRFAX MEDIA LIMITED [2017] NZHC 3206 [19 December 2017]",
+          "id": "jdo/58/alfresco/service/api/node/content/workspace/SpacesStore/62416fe2-a417-4af0-93ed-05af15470ccc/62416fe2-a417-4af0-93ed-05af15470ccc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-18T13:00:01Z",
+          "DocumentName": "88f5510b-4f02-4c08-a2ef-f02c15e341fc.pdf",
+          "CaseName": "JANET ELSIE LOWE v DIRECTOR-GENERAL OF HEALTH, MINISTRY OF HEALTH [2017] NZSC 191 [18 December 2017]",
+          "id": "jdo/df/alfresco/service/api/node/content/workspace/SpacesStore/88f5510b-4f02-4c08-a2ef-f02c15e341fc/88f5510b-4f02-4c08-a2ef-f02c15e341fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-18T13:00:01Z",
+          "DocumentName": "b0e2dfb5-90ec-4c46-8888-3a1834541aee.pdf",
+          "CaseName": "MCLANAHAN v THE NEW ZEALAND REGISTERED ARCHITECTS BOARD [2017] NZCA 606 [18 December 2017]",
+          "id": "jdo/e6/alfresco/service/api/node/content/workspace/SpacesStore/b0e2dfb5-90ec-4c46-8888-3a1834541aee/b0e2dfb5-90ec-4c46-8888-3a1834541aee.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-18T13:00:01Z",
+          "DocumentName": "efdff87b-74d0-4151-8e08-c81c46723a40.pdf",
+          "CaseName": "GANGNAM PROPERTY INVESTMENTS LTD v AFFIN INTERIORS LTD & Anor [2017] NZHC 3197 _x000b_[15 December 2017]",
+          "id": "jdo/64/alfresco/service/api/node/content/workspace/SpacesStore/efdff87b-74d0-4151-8e08-c81c46723a40/efdff87b-74d0-4151-8e08-c81c46723a40.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-18T13:00:01Z",
+          "DocumentName": "e1275929-bead-457a-9ce5-5762f68c06f2.pdf",
+          "CaseName": "GUO v BOURKE & TOTHILL [2017] NZCA 609 [18 December 2017]",
+          "id": "jdo/24/alfresco/service/api/node/content/workspace/SpacesStore/e1275929-bead-457a-9ce5-5762f68c06f2/e1275929-bead-457a-9ce5-5762f68c06f2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-18T13:00:01Z",
+          "DocumentName": "ec412400-a431-4284-9859-58a3ac2e1585.pdf",
+          "CaseName": "R v MCLEAN [2017] NZHC 3183 [18 December 2017]",
+          "id": "jdo/49/alfresco/service/api/node/content/workspace/SpacesStore/ec412400-a431-4284-9859-58a3ac2e1585/ec412400-a431-4284-9859-58a3ac2e1585.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "55a28689-a2ba-4008-b4e0-213f174f2387.pdf",
+          "CaseName": "REDAI v NEW ZEALAND POLICE [2017] NZHC 3173 [15 December 2017]",
+          "id": "jdo/64/alfresco/service/api/node/content/workspace/SpacesStore/55a28689-a2ba-4008-b4e0-213f174f2387/55a28689-a2ba-4008-b4e0-213f174f2387.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "2bb8437b-8093-4361-9286-9365ebe9690f.pdf",
+          "CaseName": "R v Sami [2017] NZHC 3159 [15 December 2017]",
+          "id": "jdo/bc/alfresco/service/api/node/content/workspace/SpacesStore/2bb8437b-8093-4361-9286-9365ebe9690f/2bb8437b-8093-4361-9286-9365ebe9690f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "26f6a58f-e567-464f-8c5b-9251ce0695e8.pdf",
+          "CaseName": "MCLANAHAN AND TAN v STUDIO OF PACIFIC ARCHITECTURE LIMITED [2017] NZHC 3174 [15 December 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/26f6a58f-e567-464f-8c5b-9251ce0695e8/26f6a58f-e567-464f-8c5b-9251ce0695e8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "1c163e98-c346-44a1-b599-2f7188f1cb8b.pdf",
+          "CaseName": "FARR v ROSS MILLER [2017] NZHC 3150 [15 December 2017]",
+          "id": "jdo/1f/alfresco/service/api/node/content/workspace/SpacesStore/1c163e98-c346-44a1-b599-2f7188f1cb8b/1c163e98-c346-44a1-b599-2f7188f1cb8b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "ad6f43a3-0db1-4e07-bfeb-39926e33a934.pdf",
+          "CaseName": "MOUAT v R [2017] NZCA 603",
+          "id": "jdo/57/alfresco/service/api/node/content/workspace/SpacesStore/ad6f43a3-0db1-4e07-bfeb-39926e33a934/ad6f43a3-0db1-4e07-bfeb-39926e33a934.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "ebec4869-8b5e-4e08-8049-09188f1bb739.pdf",
+          "CaseName": "DU FALL & ORS v TAURANGA BRIDGE MARINA LTD [2017] NZHC 3165 [15 December 2017]",
+          "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/ebec4869-8b5e-4e08-8049-09188f1bb739/ebec4869-8b5e-4e08-8049-09188f1bb739.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "3c1d5533-4fb0-46ee-9025-a7bf84477b6f.pdf",
+          "CaseName": "KIMBLE CONTRACTING LTD v WOULDES & ANOR [2017] NZHC 3151 [15 December 2017]",
+          "id": "jdo/f6/alfresco/service/api/node/content/workspace/SpacesStore/3c1d5533-4fb0-46ee-9025-a7bf84477b6f/3c1d5533-4fb0-46ee-9025-a7bf84477b6f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "55702453-0fe2-4fc8-ab66-856be81bae35.pdf",
+          "CaseName": "THE COMMISSIONER OF INLAND REVENUE v CHESTERFIELDS PRESCHOOLS LTD & SISSON [2017] NZHC 3172 [15 December 2017]",
+          "id": "jdo/6d/alfresco/service/api/node/content/workspace/SpacesStore/55702453-0fe2-4fc8-ab66-856be81bae35/55702453-0fe2-4fc8-ab66-856be81bae35.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "a08e4025-3972-4f21-b6a7-b92aa0436374.pdf",
+          "CaseName": "ALUSI LTD v CREATIVE DENTISTRY LTD [2017] NZHC 3154 [15 December 2017]",
+          "id": "jdo/65/alfresco/service/api/node/content/workspace/SpacesStore/a08e4025-3972-4f21-b6a7-b92aa0436374/a08e4025-3972-4f21-b6a7-b92aa0436374.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "13e76bcb-6d59-417a-90cb-45635b289323.pdf",
+          "CaseName": "MARINO v NEW ZEALAND POLICE [2017] NZCA 594 [15 December 2017]",
+          "id": "jdo/57/alfresco/service/api/node/content/workspace/SpacesStore/13e76bcb-6d59-417a-90cb-45635b289323/13e76bcb-6d59-417a-90cb-45635b289323.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "0995d0ab-7708-4c68-8f4f-5d9a7945fdc8.pdf",
+          "CaseName": "THORN v UNITED STEEL LTD [2017] NZHC 3152 [15 December 2017]",
+          "id": "jdo/46/alfresco/service/api/node/content/workspace/SpacesStore/0995d0ab-7708-4c68-8f4f-5d9a7945fdc8/0995d0ab-7708-4c68-8f4f-5d9a7945fdc8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "39c96291-467b-4ce5-bb22-e48aeb61a6ab.pdf",
+          "CaseName": "KIM DOTCOM v THE DISTRICT COURT AT NORTH SHORE [2017] NZHC 3158 [15 December 2017]",
+          "id": "jdo/9d/alfresco/service/api/node/content/workspace/SpacesStore/39c96291-467b-4ce5-bb22-e48aeb61a6ab/39c96291-467b-4ce5-bb22-e48aeb61a6ab.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "99067625-3db1-4d77-ac4a-e32b89b372e7.pdf",
+          "CaseName": "GENGE v VISITING JUSTICE AT CHRISTCHURCH MENʼS PRISON [2017] NZHC 3168 [15 December 2017]",
+          "id": "jdo/a6/alfresco/service/api/node/content/workspace/SpacesStore/99067625-3db1-4d77-ac4a-e32b89b372e7/99067625-3db1-4d77-ac4a-e32b89b372e7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "f212f88f-ee63-4a91-86a0-80060f945295.pdf",
+          "CaseName": "MINISTER OF EDUCATION v H CONSTRUCTION NORTH ISLAND LIMITED [2017] NZHC 3147 [15 December 2017]",
+          "id": "jdo/b8/alfresco/service/api/node/content/workspace/SpacesStore/f212f88f-ee63-4a91-86a0-80060f945295/f212f88f-ee63-4a91-86a0-80060f945295.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-15T13:00:01Z",
+          "DocumentName": "a5b2169e-dadc-43d8-8ea1-86937b085133.pdf",
+          "CaseName": "T (CA251/2017) v R [2017] NZCA 595 [15 December 2017]",
+          "id": "jdo/c4/alfresco/service/api/node/content/workspace/SpacesStore/a5b2169e-dadc-43d8-8ea1-86937b085133/a5b2169e-dadc-43d8-8ea1-86937b085133.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "0644459d-1717-4e39-98c5-991bb183b0bb.pdf",
+          "CaseName": "SOUTHLAND INDOOR LEISURE CENTRE CHARITABLE TRUST v INVERCARGILL CITY COUNCIL [2017] NZSC 190 [14 December 2017]",
+          "id": "jdo/79/alfresco/service/api/node/content/workspace/SpacesStore/0644459d-1717-4e39-98c5-991bb183b0bb/0644459d-1717-4e39-98c5-991bb183b0bb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "a8c5455a-efd3-4f20-9316-7b3f62cab811.pdf",
+          "CaseName": "MCMILLAN v QUEENSTOWN LAKES DISTRICT COUNCIL [2017] NZHC 3148 [14 December 2017]",
+          "id": "jdo/13/alfresco/service/api/node/content/workspace/SpacesStore/a8c5455a-efd3-4f20-9316-7b3f62cab811/a8c5455a-efd3-4f20-9316-7b3f62cab811.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "c6d3721a-cc75-4e72-ac61-3100369bf73e.pdf",
+          "CaseName": "MITCHELL v POLICE [2017] NZHC 3143 [14 December 2017]",
+          "id": "jdo/f5/alfresco/service/api/node/content/workspace/SpacesStore/c6d3721a-cc75-4e72-ac61-3100369bf73e/c6d3721a-cc75-4e72-ac61-3100369bf73e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "d1fa0822-2dc2-4f42-ac9f-98e0b1ceeb27.pdf",
+          "CaseName": "Estate of DW Carson [2017] NZHC 3144 [14 December 2017]",
+          "id": "jdo/1b/alfresco/service/api/node/content/workspace/SpacesStore/d1fa0822-2dc2-4f42-ac9f-98e0b1ceeb27/d1fa0822-2dc2-4f42-ac9f-98e0b1ceeb27.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "1fdd4801-9aec-4736-9cdb-8252cc3409ec.pdf",
+          "CaseName": "BUTCH PET FOODS LTD v MAC MOTORS LTD [2017] NZHC 3133 [14 December 2017]",
+          "id": "jdo/9c/alfresco/service/api/node/content/workspace/SpacesStore/1fdd4801-9aec-4736-9cdb-8252cc3409ec/1fdd4801-9aec-4736-9cdb-8252cc3409ec.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "8b3312b0-704b-40e4-ba92-7800f204d5e8.pdf",
+          "CaseName": "THE FISH MAN LIMITED (IN LIQUIDATION) v HADFIELD [2017] NZCA 589 [14 December 2017]",
+          "id": "jdo/49/alfresco/service/api/node/content/workspace/SpacesStore/8b3312b0-704b-40e4-ba92-7800f204d5e8/8b3312b0-704b-40e4-ba92-7800f204d5e8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "7f22ff0f-fb77-40fb-b15c-13d334de3a7e.pdf",
+          "CaseName": "L & M COAL HOLDINGS LIMITED v BATHURST RESOURCES LIMITED [2017] NZHC 3138 [14 December 2017]",
+          "id": "jdo/71/alfresco/service/api/node/content/workspace/SpacesStore/7f22ff0f-fb77-40fb-b15c-13d334de3a7e/7f22ff0f-fb77-40fb-b15c-13d334de3a7e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "cf80fa7a-6115-4ebb-83a1-01937d1df351.pdf",
+          "CaseName": "WEI v NEW ZEALAND POLICE [2017] NZHC 3111 [14 December 2017]",
+          "id": "jdo/a4/alfresco/service/api/node/content/workspace/SpacesStore/cf80fa7a-6115-4ebb-83a1-01937d1df351/cf80fa7a-6115-4ebb-83a1-01937d1df351.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "fde72b66-432d-4b90-9cb8-d8d2602bf1ca.pdf",
+          "CaseName": "EZIPAINT LIMITED (IN LIQUIDATION) & ORS v PETERS HOLDINGS TRUSTEE LIMITED [2017] NZHC 3139 [14 December 2017]",
+          "id": "jdo/14/alfresco/service/api/node/content/workspace/SpacesStore/fde72b66-432d-4b90-9cb8-d8d2602bf1ca/fde72b66-432d-4b90-9cb8-d8d2602bf1ca.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "0234ab18-352c-4812-9720-4f4857c7f6a1.pdf",
+          "CaseName": "MAAN AND SINGH v KEYS [2017] NZHC 3126 [14 December 2017]",
+          "id": "jdo/e9/alfresco/service/api/node/content/workspace/SpacesStore/0234ab18-352c-4812-9720-4f4857c7f6a1/0234ab18-352c-4812-9720-4f4857c7f6a1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "aba6a444-78e6-4be0-86fa-3b7998727fd3.pdf",
+          "CaseName": "NGOI v WEN [2017] NZCA 598 [14 December 2017]",
+          "id": "jdo/6f/alfresco/service/api/node/content/workspace/SpacesStore/aba6a444-78e6-4be0-86fa-3b7998727fd3/aba6a444-78e6-4be0-86fa-3b7998727fd3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "fbaa4d9c-bb54-42c5-bffc-e4f60ca6a711.pdf",
+          "CaseName": "POLICE v HARRISON [2017] NZHC 3140 [14 December 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/fbaa4d9c-bb54-42c5-bffc-e4f60ca6a711/fbaa4d9c-bb54-42c5-bffc-e4f60ca6a711.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "3eb0e553-1e29-44a6-86d5-b5717014da0b.pdf",
+          "CaseName": "TAYLOR v R [2017] NZCA 574 [14 December 2017]",
+          "id": "jdo/bd/alfresco/service/api/node/content/workspace/SpacesStore/3eb0e553-1e29-44a6-86d5-b5717014da0b/3eb0e553-1e29-44a6-86d5-b5717014da0b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-14T13:00:01Z",
+          "DocumentName": "3d5df1f7-98f5-40ef-8be7-1d2546db653b.pdf",
+          "CaseName": "MCLEAN v THE QUEEN [2017] NZHC 3127 [14 December 2017]",
+          "id": "jdo/a7/alfresco/service/api/node/content/workspace/SpacesStore/3d5df1f7-98f5-40ef-8be7-1d2546db653b/3d5df1f7-98f5-40ef-8be7-1d2546db653b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "970a2aae-a8f3-4ea0-8e9b-d2ca0f10f490.pdf",
+          "CaseName": "ASB BANK LTD v SGARGETTA [2017] NZHC 3097 [13 December 2017]",
+          "id": "jdo/5c/alfresco/service/api/node/content/workspace/SpacesStore/970a2aae-a8f3-4ea0-8e9b-d2ca0f10f490/970a2aae-a8f3-4ea0-8e9b-d2ca0f10f490.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "800f6e90-e9b0-4b8c-80c8-057ef4af227b.pdf",
+          "CaseName": "GREEN v POLICE [2017] NZHC 3101 [13 December 2017]",
+          "id": "jdo/4b/alfresco/service/api/node/content/workspace/SpacesStore/800f6e90-e9b0-4b8c-80c8-057ef4af227b/800f6e90-e9b0-4b8c-80c8-057ef4af227b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "bf214260-55fe-47eb-a8e7-1c4afa389d59.pdf",
+          "CaseName": "TE TANGATA WHENUA (WARREN) v THE CHIEF EXECUTIVE OF THE DEPARTMENT OF CORRECTIONS [2017] NZSC 189 [13 December 2017]",
+          "id": "jdo/25/alfresco/service/api/node/content/workspace/SpacesStore/bf214260-55fe-47eb-a8e7-1c4afa389d59/bf214260-55fe-47eb-a8e7-1c4afa389d59.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "89c2f731-ebcc-44fc-8d81-9d63fd30edd8.pdf",
+          "CaseName": "GREENPEACE OF NEW ZEALAND CORPORATED v MINISTER OF CONSERVATION [2017] NZHC 3114 [13 December 2017]",
+          "id": "jdo/de/alfresco/service/api/node/content/workspace/SpacesStore/89c2f731-ebcc-44fc-8d81-9d63fd30edd8/89c2f731-ebcc-44fc-8d81-9d63fd30edd8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "d4a6df0b-d5c4-48f2-9db6-101daa862164.pdf",
+          "CaseName": "RABSON v JUDICIAL CONDUCT COMMISSIONER [2017] NZHC 3112 [13 December 2017]",
+          "id": "jdo/87/alfresco/service/api/node/content/workspace/SpacesStore/d4a6df0b-d5c4-48f2-9db6-101daa862164/d4a6df0b-d5c4-48f2-9db6-101daa862164.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "d95efedf-e5d2-4ed3-bc33-67840145f9c5.pdf",
+          "CaseName": "JAMES v NEWTON & JEFFERY AS EXECUTORS OF THE ESTATE OF SANDRA GARDINER Costs Judgment [2017] NZHC 3103 [13 December 2017]",
+          "id": "jdo/f3/alfresco/service/api/node/content/workspace/SpacesStore/d95efedf-e5d2-4ed3-bc33-67840145f9c5/d95efedf-e5d2-4ed3-bc33-67840145f9c5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "e9c39c5f-cf89-4cf5-9c84-0ecd21bd8e5e.pdf",
+          "CaseName": "COUPER v R [2017] NZCA 588 [13 December 2017]",
+          "id": "jdo/c6/alfresco/service/api/node/content/workspace/SpacesStore/e9c39c5f-cf89-4cf5-9c84-0ecd21bd8e5e/e9c39c5f-cf89-4cf5-9c84-0ecd21bd8e5e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "1873cdf3-74fd-4d23-97c2-536980164251.pdf",
+          "CaseName": "LAWTON v REDEMPTECH HOLDINGS PTE LTD [2017] NZHC 3104 [13 December 2017]",
+          "id": "jdo/d7/alfresco/service/api/node/content/workspace/SpacesStore/1873cdf3-74fd-4d23-97c2-536980164251/1873cdf3-74fd-4d23-97c2-536980164251.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "55310295-4299-4522-9781-94c857dfa6fc.pdf",
+          "CaseName": "WOODS v NEW ZEALAND POLICE [2017] NZHC 3093 [13 December 2017]",
+          "id": "jdo/3c/alfresco/service/api/node/content/workspace/SpacesStore/55310295-4299-4522-9781-94c857dfa6fc/55310295-4299-4522-9781-94c857dfa6fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "d014d58a-4ab5-42bc-b712-9be28a9eee2d.pdf",
+          "CaseName": "Re Heasley (deceased) [2017] NZHC 3099 [13 December 2017]",
+          "id": "jdo/d9/alfresco/service/api/node/content/workspace/SpacesStore/d014d58a-4ab5-42bc-b712-9be28a9eee2d/d014d58a-4ab5-42bc-b712-9be28a9eee2d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "87f78ede-05ee-4fa3-9ce9-2313818cde42.pdf",
+          "CaseName": "GAUNT v NEW ZEALAND POLICE [2017] NZCA 590 [13 December 2017]",
+          "id": "jdo/7a/alfresco/service/api/node/content/workspace/SpacesStore/87f78ede-05ee-4fa3-9ce9-2313818cde42/87f78ede-05ee-4fa3-9ce9-2313818cde42.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "a4bbc9dd-edd9-4ed0-80a1-893b3eea1657.pdf",
+          "CaseName": "EASTLIGHT ASSET TRADING NO.3 LIMITED v JAAFAR HOLDINGS LIMITED [2017] NZHC 3105 [13 December 2017]",
+          "id": "jdo/2e/alfresco/service/api/node/content/workspace/SpacesStore/a4bbc9dd-edd9-4ed0-80a1-893b3eea1657/a4bbc9dd-edd9-4ed0-80a1-893b3eea1657.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-13T13:00:01Z",
+          "DocumentName": "baa4c0e5-a7c1-4353-b5d3-29c0afbc7238.pdf",
+          "CaseName": "OFFICIAL ASSIGNEE v MATHIESEN [2017] NZHC 3108 [13 December 2017]",
+          "id": "jdo/db/alfresco/service/api/node/content/workspace/SpacesStore/baa4c0e5-a7c1-4353-b5d3-29c0afbc7238/baa4c0e5-a7c1-4353-b5d3-29c0afbc7238.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "d8ab30ed-21dd-4f27-92c3-6936e6b1b2d4.pdf",
+          "CaseName": "CASSIDY v POLICE [2017] NZHC 3079 [12 December 2017]",
+          "id": "jdo/e3/alfresco/service/api/node/content/workspace/SpacesStore/d8ab30ed-21dd-4f27-92c3-6936e6b1b2d4/d8ab30ed-21dd-4f27-92c3-6936e6b1b2d4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "e252e637-bdf3-4c7c-80c1-2bd41eff59ba.pdf",
+          "CaseName": "IRVINE v NEW ZEALAND POLICE [2017] NZHC 3085 [12 December 2017]",
+          "id": "jdo/a8/alfresco/service/api/node/content/workspace/SpacesStore/e252e637-bdf3-4c7c-80c1-2bd41eff59ba/e252e637-bdf3-4c7c-80c1-2bd41eff59ba.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "9554a3e9-c5e5-46f6-9758-30da1cf3d447.pdf",
+          "CaseName": "ANDREWS v NEW ZEALAND POLICE [2017] NZHC 3073 [12 December 2017]",
+          "id": "jdo/c6/alfresco/service/api/node/content/workspace/SpacesStore/9554a3e9-c5e5-46f6-9758-30da1cf3d447/9554a3e9-c5e5-46f6-9758-30da1cf3d447.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "cdbaeda1-3cf5-4b33-b202-b4dad95d5d13.pdf",
+          "CaseName": "THE COMMISSIONER OF THE NEW ZEALAND POLICE v KARL ALFRED TRUAN DOLLMAN [2017] NZHC 3094 [12 December 2017]",
+          "id": "jdo/3c/alfresco/service/api/node/content/workspace/SpacesStore/cdbaeda1-3cf5-4b33-b202-b4dad95d5d13/cdbaeda1-3cf5-4b33-b202-b4dad95d5d13.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "86824cc9-f4a7-4890-b8d2-6e2787ea25ae.pdf",
+          "CaseName": "H v CAPITAL AND COAST DISTRICT HEALTH BOARD [2017] NZHC 3092 [12 December 2017]",
+          "id": "jdo/89/alfresco/service/api/node/content/workspace/SpacesStore/86824cc9-f4a7-4890-b8d2-6e2787ea25ae/86824cc9-f4a7-4890-b8d2-6e2787ea25ae.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "d04d6ab3-38e8-4640-8b4e-8406c75bdc3c.pdf",
+          "CaseName": "YLs (CA174/2017) v REFUGEE AND PROTECTION OFFICER [2017] NZCA 582 [12 December 2017]",
+          "id": "jdo/a9/alfresco/service/api/node/content/workspace/SpacesStore/d04d6ab3-38e8-4640-8b4e-8406c75bdc3c/d04d6ab3-38e8-4640-8b4e-8406c75bdc3c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "7aa60f51-eb06-480b-b782-15667c44d91e.pdf",
+          "CaseName": "MCGUIRE v SECRETARY FOR JUSTICE [2017] NZCA 583 [12 December 2017]",
+          "id": "jdo/c2/alfresco/service/api/node/content/workspace/SpacesStore/7aa60f51-eb06-480b-b782-15667c44d91e/7aa60f51-eb06-480b-b782-15667c44d91e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "c0a862c7-5aa4-4ce7-89ac-e3403b2a92a6.pdf",
+          "CaseName": "KELSEY v TANIORA re estate of LAWRENCE PERKINSON [2017] NZHC 3234 [12 December 2017]",
+          "id": "jdo/67/alfresco/service/api/node/content/workspace/SpacesStore/c0a862c7-5aa4-4ce7-89ac-e3403b2a92a6/c0a862c7-5aa4-4ce7-89ac-e3403b2a92a6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "6dbe411a-1d6b-465b-aa3f-0abdbae3d010.pdf",
+          "CaseName": "DAVIS & MCNIECE AS TRUSTEES OF THE REX WHITE FAMILY TRUST v WHITE [2017] NZCA 585 [12 December 2017]",
+          "id": "jdo/6b/alfresco/service/api/node/content/workspace/SpacesStore/6dbe411a-1d6b-465b-aa3f-0abdbae3d010/6dbe411a-1d6b-465b-aa3f-0abdbae3d010.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "dcd4f7c0-ed0b-4be6-9990-9fe9e8c85895.pdf",
+          "CaseName": "BURDON v NEW ZEALAND POLICE [2017] NZHC  3088 [12 December 2017]",
+          "id": "jdo/f5/alfresco/service/api/node/content/workspace/SpacesStore/dcd4f7c0-ed0b-4be6-9990-9fe9e8c85895/dcd4f7c0-ed0b-4be6-9990-9fe9e8c85895.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "d6783393-3d83-4429-b575-fc0f4094d070.pdf",
+          "CaseName": "CRONIN v POLICE [2017] NZHC 3078 [12 December 2017]",
+          "id": "jdo/ec/alfresco/service/api/node/content/workspace/SpacesStore/d6783393-3d83-4429-b575-fc0f4094d070/d6783393-3d83-4429-b575-fc0f4094d070.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-12T13:00:01Z",
+          "DocumentName": "7939ced8-44fe-4392-9f84-a3f1420ea674.pdf",
+          "CaseName": "ROYAL FOREST AND BIRD PROTECTION SOCIETY OF NZ INC v BAY OF PLENTY REGIONAL COUNCIL [2017] NZHC 3080 [12 December 2017]",
+          "id": "jdo/3e/alfresco/service/api/node/content/workspace/SpacesStore/7939ced8-44fe-4392-9f84-a3f1420ea674/7939ced8-44fe-4392-9f84-a3f1420ea674.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "a2537b93-acf8-45ea-a645-fe2394f0f889.pdf",
+          "CaseName": "W (CA639/2016) v R [2017] NZCA 580 [11 December 2017]",
+          "id": "jdo/7d/alfresco/service/api/node/content/workspace/SpacesStore/a2537b93-acf8-45ea-a645-fe2394f0f889/a2537b93-acf8-45ea-a645-fe2394f0f889.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "067570aa-1b52-47d7-a306-e789e243b695.pdf",
+          "CaseName": "MCINTYRE v R [2017] NZCA 579 [11 December 2017]",
+          "id": "jdo/c2/alfresco/service/api/node/content/workspace/SpacesStore/067570aa-1b52-47d7-a306-e789e243b695/067570aa-1b52-47d7-a306-e789e243b695.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "c389f1f9-a03f-4d6e-8150-f80d4f54016c.pdf",
+          "CaseName": "VAN UDEN v THE COMMISSIONER OF INLAND REVENUE [2017] NZHC 3058 [11 December 2017]",
+          "id": "jdo/d6/alfresco/service/api/node/content/workspace/SpacesStore/c389f1f9-a03f-4d6e-8150-f80d4f54016c/c389f1f9-a03f-4d6e-8150-f80d4f54016c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "e987f41c-12c1-4ae3-b44b-c5dfe53ec1ad.pdf",
+          "CaseName": "DE VRIES v BARTERCARD EXCHANGE LIMITED [2017] NZSC 186 [11 December 2017]",
+          "id": "jdo/d4/alfresco/service/api/node/content/workspace/SpacesStore/e987f41c-12c1-4ae3-b44b-c5dfe53ec1ad/e987f41c-12c1-4ae3-b44b-c5dfe53ec1ad.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "14be6fce-74cc-4797-8fa6-a4eb8d4a79e2.pdf",
+          "CaseName": "SINGH v POLICE [2017] NZHC 3064 [11 December 2017]",
+          "id": "jdo/13/alfresco/service/api/node/content/workspace/SpacesStore/14be6fce-74cc-4797-8fa6-a4eb8d4a79e2/14be6fce-74cc-4797-8fa6-a4eb8d4a79e2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "e54246b3-1fc4-4ae6-b312-e6ebf225f9e1.pdf",
+          "CaseName": "KENNEDY v NEW ZEALAND POLICE [2017] NZHC 3066 [11 December 2017]",
+          "id": "jdo/83/alfresco/service/api/node/content/workspace/SpacesStore/e54246b3-1fc4-4ae6-b312-e6ebf225f9e1/e54246b3-1fc4-4ae6-b312-e6ebf225f9e1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "f32f693a-32ca-4a79-a2aa-bd23b2bafe01.pdf",
+          "CaseName": "AITKENHEAD & ANOR v KOOPERBERG & ANOR [2017] NZHC 3071 [11 December 2017]",
+          "id": "jdo/f9/alfresco/service/api/node/content/workspace/SpacesStore/f32f693a-32ca-4a79-a2aa-bd23b2bafe01/f32f693a-32ca-4a79-a2aa-bd23b2bafe01.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "d6857f88-7dcd-44ec-ba7d-da1b8c53349d.pdf",
+          "CaseName": "ROMANOV v THE CHIEF EXECUTIVE, DEPARTMENT OF CORRECTIONS [2017] NZHC 3060 [11 December 2017]",
+          "id": "jdo/85/alfresco/service/api/node/content/workspace/SpacesStore/d6857f88-7dcd-44ec-ba7d-da1b8c53349d/d6857f88-7dcd-44ec-ba7d-da1b8c53349d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "84ad2296-f937-4dc5-a9c0-f2b2494d7661.pdf",
+          "CaseName": "NOTTINGHAM v THE AUCKLAND DISTRICT COURT & ANOR [2017] NZHC 3056 [11 December 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/84ad2296-f937-4dc5-a9c0-f2b2494d7661/84ad2296-f937-4dc5-a9c0-f2b2494d7661.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "e1c7d2ae-182f-4054-963e-224eb71e5343.pdf",
+          "CaseName": "DANIELS v POLICE [2017] NZHC 3070 [11 December 2017]",
+          "id": "jdo/fe/alfresco/service/api/node/content/workspace/SpacesStore/e1c7d2ae-182f-4054-963e-224eb71e5343/e1c7d2ae-182f-4054-963e-224eb71e5343.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "431d3475-7afb-417d-8094-0c35c93835fa.pdf",
+          "CaseName": "CHATHAM ROCK PHOSPHATE LTD v THE ENVIRONMENTAL PROTECTION AUTHORITY [2017] NZHC 3076 [11 December 2017]",
+          "id": "jdo/ac/alfresco/service/api/node/content/workspace/SpacesStore/431d3475-7afb-417d-8094-0c35c93835fa/431d3475-7afb-417d-8094-0c35c93835fa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-11T13:00:01Z",
+          "DocumentName": "f63fa328-7cde-4887-bab0-041de38e3145.pdf",
+          "CaseName": "DEPARTMENT OF CORRECTIONS v PORI [2017] NZHC 3082 [11 December 2017]",
+          "id": "jdo/19/alfresco/service/api/node/content/workspace/SpacesStore/f63fa328-7cde-4887-bab0-041de38e3145/f63fa328-7cde-4887-bab0-041de38e3145.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "ed1d052a-998d-4ce0-b392-372ac4b517df.pdf",
+          "CaseName": "THE OFFICIAL ASSIGNEE v MWA CONSULTANTS LTD [2017] NZHC 3054 [8 December 2017]",
+          "id": "jdo/61/alfresco/service/api/node/content/workspace/SpacesStore/ed1d052a-998d-4ce0-b392-372ac4b517df/ed1d052a-998d-4ce0-b392-372ac4b517df.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "62db09ba-4233-4430-a9d0-0ff4753c5a1a.pdf",
+          "CaseName": "CADLE v NEW ZEALAND POLICE [2017] NZHC 3042 [8 December 2017]",
+          "id": "jdo/af/alfresco/service/api/node/content/workspace/SpacesStore/62db09ba-4233-4430-a9d0-0ff4753c5a1a/62db09ba-4233-4430-a9d0-0ff4753c5a1a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "9485a22e-6540-4c33-84fd-ac836258d4c1.pdf",
+          "CaseName": "CONFIDENT TRUSTEE LIMITED v GARDEN AND TREES LIMITED [2017] NZCA 578 [8 December 2017]",
+          "id": "jdo/25/alfresco/service/api/node/content/workspace/SpacesStore/9485a22e-6540-4c33-84fd-ac836258d4c1/9485a22e-6540-4c33-84fd-ac836258d4c1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "ed7d64de-a43d-487c-842e-094d39d9b59f.pdf",
+          "CaseName": "Wright v Wright [2017] NZHC 3053 [8 December 2017]",
+          "id": "jdo/e0/alfresco/service/api/node/content/workspace/SpacesStore/ed7d64de-a43d-487c-842e-094d39d9b59f/ed7d64de-a43d-487c-842e-094d39d9b59f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "34612b0a-71a5-49ac-8908-2284a0ad978a.pdf",
+          "CaseName": "R v NICHOLAS [2017] NZHC 3043 [8 December 2017]",
+          "id": "jdo/a6/alfresco/service/api/node/content/workspace/SpacesStore/34612b0a-71a5-49ac-8908-2284a0ad978a/34612b0a-71a5-49ac-8908-2284a0ad978a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-08T13:00:01Z",
+          "DocumentName": "314f5357-a1ef-4708-bdd5-69053c4e7f4c.pdf",
+          "CaseName": "LAGOLAGO v WELLINGTON STANDARDS COMMITTEE 2 [2017] NZHC 3038 [8 December 2017]",
+          "id": "jdo/89/alfresco/service/api/node/content/workspace/SpacesStore/314f5357-a1ef-4708-bdd5-69053c4e7f4c/314f5357-a1ef-4708-bdd5-69053c4e7f4c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "b0878b28-e01e-44f3-8e5a-a92607094d8e.pdf",
+          "CaseName": "R v ULUTUPU [2017] NZHC 3025 [7 December 2017]",
+          "id": "jdo/4d/alfresco/service/api/node/content/workspace/SpacesStore/b0878b28-e01e-44f3-8e5a-a92607094d8e/b0878b28-e01e-44f3-8e5a-a92607094d8e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "747941b2-7892-49c3-ab34-e3f092efbb86.pdf",
+          "CaseName": "JENNER v NEW ZEALAND POLICE [2017] NZHC 3031 [7 December 2017]",
+          "id": "jdo/8f/alfresco/service/api/node/content/workspace/SpacesStore/747941b2-7892-49c3-ab34-e3f092efbb86/747941b2-7892-49c3-ab34-e3f092efbb86.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "41406e19-11cb-477b-9b5b-58294ebdeef1.pdf",
+          "CaseName": "ULSTERMAN HOLDINGS LIMITED (IN LIQ) v WALLS [2017] NZHC 3040 [7 December 2017]",
+          "id": "jdo/12/alfresco/service/api/node/content/workspace/SpacesStore/41406e19-11cb-477b-9b5b-58294ebdeef1/41406e19-11cb-477b-9b5b-58294ebdeef1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "1b614f85-3c4c-47c3-ba57-6dfc52796558.pdf",
+          "CaseName": "LIANG LIU V R [2017] NZCA 573 [7 December 2017]",
+          "id": "jdo/8a/alfresco/service/api/node/content/workspace/SpacesStore/1b614f85-3c4c-47c3-ba57-6dfc52796558/1b614f85-3c4c-47c3-ba57-6dfc52796558.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "adf5a4de-c180-498c-b972-d6f7300ecbeb.pdf",
+          "CaseName": "HUGHES v FEA & HEENAN [2017] NZHC 3037 [7 December 2017]",
+          "id": "jdo/cf/alfresco/service/api/node/content/workspace/SpacesStore/adf5a4de-c180-498c-b972-d6f7300ecbeb/adf5a4de-c180-498c-b972-d6f7300ecbeb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "735c1ab8-50a1-4642-b8e5-fe003a5fbcaa.pdf",
+          "CaseName": "Q v ACCIDENT COMPENSATION CORPORATION [2017] NZHC 3024 [7 December 2017]",
+          "id": "jdo/16/alfresco/service/api/node/content/workspace/SpacesStore/735c1ab8-50a1-4642-b8e5-fe003a5fbcaa/735c1ab8-50a1-4642-b8e5-fe003a5fbcaa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "700012a2-1fbd-45a1-9e57-67f4c92fb633.pdf",
+          "CaseName": "NOTTINGHAM & MCKINNEY v REAL ESTATE AGENTS DISCIPLINARY TRIBUNAL & HONEY [2017] NZHC 3018 [7 December 2017]",
+          "id": "jdo/8b/alfresco/service/api/node/content/workspace/SpacesStore/700012a2-1fbd-45a1-9e57-67f4c92fb633/700012a2-1fbd-45a1-9e57-67f4c92fb633.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "a9618e09-b0e9-4ff1-a506-6bbbae4b4c8e.pdf",
+          "CaseName": "THE BOARD OF TRUSTEES OF NELSON COLLEGE v FITCHETT [2017] NZCA 572 [7 December 2017]",
+          "id": "jdo/24/alfresco/service/api/node/content/workspace/SpacesStore/a9618e09-b0e9-4ff1-a506-6bbbae4b4c8e/a9618e09-b0e9-4ff1-a506-6bbbae4b4c8e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "55f7efac-d68d-4122-a471-bf4205bfd1dd.pdf",
+          "CaseName": "BLAIR v POLICE [2017] NZHC 3028 [7 December 2017]",
+          "id": "jdo/be/alfresco/service/api/node/content/workspace/SpacesStore/55f7efac-d68d-4122-a471-bf4205bfd1dd/55f7efac-d68d-4122-a471-bf4205bfd1dd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "1d531280-d040-423a-ad51-b32544a2be8c.pdf",
+          "CaseName": "THOMPSON v POLICE [2017] NZHC 3039 [7 December 2017]",
+          "id": "jdo/67/alfresco/service/api/node/content/workspace/SpacesStore/1d531280-d040-423a-ad51-b32544a2be8c/1d531280-d040-423a-ad51-b32544a2be8c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "5068b034-b5ef-4e59-8d63-9cf11011de85.pdf",
+          "CaseName": "PAUL v POLICE [2017] NZHC 3021 [7 December 2017]",
+          "id": "jdo/f9/alfresco/service/api/node/content/workspace/SpacesStore/5068b034-b5ef-4e59-8d63-9cf11011de85/5068b034-b5ef-4e59-8d63-9cf11011de85.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "11c11e0f-2c85-4d25-927c-f338e1baa395.pdf",
+          "CaseName": "MABEE v NEW ZEALAND POLICE [2017] NZCA 570 [7 December 2017]",
+          "id": "jdo/7a/alfresco/service/api/node/content/workspace/SpacesStore/11c11e0f-2c85-4d25-927c-f338e1baa395/11c11e0f-2c85-4d25-927c-f338e1baa395.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "9026a63b-65a5-4432-9834-982cc1f28deb.pdf",
+          "CaseName": "GAN v R [2017] NZCA 569 [7 December 2017]",
+          "id": "jdo/d3/alfresco/service/api/node/content/workspace/SpacesStore/9026a63b-65a5-4432-9834-982cc1f28deb/9026a63b-65a5-4432-9834-982cc1f28deb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "e19db6f6-6f3b-4fb2-8d2c-333bb056060b.pdf",
+          "CaseName": "TUIRIRANGI v NEW ZEALAND POLICE [2017] NZCA 571 [7 December 2017]",
+          "id": "jdo/d3/alfresco/service/api/node/content/workspace/SpacesStore/e19db6f6-6f3b-4fb2-8d2c-333bb056060b/e19db6f6-6f3b-4fb2-8d2c-333bb056060b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "5d1a0d85-d00d-417a-a1a3-7e8d9cb8321b.pdf",
+          "CaseName": "UDDERFIELD LTD v TARANAKI GALVANIZERS LTD COSTS [2017] NZHC 3019 [7 December 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/5d1a0d85-d00d-417a-a1a3-7e8d9cb8321b/5d1a0d85-d00d-417a-a1a3-7e8d9cb8321b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "ba48a6c0-c572-4eff-b9e6-cafbb72d3476.pdf",
+          "CaseName": "SUTTON v VAN DER AA [2017] NZHC 3006 [7 December 2017]",
+          "id": "jdo/3d/alfresco/service/api/node/content/workspace/SpacesStore/ba48a6c0-c572-4eff-b9e6-cafbb72d3476/ba48a6c0-c572-4eff-b9e6-cafbb72d3476.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-07T13:00:01Z",
+          "DocumentName": "6b08d96e-cab9-4bb2-a449-91b8f7c9e00d.pdf",
+          "CaseName": "PAIKEA v POLICE [2017] NZHC 3032 [7 December 2017]",
+          "id": "jdo/a6/alfresco/service/api/node/content/workspace/SpacesStore/6b08d96e-cab9-4bb2-a449-91b8f7c9e00d/6b08d96e-cab9-4bb2-a449-91b8f7c9e00d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "05e56d68-c8a7-4c9f-aee7-5eaf2f81f829.pdf",
+          "CaseName": "Radich v New Zealand Police [2017] NZHC 3013 [6 December 2017]",
+          "id": "jdo/f5/alfresco/service/api/node/content/workspace/SpacesStore/05e56d68-c8a7-4c9f-aee7-5eaf2f81f829/05e56d68-c8a7-4c9f-aee7-5eaf2f81f829.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "c7e0847e-9011-4c1f-8ab7-f462d028a111.pdf",
+          "CaseName": "HINEMANU NGARONOA, SANDRA WILDE, AND ARTHUR WILLIAM TAYLOR v ATTORNEY_x001e_GENERAL [2017] NZSC 183 [6 December 2017]",
+          "id": "jdo/8b/alfresco/service/api/node/content/workspace/SpacesStore/c7e0847e-9011-4c1f-8ab7-f462d028a111/c7e0847e-9011-4c1f-8ab7-f462d028a111.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "df3f65ef-2868-47e5-8e1b-1f0b631d39e2.pdf",
+          "CaseName": "R v ORCHARD [2017] NZHC 3015 [6 December 2017]",
+          "id": "jdo/40/alfresco/service/api/node/content/workspace/SpacesStore/df3f65ef-2868-47e5-8e1b-1f0b631d39e2/df3f65ef-2868-47e5-8e1b-1f0b631d39e2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "e0c05040-1367-4136-b263-de0ba9b9f6ce.pdf",
+          "CaseName": "TAMIHERE v COMMISSIONER OF INLAND REVENUE [2017] NZHC 3012 [6 December 2017]",
+          "id": "jdo/cd/alfresco/service/api/node/content/workspace/SpacesStore/e0c05040-1367-4136-b263-de0ba9b9f6ce/e0c05040-1367-4136-b263-de0ba9b9f6ce.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "00cc05d0-2109-4384-9602-d218c3b48f50.pdf",
+          "CaseName": "DA JIANG FAN v R [2017] NZSC 184 [6 December 2017]",
+          "id": "jdo/34/alfresco/service/api/node/content/workspace/SpacesStore/00cc05d0-2109-4384-9602-d218c3b48f50/00cc05d0-2109-4384-9602-d218c3b48f50.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "1d160e13-0b51-4ca9-b37d-19d610fc1a52.pdf",
+          "CaseName": "STEVEN IHAKA SYLVA V R [2017] NZCA 567 [6 December 2017]",
+          "id": "jdo/40/alfresco/service/api/node/content/workspace/SpacesStore/1d160e13-0b51-4ca9-b37d-19d610fc1a52/1d160e13-0b51-4ca9-b37d-19d610fc1a52.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "f4736f01-4c30-46a1-b56a-5a37a7c4082b.pdf",
+          "CaseName": "BROWN v R [2017] NZCA 565 [6 December 2017]",
+          "id": "jdo/26/alfresco/service/api/node/content/workspace/SpacesStore/f4736f01-4c30-46a1-b56a-5a37a7c4082b/f4736f01-4c30-46a1-b56a-5a37a7c4082b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-06T13:00:01Z",
+          "DocumentName": "bf159354-b210-4c97-a4e5-432a69f2a5cf.pdf",
+          "CaseName": "TE AHO v THE QUEEN [2017] NZHC 3014 [6 December 2017]",
+          "id": "jdo/35/alfresco/service/api/node/content/workspace/SpacesStore/bf159354-b210-4c97-a4e5-432a69f2a5cf/bf159354-b210-4c97-a4e5-432a69f2a5cf.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "40ebc734-94a6-49c7-a9ea-966501b9b5f7.pdf",
+          "CaseName": "DOIG v TOWER INSURANCE LIMITED [2017] NZHC 2997 [5 December 2017]",
+          "id": "jdo/13/alfresco/service/api/node/content/workspace/SpacesStore/40ebc734-94a6-49c7-a9ea-966501b9b5f7/40ebc734-94a6-49c7-a9ea-966501b9b5f7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "e7e28b96-b69c-4718-8abc-f0bb8c299fed.pdf",
+          "CaseName": "LEYLANDER v NZ PAROLE BOARD [2017] NZHC 2996 [5 December 2017]",
+          "id": "jdo/c1/alfresco/service/api/node/content/workspace/SpacesStore/e7e28b96-b69c-4718-8abc-f0bb8c299fed/e7e28b96-b69c-4718-8abc-f0bb8c299fed.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "924d06e5-da04-45df-a31f-860c6769fd3a.pdf",
+          "CaseName": "ASB BANK LIMITED v NEL [2017] NZCA 559 [5 December 2017]",
+          "id": "jdo/c2/alfresco/service/api/node/content/workspace/SpacesStore/924d06e5-da04-45df-a31f-860c6769fd3a/924d06e5-da04-45df-a31f-860c6769fd3a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "3c3616ab-dd36-4ebf-968f-9aad8f26754c.pdf",
+          "CaseName": "ABANO HEALTHCARE GROUP LTD v HEALTHCARE PARTNERS HOLDINGS LTD [2017] NZHC 3003 [5 December 2017]",
+          "id": "jdo/49/alfresco/service/api/node/content/workspace/SpacesStore/3c3616ab-dd36-4ebf-968f-9aad8f26754c/3c3616ab-dd36-4ebf-968f-9aad8f26754c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "3ef63a64-ee3d-40bf-a93c-c62f85d3ac53.pdf",
+          "CaseName": "IZARD WESTON v AYERS [2017] NZHC 3000 [5 December 2017]",
+          "id": "jdo/5f/alfresco/service/api/node/content/workspace/SpacesStore/3ef63a64-ee3d-40bf-a93c-c62f85d3ac53/3ef63a64-ee3d-40bf-a93c-c62f85d3ac53.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "4a131720-4a1a-462f-af05-cf687df4c442.pdf",
+          "CaseName": "LEVI JAMES KEIL V R [2017] NZCA 563 [5 December 2017]",
+          "id": "jdo/b4/alfresco/service/api/node/content/workspace/SpacesStore/4a131720-4a1a-462f-af05-cf687df4c442/4a131720-4a1a-462f-af05-cf687df4c442.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "de5b5535-490a-4ad3-a056-2eae8b2329d3.pdf",
+          "CaseName": "RAMKISSOON v THE COMMISSIONER OF POLICE [2017] NZCA 558 [5 December 2017]",
+          "id": "jdo/28/alfresco/service/api/node/content/workspace/SpacesStore/de5b5535-490a-4ad3-a056-2eae8b2329d3/de5b5535-490a-4ad3-a056-2eae8b2329d3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "1729d753-6d25-4960-9f81-6f0d44647570.pdf",
+          "CaseName": "GREGORY v THAMES COROMANDEL DISTRICT COUNCIL [2017] NZHC 3002 [5 December 2017]",
+          "id": "jdo/50/alfresco/service/api/node/content/workspace/SpacesStore/1729d753-6d25-4960-9f81-6f0d44647570/1729d753-6d25-4960-9f81-6f0d44647570.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "ba404df6-e07b-486d-b5ed-36e0677e0305.pdf",
+          "CaseName": "Meredith v Matarese [2017] NZHC 3005 [5 December 2017]",
+          "id": "jdo/6e/alfresco/service/api/node/content/workspace/SpacesStore/ba404df6-e07b-486d-b5ed-36e0677e0305/ba404df6-e07b-486d-b5ed-36e0677e0305.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-05T13:00:01Z",
+          "DocumentName": "95a65da3-9d09-40ae-884e-56995fc3649a.pdf",
+          "CaseName": "HANDY v NEW ZEALAND POLICE [2017] NZCA 557 [5 December 2017]",
+          "id": "jdo/92/alfresco/service/api/node/content/workspace/SpacesStore/95a65da3-9d09-40ae-884e-56995fc3649a/95a65da3-9d09-40ae-884e-56995fc3649a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "f91e97ec-6790-42ff-afe6-2e1b18f305b5.pdf",
+          "CaseName": "LOPES v NZ POLICE [2017] NZHC 2991 [4 December 2017]",
+          "id": "jdo/80/alfresco/service/api/node/content/workspace/SpacesStore/f91e97ec-6790-42ff-afe6-2e1b18f305b5/f91e97ec-6790-42ff-afe6-2e1b18f305b5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "c5016642-04c3-4e98-9954-b4c0b2404dd1.pdf",
+          "CaseName": "TAFERE v NZ POLICE [2017] NZHC 2992 [4 December 2017]",
+          "id": "jdo/ba/alfresco/service/api/node/content/workspace/SpacesStore/c5016642-04c3-4e98-9954-b4c0b2404dd1/c5016642-04c3-4e98-9954-b4c0b2404dd1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "e3dea6ae-24d5-471b-b05a-f32f6139d0a7.pdf",
+          "CaseName": "MYALL v TOWER INSURANCE LIMITED [2017] NZCA 561 [4 December 2017]",
+          "id": "jdo/a6/alfresco/service/api/node/content/workspace/SpacesStore/e3dea6ae-24d5-471b-b05a-f32f6139d0a7/e3dea6ae-24d5-471b-b05a-f32f6139d0a7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "ad49afb3-aef5-4ebb-b283-e356dad5162f.pdf",
+          "CaseName": "HOWARD v THE QUEEN [2017] NZHC 2986 [4 December 2017]",
+          "id": "jdo/4a/alfresco/service/api/node/content/workspace/SpacesStore/ad49afb3-aef5-4ebb-b283-e356dad5162f/ad49afb3-aef5-4ebb-b283-e356dad5162f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "6331aeb0-6ea7-4d59-bd5a-c03b0448ced1.pdf",
+          "CaseName": "LEONARD GUS NATTRASS-BERGQUIST v R [2017] NZCA 552 [4 December 2017]",
+          "id": "jdo/60/alfresco/service/api/node/content/workspace/SpacesStore/6331aeb0-6ea7-4d59-bd5a-c03b0448ced1/6331aeb0-6ea7-4d59-bd5a-c03b0448ced1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "eec4d56e-6bab-45c1-84c0-1d468eb2a56c.pdf",
+          "CaseName": "INAMATA V R [2017] NZCA 556 [4 December 2017]",
+          "id": "jdo/18/alfresco/service/api/node/content/workspace/SpacesStore/eec4d56e-6bab-45c1-84c0-1d468eb2a56c/eec4d56e-6bab-45c1-84c0-1d468eb2a56c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "e7664398-dc13-469c-bf34-7a1aea865af4.pdf",
+          "CaseName": "SIME v MAUNGATAPERE COMMUNITY CHURCH (INC) [2017] NZHC 2985 [4 December 2017]",
+          "id": "jdo/ec/alfresco/service/api/node/content/workspace/SpacesStore/e7664398-dc13-469c-bf34-7a1aea865af4/e7664398-dc13-469c-bf34-7a1aea865af4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "77bedc41-22ad-4254-8460-dc74db53c41a.pdf",
+          "CaseName": "UNIVERSAL EDUCATION GROUP LIMITED TRADING AS NEW ZEALAND NATIONAL COLLEGE 2008 v NEW ZEALAND QUALIFICATIONS AUTHORITY [2017] NZHC 2988 [4 December 2017]",
+          "id": "jdo/34/alfresco/service/api/node/content/workspace/SpacesStore/77bedc41-22ad-4254-8460-dc74db53c41a/77bedc41-22ad-4254-8460-dc74db53c41a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "203d1ca3-f73e-46eb-8876-6e9fac1d91cf.pdf",
+          "CaseName": "NGĀTI WHĀTUA ŌRĀKEI TRUST v ATTORNEY-GENERAL & ORS [2017] NZCA 554 [4 December 2017]",
+          "id": "jdo/b8/alfresco/service/api/node/content/workspace/SpacesStore/203d1ca3-f73e-46eb-8876-6e9fac1d91cf/203d1ca3-f73e-46eb-8876-6e9fac1d91cf.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "52464b96-2ab8-428a-b176-7cc651f60417.pdf",
+          "CaseName": "Re Tipene [2017] NZHC 2990 [4 December 2017]",
+          "id": "jdo/6e/alfresco/service/api/node/content/workspace/SpacesStore/52464b96-2ab8-428a-b176-7cc651f60417/52464b96-2ab8-428a-b176-7cc651f60417.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-04T13:00:01Z",
+          "DocumentName": "652dac4a-184b-467d-a987-968c98dcfbaf.pdf",
+          "CaseName": "DILWORTH TRUST BOARD v THE ATTORNEY-GENERAL [2017] NZHC 2987 [4 December 2017]",
+          "id": "jdo/cf/alfresco/service/api/node/content/workspace/SpacesStore/652dac4a-184b-467d-a987-968c98dcfbaf/652dac4a-184b-467d-a987-968c98dcfbaf.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "6b02bdd7-80ec-407f-9d73-97419ed0ceae.pdf",
+          "CaseName": "MACKIE LAW INDEPENDENT TRUSTEE LTD & ORS v CHAPLOW [2017] NZHC 2966 [1 December 2017]",
+          "id": "jdo/dc/alfresco/service/api/node/content/workspace/SpacesStore/6b02bdd7-80ec-407f-9d73-97419ed0ceae/6b02bdd7-80ec-407f-9d73-97419ed0ceae.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "23051e02-c093-4669-b00d-e81d1dcdc6de.pdf",
+          "CaseName": "THE PUBLIC TRUST v TURNER [2017] NZHC 2979 [1 December 2017]",
+          "id": "jdo/50/alfresco/service/api/node/content/workspace/SpacesStore/23051e02-c093-4669-b00d-e81d1dcdc6de/23051e02-c093-4669-b00d-e81d1dcdc6de.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "4dfee597-5240-41a4-a43d-c3185299579d.pdf",
+          "CaseName": "BODY CORPORATE 201036 v MURPHY [2017] NZHC 2974 [1 December 2017]",
+          "id": "jdo/cc/alfresco/service/api/node/content/workspace/SpacesStore/4dfee597-5240-41a4-a43d-c3185299579d/4dfee597-5240-41a4-a43d-c3185299579d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "2129c755-9478-47c3-a6e2-7f3fa0cc9c1f.pdf",
+          "CaseName": "BUILDFIRST LTD v BESPOKE SYSTEMS LTD [2017] NZHC 2971 [1 December 2017]",
+          "id": "jdo/d1/alfresco/service/api/node/content/workspace/SpacesStore/2129c755-9478-47c3-a6e2-7f3fa0cc9c1f/2129c755-9478-47c3-a6e2-7f3fa0cc9c1f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "79bceb13-8ff8-469e-8941-5f682e90a00e.pdf",
+          "CaseName": "LI v CHIEF EXECUTIVE OF THE MINISTRY OF BUSINESS, INNOVATION AND EMPLOYMENT [2017] NZHC 2977 [1 December 2017]",
+          "id": "jdo/31/alfresco/service/api/node/content/workspace/SpacesStore/79bceb13-8ff8-469e-8941-5f682e90a00e/79bceb13-8ff8-469e-8941-5f682e90a00e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "b426e619-1d33-42fe-8b82-fdee484178a2.pdf",
+          "CaseName": "R v ALI [2017] NZHC 2973 [1 December 2017]",
+          "id": "jdo/26/alfresco/service/api/node/content/workspace/SpacesStore/b426e619-1d33-42fe-8b82-fdee484178a2/b426e619-1d33-42fe-8b82-fdee484178a2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "e70f13cc-a5ea-473d-a97f-a64bd29b6218.pdf",
+          "CaseName": "BUTLER v POLICE [2017] NZHC 2972 [1 December 2017]",
+          "id": "jdo/1a/alfresco/service/api/node/content/workspace/SpacesStore/e70f13cc-a5ea-473d-a97f-a64bd29b6218/e70f13cc-a5ea-473d-a97f-a64bd29b6218.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "3d151324-54db-4047-8a73-259344f9fbba.pdf",
+          "CaseName": "TAYLOR v MINISTER OF INTERNAL AFFAIRS [2017] NZHC 2967 [1 December 2017]",
+          "id": "jdo/b4/alfresco/service/api/node/content/workspace/SpacesStore/3d151324-54db-4047-8a73-259344f9fbba/3d151324-54db-4047-8a73-259344f9fbba.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "371866e6-d2f7-40a1-b563-737a16995578.pdf",
+          "CaseName": "MINOTAUR CUSTODIANS LIMITED v WELLINGTON CITY COUNCIL [2017] NZHC 2970 [1 December 2017]",
+          "id": "jdo/d4/alfresco/service/api/node/content/workspace/SpacesStore/371866e6-d2f7-40a1-b563-737a16995578/371866e6-d2f7-40a1-b563-737a16995578.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "e5625e29-5956-43be-afff-a0b32221d30c.pdf",
+          "CaseName": "RE WATERCARE SERVICES LTD [2017] NZHC 2981 [1 December 2017]",
+          "id": "jdo/f3/alfresco/service/api/node/content/workspace/SpacesStore/e5625e29-5956-43be-afff-a0b32221d30c/e5625e29-5956-43be-afff-a0b32221d30c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "e0845d64-5326-417a-a6a5-1c3b6a87632e.pdf",
+          "CaseName": "GREER v DEPARTMENT OF CORRECTIONS [2017] NZHC 2980 [1 December 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/e0845d64-5326-417a-a6a5-1c3b6a87632e/e0845d64-5326-417a-a6a5-1c3b6a87632e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "9ac899f1-9e41-4bc0-b01c-9364c17756ba.pdf",
+          "CaseName": "M v H [2017] NZHC 2968 [1 December 2017]",
+          "id": "jdo/db/alfresco/service/api/node/content/workspace/SpacesStore/9ac899f1-9e41-4bc0-b01c-9364c17756ba/9ac899f1-9e41-4bc0-b01c-9364c17756ba.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-12-01T13:00:01Z",
+          "DocumentName": "74188f1e-5744-40dc-a1c7-bcd0ef477ea4.pdf",
+          "CaseName": "NRS MEDIA HOLDINGS LIMITED v COMMISSIONER OF INLAND REVENUE [2017] NZHC 2978 [1 December 2017]",
+          "id": "jdo/ec/alfresco/service/api/node/content/workspace/SpacesStore/74188f1e-5744-40dc-a1c7-bcd0ef477ea4/74188f1e-5744-40dc-a1c7-bcd0ef477ea4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "d936ea39-2130-4365-bfae-8a5a2a2f2371.pdf",
+          "CaseName": "REMARKABLES PARK LTD v QUEENSTOWN AIRPORT CORPORATION LTD [2017] NZHC 2962 [30 November 2017]",
+          "id": "jdo/57/alfresco/service/api/node/content/workspace/SpacesStore/d936ea39-2130-4365-bfae-8a5a2a2f2371/d936ea39-2130-4365-bfae-8a5a2a2f2371.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "6168cf8c-0c23-4506-bc3f-19002ea7cb44.pdf",
+          "CaseName": "BODY CORPORATE 200012 v KEENE & ORS [2017] NZHC 2953 [30 November 2017]",
+          "id": "jdo/84/alfresco/service/api/node/content/workspace/SpacesStore/6168cf8c-0c23-4506-bc3f-19002ea7cb44/6168cf8c-0c23-4506-bc3f-19002ea7cb44.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "0f1491e7-91b6-4118-9a06-6e589f5b0055.pdf",
+          "CaseName": "TAMIHERE v COMMISSIONER OF INLAND REVENUE & ORS [2017] NZHC 2949 [30 November 2017]",
+          "id": "jdo/58/alfresco/service/api/node/content/workspace/SpacesStore/0f1491e7-91b6-4118-9a06-6e589f5b0055/0f1491e7-91b6-4118-9a06-6e589f5b0055.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "d4e46f56-e195-4d34-aff1-6c13700bd33e.pdf",
+          "CaseName": "BRECHELT v NEW ZEALAND POLICE [2017] NZHC 2955 [30 November 2017]",
+          "id": "jdo/42/alfresco/service/api/node/content/workspace/SpacesStore/d4e46f56-e195-4d34-aff1-6c13700bd33e/d4e46f56-e195-4d34-aff1-6c13700bd33e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "f58c7e55-02f6-45bb-ad13-93f31bdaa498.pdf",
+          "CaseName": "RESMED LTD v FISHER & PAYKEL HEALTHCARE LTD [2017] NZHC 2954 [30 November 2017]",
+          "id": "jdo/8f/alfresco/service/api/node/content/workspace/SpacesStore/f58c7e55-02f6-45bb-ad13-93f31bdaa498/f58c7e55-02f6-45bb-ad13-93f31bdaa498.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-30T13:00:01Z",
+          "DocumentName": "146eb7ff-038d-4baf-b884-96fb2a2d3bcf.pdf",
+          "CaseName": "NORTH EASTERN INVESTMENTS LIMITED AND HERITAGE LAND LIMITED v AUCKLAND COUNCIL [2017] NZHC 2960 [30 November 2017]",
+          "id": "jdo/9d/alfresco/service/api/node/content/workspace/SpacesStore/146eb7ff-038d-4baf-b884-96fb2a2d3bcf/146eb7ff-038d-4baf-b884-96fb2a2d3bcf.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "c2d9bdc5-9654-47dc-b2df-99eaf28300b4.pdf",
+          "CaseName": "GENGE v THE VISITING JUSTICE, CHRISTCHURCH MENʼS PRISON [2017] NZHC 2936 [29 November 2017]",
+          "id": "jdo/3f/alfresco/service/api/node/content/workspace/SpacesStore/c2d9bdc5-9654-47dc-b2df-99eaf28300b4/c2d9bdc5-9654-47dc-b2df-99eaf28300b4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "d958c81f-5bc2-471d-a173-bcc5d6ee387e.pdf",
+          "CaseName": "Brodie v Turkmani [2017] NZHC 2945 [29 November 2017]",
+          "id": "jdo/68/alfresco/service/api/node/content/workspace/SpacesStore/d958c81f-5bc2-471d-a173-bcc5d6ee387e/d958c81f-5bc2-471d-a173-bcc5d6ee387e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "c73a8b90-8790-4766-9cc1-03917f1dd325.pdf",
+          "CaseName": "MUIR v THE TAXATION REVIEW AUTHORITY & ANOR [2017] NZHC 2932 [29 November 2017]",
+          "id": "jdo/75/alfresco/service/api/node/content/workspace/SpacesStore/c73a8b90-8790-4766-9cc1-03917f1dd325/c73a8b90-8790-4766-9cc1-03917f1dd325.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "bbd1d4e6-e3c7-465e-90b5-267ce3656db0.pdf",
+          "CaseName": "COASTAL RATEPAYERS UNITED INCORPORATED v THE KĀPITI COAST DISTRICT COUNCIL [2017] NZHC 2933 [29 November 2017]",
+          "id": "jdo/d5/alfresco/service/api/node/content/workspace/SpacesStore/bbd1d4e6-e3c7-465e-90b5-267ce3656db0/bbd1d4e6-e3c7-465e-90b5-267ce3656db0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "61d50dda-2353-4757-86b9-2e76cd2550fa.pdf",
+          "CaseName": "AKLANDER INVESTMENT LTD [2017] NZHC 2939 [29 November 2017]",
+          "id": "jdo/e5/alfresco/service/api/node/content/workspace/SpacesStore/61d50dda-2353-4757-86b9-2e76cd2550fa/61d50dda-2353-4757-86b9-2e76cd2550fa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "94fc3f3e-eba6-498e-b55c-8ef13ce70db2.pdf",
+          "CaseName": "ECOSTORE CO LTD v WORTH [2017] NZHC 2943 [29 November 2017]",
+          "id": "jdo/91/alfresco/service/api/node/content/workspace/SpacesStore/94fc3f3e-eba6-498e-b55c-8ef13ce70db2/94fc3f3e-eba6-498e-b55c-8ef13ce70db2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "0b9d1b85-9521-46f5-a664-1e7b1d117d8a.pdf",
+          "CaseName": "YORK TRUSTEES LIMITED v BODY CORPORATE 166208 [2017] NZHC 2942 [29 November 2017]",
+          "id": "jdo/b4/alfresco/service/api/node/content/workspace/SpacesStore/0b9d1b85-9521-46f5-a664-1e7b1d117d8a/0b9d1b85-9521-46f5-a664-1e7b1d117d8a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "a2ea4dcd-db09-4d31-ab44-eea269e0b47c.pdf",
+          "CaseName": "R v REID [2017] NZHC 2947 [29 November 2017]",
+          "id": "jdo/1d/alfresco/service/api/node/content/workspace/SpacesStore/a2ea4dcd-db09-4d31-ab44-eea269e0b47c/a2ea4dcd-db09-4d31-ab44-eea269e0b47c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "58880e12-d651-4119-8594-0788edf6dacf.pdf",
+          "CaseName": "BODY CORPORATE 234525 v STENT [2017] NZHC 2948 [29 November 2017]",
+          "id": "jdo/a5/alfresco/service/api/node/content/workspace/SpacesStore/58880e12-d651-4119-8594-0788edf6dacf/58880e12-d651-4119-8594-0788edf6dacf.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-29T13:00:01Z",
+          "DocumentName": "48d47fcb-1c47-4166-8eeb-b5a31a2b5788.pdf",
+          "CaseName": "R v MALU [2017] NZCA 546 [29 November 2017]",
+          "id": "jdo/ef/alfresco/service/api/node/content/workspace/SpacesStore/48d47fcb-1c47-4166-8eeb-b5a31a2b5788/48d47fcb-1c47-4166-8eeb-b5a31a2b5788.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "901d4ded-b71a-48d3-bf8e-9985737da98f.pdf",
+          "CaseName": "RE O’REILLY [2017] NZHC 2922 [28 November 2017]",
+          "id": "jdo/be/alfresco/service/api/node/content/workspace/SpacesStore/901d4ded-b71a-48d3-bf8e-9985737da98f/901d4ded-b71a-48d3-bf8e-9985737da98f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "c84e31d2-f673-4344-992f-adb97e01be78.pdf",
+          "CaseName": "REAL ESTATE AGENTS AUTHORITY v A [2017] NZHC 2929 [28 November 2017]",
+          "id": "jdo/f8/alfresco/service/api/node/content/workspace/SpacesStore/c84e31d2-f673-4344-992f-adb97e01be78/c84e31d2-f673-4344-992f-adb97e01be78.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "b048e217-ce92-4302-aa92-10f668df3ee8.pdf",
+          "CaseName": "THOMAS HOGAN PARKER V R [2017] NZCA 550 [28 November 2017]",
+          "id": "jdo/e2/alfresco/service/api/node/content/workspace/SpacesStore/b048e217-ce92-4302-aa92-10f668df3ee8/b048e217-ce92-4302-aa92-10f668df3ee8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "9fb71bca-d7ec-4843-882f-76e33c5cd34c.pdf",
+          "CaseName": "PRECINCT PROPERTIES HOLDINGS LIMITED v OMV NEW ZEALAND LIMITED [2017] NZHC 2926 [28 November 2017]",
+          "id": "jdo/22/alfresco/service/api/node/content/workspace/SpacesStore/9fb71bca-d7ec-4843-882f-76e33c5cd34c/9fb71bca-d7ec-4843-882f-76e33c5cd34c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "b8c88b8a-dd46-47dc-9b42-ffff37b93a02.pdf",
+          "CaseName": "NOTTINGHAM v HONEY [2017] NZHC 2921 [28 November 2017]",
+          "id": "jdo/d6/alfresco/service/api/node/content/workspace/SpacesStore/b8c88b8a-dd46-47dc-9b42-ffff37b93a02/b8c88b8a-dd46-47dc-9b42-ffff37b93a02.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "2fd1abc3-0481-457a-bdd5-7d12cb748953.pdf",
+          "CaseName": "CLODE v SULLIVAN [2017] NZCA 548 [28 November 2017]",
+          "id": "jdo/d6/alfresco/service/api/node/content/workspace/SpacesStore/2fd1abc3-0481-457a-bdd5-7d12cb748953/2fd1abc3-0481-457a-bdd5-7d12cb748953.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "00dd5f21-77de-457a-aaf2-b377413e60f3.pdf",
+          "CaseName": "LONGMAN v POLICE [2017] NZHC 2928 [28 November 2017]",
+          "id": "jdo/1b/alfresco/service/api/node/content/workspace/SpacesStore/00dd5f21-77de-457a-aaf2-b377413e60f3/00dd5f21-77de-457a-aaf2-b377413e60f3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "9be570ca-e11a-46df-82a4-c1e9c6535b94.pdf",
+          "CaseName": "COKER v R [2017] NZHC 2927 [28 November 2017]",
+          "id": "jdo/c4/alfresco/service/api/node/content/workspace/SpacesStore/9be570ca-e11a-46df-82a4-c1e9c6535b94/9be570ca-e11a-46df-82a4-c1e9c6535b94.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "eb443820-8740-4fcf-a508-8b98e8445b79.pdf",
+          "CaseName": "THOMAS v MACKINTOSH AND HALL AS EXECUTORS AND TRUSTESS OF THE ESTATE OF NORMAN DEAN THOMAS [2017] NZCA 549 [28 November 2017]",
+          "id": "jdo/d1/alfresco/service/api/node/content/workspace/SpacesStore/eb443820-8740-4fcf-a508-8b98e8445b79/eb443820-8740-4fcf-a508-8b98e8445b79.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "39bf9610-1030-4d58-a9d2-a6f3be5fd20e.pdf",
+          "CaseName": "R v SHARMA [2017] NZHC 2925 [28 November 2017]",
+          "id": "jdo/51/alfresco/service/api/node/content/workspace/SpacesStore/39bf9610-1030-4d58-a9d2-a6f3be5fd20e/39bf9610-1030-4d58-a9d2-a6f3be5fd20e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "2b9cd5ab-f9da-4fb5-b330-6a5f5c5944a5.pdf",
+          "CaseName": "TYSON-TAINUI RUKUWAI TE TOMO v R [2017] NZSC 180 [28 November 2017]",
+          "id": "jdo/61/alfresco/service/api/node/content/workspace/SpacesStore/2b9cd5ab-f9da-4fb5-b330-6a5f5c5944a5/2b9cd5ab-f9da-4fb5-b330-6a5f5c5944a5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-28T13:00:01Z",
+          "DocumentName": "94dddacf-17c0-4a10-9004-187bd4c05a01.pdf",
+          "CaseName": "R v L [2017] NZHC 2934 [28 November 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/94dddacf-17c0-4a10-9004-187bd4c05a01/94dddacf-17c0-4a10-9004-187bd4c05a01.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "d8cd8566-0aeb-4940-8bfa-59b742080176.pdf",
+          "CaseName": "THE COMMISSIONER OF THE NEW ZEALAND POLICE v DRAKE AND ANOR [2017] NZHC 2919 [27 November 2017]",
+          "id": "jdo/8c/alfresco/service/api/node/content/workspace/SpacesStore/d8cd8566-0aeb-4940-8bfa-59b742080176/d8cd8566-0aeb-4940-8bfa-59b742080176.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "b1ef5fb1-7d5a-4fee-a2cd-9f5dd70eef1f.pdf",
+          "CaseName": "C (SC 101/2017) v R [2017] NZSC 179 [27 November 2017]",
+          "id": "jdo/1b/alfresco/service/api/node/content/workspace/SpacesStore/b1ef5fb1-7d5a-4fee-a2cd-9f5dd70eef1f/b1ef5fb1-7d5a-4fee-a2cd-9f5dd70eef1f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "a90950d2-cb69-496a-88f3-47cec57b2b91.pdf",
+          "CaseName": "STUDORP LIMITED v CRIDGE AND ORS [2017] NZSC 178 [27 November 2017]",
+          "id": "jdo/3b/alfresco/service/api/node/content/workspace/SpacesStore/a90950d2-cb69-496a-88f3-47cec57b2b91/a90950d2-cb69-496a-88f3-47cec57b2b91.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "cfb6824b-f69c-4faa-9958-ddd229eab800.pdf",
+          "CaseName": "GARY OWEN BURGESS v MALLEY & CO [2017] NZSC 177 [27 November 2017]",
+          "id": "jdo/4d/alfresco/service/api/node/content/workspace/SpacesStore/cfb6824b-f69c-4faa-9958-ddd229eab800/cfb6824b-f69c-4faa-9958-ddd229eab800.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "52c2a3cc-3961-4164-9267-10ab0da7698f.pdf",
+          "CaseName": "MERIAL INC v INTERVET INTL B.V. [2017] NZHC 2918 [27 November 2017]",
+          "id": "jdo/b7/alfresco/service/api/node/content/workspace/SpacesStore/52c2a3cc-3961-4164-9267-10ab0da7698f/52c2a3cc-3961-4164-9267-10ab0da7698f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-27T13:00:01Z",
+          "DocumentName": "1d8b0e08-cdc7-43fc-a841-bc1c61a50d39.pdf",
+          "CaseName": "RAKETE v NEW ZEALAND POLICE [2017] NZHC 2915 [27 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/1d8b0e08-cdc7-43fc-a841-bc1c61a50d39/1d8b0e08-cdc7-43fc-a841-bc1c61a50d39.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "2f62bb6d-9e86-4404-8748-3d923d1d1b10.pdf",
+          "CaseName": "ASH v SINGH [2017] NZHC 2909 [24 November 2017]",
+          "id": "jdo/71/alfresco/service/api/node/content/workspace/SpacesStore/2f62bb6d-9e86-4404-8748-3d923d1d1b10/2f62bb6d-9e86-4404-8748-3d923d1d1b10.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "6d2181b3-c795-4841-8633-93e33abe136d.pdf",
+          "CaseName": "EXPORT FINANCE LTD v MELLSOP & Ors [2017] NZHC 2908 [24 November 2017]",
+          "id": "jdo/a1/alfresco/service/api/node/content/workspace/SpacesStore/6d2181b3-c795-4841-8633-93e33abe136d/6d2181b3-c795-4841-8633-93e33abe136d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "8e36ed90-b577-4625-bc0c-e114b30cac59.pdf",
+          "CaseName": "WELLINGTON CITY COUNCIL v LOCAL GOVERNMENT MUTUAL FUNDS TRUSTEE LIMITED [2017] NZHC 2901 [24 November 2017]",
+          "id": "jdo/9d/alfresco/service/api/node/content/workspace/SpacesStore/8e36ed90-b577-4625-bc0c-e114b30cac59/8e36ed90-b577-4625-bc0c-e114b30cac59.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "a246ad11-a584-480c-a921-497a799ead51.pdf",
+          "CaseName": "R v SADLER AND KEIL [2017] NZHC 2903 [24 November 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/a246ad11-a584-480c-a921-497a799ead51/a246ad11-a584-480c-a921-497a799ead51.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "905d35d6-030f-405f-a1ff-fd3ee3f4dd80.pdf",
+          "CaseName": "MANE v R [2017] NZCA 543 [24 November 2017]",
+          "id": "jdo/ec/alfresco/service/api/node/content/workspace/SpacesStore/905d35d6-030f-405f-a1ff-fd3ee3f4dd80/905d35d6-030f-405f-a1ff-fd3ee3f4dd80.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "17cfb64e-91a8-473f-9800-6e916f1318d1.pdf",
+          "CaseName": "VAEAFISI V R [2017] NZCA 545 [24 November 2017]",
+          "id": "jdo/93/alfresco/service/api/node/content/workspace/SpacesStore/17cfb64e-91a8-473f-9800-6e916f1318d1/17cfb64e-91a8-473f-9800-6e916f1318d1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "0d844ca6-a7ee-410c-b846-bb690a8cd64e.pdf",
+          "CaseName": "STACEY v WATSON [2017] NZCA 542 [24 November 2017]",
+          "id": "jdo/95/alfresco/service/api/node/content/workspace/SpacesStore/0d844ca6-a7ee-410c-b846-bb690a8cd64e/0d844ca6-a7ee-410c-b846-bb690a8cd64e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-24T13:00:01Z",
+          "DocumentName": "78cebddc-f221-47d9-9221-ae8ed0aca6a7.pdf",
+          "CaseName": "MARUTI INVESTMENTS LIMITED v RITELINE ROOFING LIMITED [2017] NZHC 2905 [24 November 2017]",
+          "id": "jdo/6f/alfresco/service/api/node/content/workspace/SpacesStore/78cebddc-f221-47d9-9221-ae8ed0aca6a7/78cebddc-f221-47d9-9221-ae8ed0aca6a7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "cea32093-7072-446d-bffb-89829706e2c8.pdf",
+          "CaseName": "SPX FLOW TECHNOLOGY NZ LTD v GAS 1 LTD [2017] NZHC 2899 [23 November 2017]",
+          "id": "jdo/b9/alfresco/service/api/node/content/workspace/SpacesStore/cea32093-7072-446d-bffb-89829706e2c8/cea32093-7072-446d-bffb-89829706e2c8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "0ba0f669-5592-47b7-903e-8064870eed69.pdf",
+          "CaseName": "BOULT v CHIEF EXECUTIVE OF THE DEPARTMENT OF CORRECTIONS [2017] NZHC 2900 [23 November 2017]",
+          "id": "jdo/db/alfresco/service/api/node/content/workspace/SpacesStore/0ba0f669-5592-47b7-903e-8064870eed69/0ba0f669-5592-47b7-903e-8064870eed69.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "a6cb7187-08ed-45eb-af46-6f10bcfcb5be.pdf",
+          "CaseName": "JUHASZ v MEDICAL LIFE ASSURANCE SOCIETY LTD [2017] NZHC 2866 [23 November 2017]",
+          "id": "jdo/bc/alfresco/service/api/node/content/workspace/SpacesStore/a6cb7187-08ed-45eb-af46-6f10bcfcb5be/a6cb7187-08ed-45eb-af46-6f10bcfcb5be.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "d72630b3-0cfa-4b68-8135-9a2c4cc256d4.pdf",
+          "CaseName": "THE OFFICIAL ASSIGNEE v NIKORA [2017] NZHC 2907 [23 November 2017]",
+          "id": "jdo/5b/alfresco/service/api/node/content/workspace/SpacesStore/d72630b3-0cfa-4b68-8135-9a2c4cc256d4/d72630b3-0cfa-4b68-8135-9a2c4cc256d4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "4607e16d-bfc8-46ea-969a-d400894679f0.pdf",
+          "CaseName": "YORK TRUSTEES LIMITED v BODY CORPORATE 166208 [2017] NZHC 2877 [23 November 2017]",
+          "id": "jdo/63/alfresco/service/api/node/content/workspace/SpacesStore/4607e16d-bfc8-46ea-969a-d400894679f0/4607e16d-bfc8-46ea-969a-d400894679f0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "ce4a93f8-c32a-44e3-aab6-9c7579d003d6.pdf",
+          "CaseName": "COLLINS & MAY LAW v MEMELINK & PATRICK JOHN RENSHAW AS TRUSTEES OF THE LINK TRUST (NO. 1) & ANOR [2017] NZCA 541 [23 November 2017]",
+          "id": "jdo/43/alfresco/service/api/node/content/workspace/SpacesStore/ce4a93f8-c32a-44e3-aab6-9c7579d003d6/ce4a93f8-c32a-44e3-aab6-9c7579d003d6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "e90bb49f-9543-4901-8159-638ab1a8d5fc.pdf",
+          "CaseName": "MACKENZIE v MACKENZIE [2017] NZHC 2893 [23 November 2017]",
+          "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/e90bb49f-9543-4901-8159-638ab1a8d5fc/e90bb49f-9543-4901-8159-638ab1a8d5fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "84ec7e00-c03b-44f8-9390-264e2630d518.pdf",
+          "CaseName": "BUDGET LOANS LIMITED v COMMERCE COMMISSION [2017] NZCA 539 [23 November 2017]",
+          "id": "jdo/a4/alfresco/service/api/node/content/workspace/SpacesStore/84ec7e00-c03b-44f8-9390-264e2630d518/84ec7e00-c03b-44f8-9390-264e2630d518.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "211fabdc-0341-4016-ae90-99e2e23e370f.pdf",
+          "CaseName": "KIHI v POLICE [2017] NZHC 2883 [23 November 2017]",
+          "id": "jdo/a3/alfresco/service/api/node/content/workspace/SpacesStore/211fabdc-0341-4016-ae90-99e2e23e370f/211fabdc-0341-4016-ae90-99e2e23e370f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "0cd7ef93-1197-4cd6-a4e2-cb24f6175f3e.pdf",
+          "CaseName": "R v SUTCLIFFE [2017] NZHC 2882 [23 November 2017]",
+          "id": "jdo/84/alfresco/service/api/node/content/workspace/SpacesStore/0cd7ef93-1197-4cd6-a4e2-cb24f6175f3e/0cd7ef93-1197-4cd6-a4e2-cb24f6175f3e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "69c88309-787d-4a3d-9c1e-8ee134012bad.pdf",
+          "CaseName": "CHESTERFIELDS PRESCHOOLS LIMITED (IN LIQUIDATION) v THE COMMISSIONER OF INLAND REVENUE [2017] NZSC 176 [23 November 2017]",
+          "id": "jdo/da/alfresco/service/api/node/content/workspace/SpacesStore/69c88309-787d-4a3d-9c1e-8ee134012bad/69c88309-787d-4a3d-9c1e-8ee134012bad.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "2874d0fa-0c75-4c81-befd-445d6e6319ac.pdf",
+          "CaseName": "ALLEN v DEPT OF CORRECTIONS [2017] NZHC 2902 [23 November 2017]",
+          "id": "jdo/ed/alfresco/service/api/node/content/workspace/SpacesStore/2874d0fa-0c75-4c81-befd-445d6e6319ac/2874d0fa-0c75-4c81-befd-445d6e6319ac.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "406e4f22-ea7f-4879-94a5-27ce1b58eaed.pdf",
+          "CaseName": "SMITH & STOKES v NOBLE INVESTMENTS LTD [2017] NZHC 2885 [23 November 2017]",
+          "id": "jdo/52/alfresco/service/api/node/content/workspace/SpacesStore/406e4f22-ea7f-4879-94a5-27ce1b58eaed/406e4f22-ea7f-4879-94a5-27ce1b58eaed.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "9fe27d1a-d042-466b-9f3e-86dc3c1f551c.pdf",
+          "CaseName": "SALIS v DUNEDIN CITY COUNCIL [2017] NZHC 2897 [23 November 2017]",
+          "id": "jdo/cf/alfresco/service/api/node/content/workspace/SpacesStore/9fe27d1a-d042-466b-9f3e-86dc3c1f551c/9fe27d1a-d042-466b-9f3e-86dc3c1f551c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "a2242185-1dc5-47a8-b453-e6410388bb7a.pdf",
+          "CaseName": "COLLINGE v R [2017] NZHC 2891 [23 November 2017]",
+          "id": "jdo/f8/alfresco/service/api/node/content/workspace/SpacesStore/a2242185-1dc5-47a8-b453-e6410388bb7a/a2242185-1dc5-47a8-b453-e6410388bb7a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "7790ad2a-53b4-43f8-9f1f-5a007bfedf7a.pdf",
+          "CaseName": "GARDNER v CORRECTIONS [2017] NZHC 2895 [23 November 2017]",
+          "id": "jdo/73/alfresco/service/api/node/content/workspace/SpacesStore/7790ad2a-53b4-43f8-9f1f-5a007bfedf7a/7790ad2a-53b4-43f8-9f1f-5a007bfedf7a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "27585202-b61e-463a-bc3b-3fa98a8da9d3.pdf",
+          "CaseName": "KNEDLER v COMMISSIONER OF INLAND REVENUE [2017] NZHC 2888 [23 November 2017]",
+          "id": "jdo/58/alfresco/service/api/node/content/workspace/SpacesStore/27585202-b61e-463a-bc3b-3fa98a8da9d3/27585202-b61e-463a-bc3b-3fa98a8da9d3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "7248cabc-107c-4664-bda9-c0f955d18fc6.pdf",
+          "CaseName": "EMMERSON v A PROFESSIONAL CONDUCT COMMITTEE APPOINTED BY THE MEDICAL COUNCIL OF NEW ZEALAND [2017] NZHC 2887 [23 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/7248cabc-107c-4664-bda9-c0f955d18fc6/7248cabc-107c-4664-bda9-c0f955d18fc6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "e2789ac7-6e5b-4d6d-99ac-ad82a823b689.pdf",
+          "CaseName": "Jiang v Huang [2017] NZHC 2884 [23 November 2017]",
+          "id": "jdo/ed/alfresco/service/api/node/content/workspace/SpacesStore/e2789ac7-6e5b-4d6d-99ac-ad82a823b689/e2789ac7-6e5b-4d6d-99ac-ad82a823b689.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "10fcf2f2-4dca-4fc0-bbe9-f8d29ea9c643.pdf",
+          "CaseName": "BYRNE AND BYRNE TRADING AS FRANK BYRNE BUILDERS v VAN GRUNSVEN AND ELIZABETH ANN VAN GRUNSVEN TRADING AS GOLDEN BAY REFRIGERATION AND AIR CONDITIONING [2017] NZHC 2886 [23 November 2017]",
+          "id": "jdo/56/alfresco/service/api/node/content/workspace/SpacesStore/10fcf2f2-4dca-4fc0-bbe9-f8d29ea9c643/10fcf2f2-4dca-4fc0-bbe9-f8d29ea9c643.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-23T13:00:01Z",
+          "DocumentName": "efd7fef8-cc3c-4128-b677-d65af8c1d89b.pdf",
+          "CaseName": "AUDIO ESSENTIALS LIMITED v U TRIPATHI U TRIPATHI, V CHAWALAH AND V ROHILLA [2017] NZHC 2864 [23 November 2017]",
+          "id": "jdo/73/alfresco/service/api/node/content/workspace/SpacesStore/efd7fef8-cc3c-4128-b677-d65af8c1d89b/efd7fef8-cc3c-4128-b677-d65af8c1d89b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "50de263f-166f-4a5d-ba2f-dd804b866108.pdf",
+          "CaseName": "SOTANA v VONGLA [2017] NZHC 2870 [22 November 2017]",
+          "id": "jdo/7e/alfresco/service/api/node/content/workspace/SpacesStore/50de263f-166f-4a5d-ba2f-dd804b866108/50de263f-166f-4a5d-ba2f-dd804b866108.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "8f33ce6b-dbc0-4462-9aba-a2a0152e9261.pdf",
+          "CaseName": "EQUITY TRUST INTERNATIONAL LTD & ANOR v BUSCHUEV & ORS [2017] NZHC 2868 [22 November 2017]",
+          "id": "jdo/af/alfresco/service/api/node/content/workspace/SpacesStore/8f33ce6b-dbc0-4462-9aba-a2a0152e9261/8f33ce6b-dbc0-4462-9aba-a2a0152e9261.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "e2f5e519-1828-499d-a09c-2d7f22faa906.pdf",
+          "CaseName": "SHAILER v SHAILER [2017] NZHC 2871 [22 November 2017]",
+          "id": "jdo/ed/alfresco/service/api/node/content/workspace/SpacesStore/e2f5e519-1828-499d-a09c-2d7f22faa906/e2f5e519-1828-499d-a09c-2d7f22faa906.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "a3a5d719-e36c-4884-b697-554fbab8db40.pdf",
+          "CaseName": "R v SMYTH [2017] NZCA 530 [22 November 2017]",
+          "id": "jdo/47/alfresco/service/api/node/content/workspace/SpacesStore/a3a5d719-e36c-4884-b697-554fbab8db40/a3a5d719-e36c-4884-b697-554fbab8db40.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "735f299b-64f0-40e5-a2f1-35f169fd8d20.pdf",
+          "CaseName": "DEBT BUYERS LTD v SCHUTT [2017] NZHC 2876 [22 November 2017]",
+          "id": "jdo/e3/alfresco/service/api/node/content/workspace/SpacesStore/735f299b-64f0-40e5-a2f1-35f169fd8d20/735f299b-64f0-40e5-a2f1-35f169fd8d20.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "6b1e79b7-8e83-41e4-8011-86d3cbf7077b.pdf",
+          "CaseName": "ALI v POLICE [2017] NZHC 2869 [22 November 2017]",
+          "id": "jdo/f7/alfresco/service/api/node/content/workspace/SpacesStore/6b1e79b7-8e83-41e4-8011-86d3cbf7077b/6b1e79b7-8e83-41e4-8011-86d3cbf7077b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "0c8a4fe5-cea3-4065-be98-903f5c888ea7.pdf",
+          "CaseName": "SCHISCHKA v MCINTOSH [2017] NZHC 2875 [22 November 2017]",
+          "id": "jdo/5f/alfresco/service/api/node/content/workspace/SpacesStore/0c8a4fe5-cea3-4065-be98-903f5c888ea7/0c8a4fe5-cea3-4065-be98-903f5c888ea7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "39f20cef-5ec0-407b-bc2e-cc4de08e0ffb.pdf",
+          "CaseName": "FUIMAONO & ANOR v HOUIA [2017] NZCA 540 [22 November 2017]",
+          "id": "jdo/bc/alfresco/service/api/node/content/workspace/SpacesStore/39f20cef-5ec0-407b-bc2e-cc4de08e0ffb/39f20cef-5ec0-407b-bc2e-cc4de08e0ffb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "77b8f6a3-2fa6-425c-a602-4e13e040b577.pdf",
+          "CaseName": "STUART WALTON HERRON v WAYNE ANDREW WALLACE [2017] NZSC 174 [22 November 2017]",
+          "id": "jdo/aa/alfresco/service/api/node/content/workspace/SpacesStore/77b8f6a3-2fa6-425c-a602-4e13e040b577/77b8f6a3-2fa6-425c-a602-4e13e040b577.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "620b503a-41e7-4a5b-83c1-fbd48ff19a5c.pdf",
+          "CaseName": "PANCHAL v MINISTER OF IMMIGRATION [2017] NZHC 2839 [22 November 2017]",
+          "id": "jdo/21/alfresco/service/api/node/content/workspace/SpacesStore/620b503a-41e7-4a5b-83c1-fbd48ff19a5c/620b503a-41e7-4a5b-83c1-fbd48ff19a5c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "1df39ff8-8f35-412f-983e-c5371b65c6f8.pdf",
+          "CaseName": "FITCHETT v BOARD OF TRUSTEES OF NELSON COLLEGE [2017] NZHC 2880 [22 November 2017]",
+          "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/1df39ff8-8f35-412f-983e-c5371b65c6f8/1df39ff8-8f35-412f-983e-c5371b65c6f8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "205e48b8-86a5-4e20-a505-fa705734b877.pdf",
+          "CaseName": "MCALISTER v POLICE [2017] NZHC 2881 [22 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/205e48b8-86a5-4e20-a505-fa705734b877/205e48b8-86a5-4e20-a505-fa705734b877.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "8760d93d-5ffe-45c6-9d09-823fa305dc28.pdf",
+          "CaseName": "WRIGHT v ATTORNEY-GENERAL (NEW ZEALAND POLICE) [2017] NZHC 2865 [22 November 2017]",
+          "id": "jdo/99/alfresco/service/api/node/content/workspace/SpacesStore/8760d93d-5ffe-45c6-9d09-823fa305dc28/8760d93d-5ffe-45c6-9d09-823fa305dc28.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-22T13:00:01Z",
+          "DocumentName": "e448243e-297a-4179-b044-f6f0446ee216.pdf",
+          "CaseName": "RANOLF CO LTD (In liquidation) v BHANA & ORS [2017] NZHC 2872 [22 November 2017]",
+          "id": "jdo/fc/alfresco/service/api/node/content/workspace/SpacesStore/e448243e-297a-4179-b044-f6f0446ee216/e448243e-297a-4179-b044-f6f0446ee216.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "97b24161-b16e-45bf-b20f-75c253a7c509.pdf",
+          "CaseName": "INDE LEGACY LIMITED v S J DISTRIBUTORS LIMITED [2017] NZHC 2859 [21 November 2017]",
+          "id": "jdo/72/alfresco/service/api/node/content/workspace/SpacesStore/97b24161-b16e-45bf-b20f-75c253a7c509/97b24161-b16e-45bf-b20f-75c253a7c509.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "fd3390ce-12fc-48f0-aafc-3fd4f5736308.pdf",
+          "CaseName": "GILL v POLICE [2017] NZHC 2858 [21 November 2017]",
+          "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/fd3390ce-12fc-48f0-aafc-3fd4f5736308/fd3390ce-12fc-48f0-aafc-3fd4f5736308.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "a324923d-6e2c-4c00-be48-100d2fe8cfca.pdf",
+          "CaseName": "PETERSEN v POLICE [2017] NZHC 2855 [21 November 2017]",
+          "id": "jdo/b8/alfresco/service/api/node/content/workspace/SpacesStore/a324923d-6e2c-4c00-be48-100d2fe8cfca/a324923d-6e2c-4c00-be48-100d2fe8cfca.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "4c1d9f3e-10b2-4bec-b13f-c08c76b4e1b0.pdf",
+          "CaseName": "Fabish and Ors [2017] NZHC 2850 [21 November 2017]",
+          "id": "jdo/39/alfresco/service/api/node/content/workspace/SpacesStore/4c1d9f3e-10b2-4bec-b13f-c08c76b4e1b0/4c1d9f3e-10b2-4bec-b13f-c08c76b4e1b0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "bfac5696-63b4-4d1f-ba14-8bfbfea28251.pdf",
+          "CaseName": "ASPIRE MK TRUSTEE LTD v STUART HENDRY BUILDERS LTD [2017] NZHC 2862 [21 November 2017]",
+          "id": "jdo/6e/alfresco/service/api/node/content/workspace/SpacesStore/bfac5696-63b4-4d1f-ba14-8bfbfea28251/bfac5696-63b4-4d1f-ba14-8bfbfea28251.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "78995585-4859-4a70-8a74-391456bcb138.pdf",
+          "CaseName": "NGAWHIKA V R [2017] NZCA 535 [21 November 2017]",
+          "id": "jdo/e7/alfresco/service/api/node/content/workspace/SpacesStore/78995585-4859-4a70-8a74-391456bcb138/78995585-4859-4a70-8a74-391456bcb138.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "c35d76e0-55df-438e-8449-7cfcaf744fc0.pdf",
+          "CaseName": "PAUL THOMAS ESCOTT v THE QUEEN [2017] NZHC 2853 [21 November 2017]",
+          "id": "jdo/7f/alfresco/service/api/node/content/workspace/SpacesStore/c35d76e0-55df-438e-8449-7cfcaf744fc0/c35d76e0-55df-438e-8449-7cfcaf744fc0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "a7a979bf-c176-40d3-a061-794d34798369.pdf",
+          "CaseName": "BODY CORPORATE 324525 v STENT [2017] NZHC 2857 [21 November 2017]",
+          "id": "jdo/f7/alfresco/service/api/node/content/workspace/SpacesStore/a7a979bf-c176-40d3-a061-794d34798369/a7a979bf-c176-40d3-a061-794d34798369.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "74094f61-d3d3-4757-b77f-bf3b55e129ee.pdf",
+          "CaseName": "GIBB V R [2017] NZCA 532 [21 November 2017]",
+          "id": "jdo/4b/alfresco/service/api/node/content/workspace/SpacesStore/74094f61-d3d3-4757-b77f-bf3b55e129ee/74094f61-d3d3-4757-b77f-bf3b55e129ee.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-21T13:00:01Z",
+          "DocumentName": "e30b3c63-c308-452f-90e5-5c78c65568df.pdf",
+          "CaseName": "JASMINE v NEW ZEALAND POLICE [2017] NZHC 2861 [21 November 2017]",
+          "id": "jdo/fa/alfresco/service/api/node/content/workspace/SpacesStore/e30b3c63-c308-452f-90e5-5c78c65568df/e30b3c63-c308-452f-90e5-5c78c65568df.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-20T13:00:01Z",
+          "DocumentName": "4c316d2b-1d0d-4c7c-b48d-fc73fb2ee6b9.pdf",
+          "CaseName": "ESR GROUP (NZ) LIMITED v IAN JAMES BURDEN [2017] NZSC 173 [20 November 2017]",
+          "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/4c316d2b-1d0d-4c7c-b48d-fc73fb2ee6b9/4c316d2b-1d0d-4c7c-b48d-fc73fb2ee6b9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-20T13:00:01Z",
+          "DocumentName": "79a126db-9c7d-4417-ac6e-6616c1b63fcd.pdf",
+          "CaseName": "CLARK ROAD DEVELOPMENTS LTD v ROHITS CIVIL & INFRASTRUCTURE LTD [2017] NZHC 2844 [20 November 2017]",
+          "id": "jdo/5a/alfresco/service/api/node/content/workspace/SpacesStore/79a126db-9c7d-4417-ac6e-6616c1b63fcd/79a126db-9c7d-4417-ac6e-6616c1b63fcd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-20T13:00:01Z",
+          "DocumentName": "bdacc35a-cee1-4efa-9db1-81c694030735.pdf",
+          "CaseName": "EMMERSON v A PROFESSIONAL CONDUCT COMMITTEE APPOINTED BY THE MEDICAL COUNCIL OF NEW ZEALAND [2017] NZHC 2847 [20 November 2017]",
+          "id": "jdo/b7/alfresco/service/api/node/content/workspace/SpacesStore/bdacc35a-cee1-4efa-9db1-81c694030735/bdacc35a-cee1-4efa-9db1-81c694030735.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-20T13:00:01Z",
+          "DocumentName": "ac8e99ce-af0a-48ac-ae74-2b1190375425.pdf",
+          "CaseName": "MAN TRUCK & BUS AG v SHAANXI HEAVY-DUTY AUTOMOBILE CO. LTD [2017] NZHC 2821 [20 November 2017]",
+          "id": "jdo/e5/alfresco/service/api/node/content/workspace/SpacesStore/ac8e99ce-af0a-48ac-ae74-2b1190375425/ac8e99ce-af0a-48ac-ae74-2b1190375425.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-20T13:00:01Z",
+          "DocumentName": "0c12a1f9-ad7e-4871-a0d1-d6f778ebd0ab.pdf",
+          "CaseName": "A (CA307/2017) v R [2017] NZCA 531 [20 November 2017]",
+          "id": "jdo/66/alfresco/service/api/node/content/workspace/SpacesStore/0c12a1f9-ad7e-4871-a0d1-d6f778ebd0ab/0c12a1f9-ad7e-4871-a0d1-d6f778ebd0ab.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "f2ee8c17-8bad-4553-afb4-3f5724f4e699.pdf",
+          "CaseName": "MANCHESTER SECURITIES LTD v BODY CORPORATE 172108 [2017] NZCA 527 [17 November 2017]",
+          "id": "jdo/36/alfresco/service/api/node/content/workspace/SpacesStore/f2ee8c17-8bad-4553-afb4-3f5724f4e699/f2ee8c17-8bad-4553-afb4-3f5724f4e699.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "4642b4ab-e856-495c-bf63-5bb526d16cda.pdf",
+          "CaseName": "JURY v THE CHIEF EXECUTIVE OF THE NEW ZEALAND CUSTOMS SERVICE [2017] NZSC 170 [17 November 2017]",
+          "id": "jdo/a3/alfresco/service/api/node/content/workspace/SpacesStore/4642b4ab-e856-495c-bf63-5bb526d16cda/4642b4ab-e856-495c-bf63-5bb526d16cda.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "76ae94ba-28be-4efe-855f-2979ddd172e3.pdf",
+          "CaseName": "BAKER v HODDER [2017] NZSC 171 [17 November 2017]",
+          "id": "jdo/8b/alfresco/service/api/node/content/workspace/SpacesStore/76ae94ba-28be-4efe-855f-2979ddd172e3/76ae94ba-28be-4efe-855f-2979ddd172e3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "002d2946-4568-422b-a906-f9a09abdc892.pdf",
+          "CaseName": "GENERAL FINANCE LIMITED v SEREPISOS [2017] NZHC 2823 [17 November 2017]",
+          "id": "jdo/cf/alfresco/service/api/node/content/workspace/SpacesStore/002d2946-4568-422b-a906-f9a09abdc892/002d2946-4568-422b-a906-f9a09abdc892.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "ac73e229-bbe1-4f84-93ea-d83decb1887c.pdf",
+          "CaseName": "WARREN v THE CHIEF EXECUTIVE OF THE DEPARTMENT OF CORRECTIONS [2017] NZHC 2832 [17 November 2017]",
+          "id": "jdo/8d/alfresco/service/api/node/content/workspace/SpacesStore/ac73e229-bbe1-4f84-93ea-d83decb1887c/ac73e229-bbe1-4f84-93ea-d83decb1887c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "6d18af2a-be6a-40dd-b224-f229ca8cdd19.pdf",
+          "CaseName": "FM CUSTODIANS LIMITED v KEAST [2017] NZHC 2829 [17 November 2017]",
+          "id": "jdo/a2/alfresco/service/api/node/content/workspace/SpacesStore/6d18af2a-be6a-40dd-b224-f229ca8cdd19/6d18af2a-be6a-40dd-b224-f229ca8cdd19.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "d0fb2048-b192-47b6-8b13-b7ff3d5274bd.pdf",
+          "CaseName": "BROWN v NEW ZEALAND POLICE [2017] NZHC 2837 [17 November 2017]",
+          "id": "jdo/ca/alfresco/service/api/node/content/workspace/SpacesStore/d0fb2048-b192-47b6-8b13-b7ff3d5274bd/d0fb2048-b192-47b6-8b13-b7ff3d5274bd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "297c16ff-7dae-4b85-a032-86482b58c8c3.pdf",
+          "CaseName": "TANOA v NEW ZEALAND POLICE [2017] NZHC 2836 [17 November 2017]",
+          "id": "jdo/d8/alfresco/service/api/node/content/workspace/SpacesStore/297c16ff-7dae-4b85-a032-86482b58c8c3/297c16ff-7dae-4b85-a032-86482b58c8c3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "c5eedae3-2aa0-4936-887c-677aecf90bf4.pdf",
+          "CaseName": "NGOI v WEN [2017] NZCA 519 [17 November 2017]",
+          "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/c5eedae3-2aa0-4936-887c-677aecf90bf4/c5eedae3-2aa0-4936-887c-677aecf90bf4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "d519d646-9fc9-4b36-9f53-9e23de4f8d61.pdf",
+          "CaseName": "WALKER v NELSON CITY COUNCIL [2017] NZCA 526 [17 November 2017]",
+          "id": "jdo/6c/alfresco/service/api/node/content/workspace/SpacesStore/d519d646-9fc9-4b36-9f53-9e23de4f8d61/d519d646-9fc9-4b36-9f53-9e23de4f8d61.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "83e7ae20-c301-4123-9e99-4a876029c0d5.pdf",
+          "CaseName": "TORCHLIGHT FUND NO. 1 LP (IN REC) v JOHNSTONE & ORS [2017] NZHC 2835 [17 November 2017]",
+          "id": "jdo/30/alfresco/service/api/node/content/workspace/SpacesStore/83e7ae20-c301-4123-9e99-4a876029c0d5/83e7ae20-c301-4123-9e99-4a876029c0d5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "b2337e75-c1ca-4b56-8822-7776a2dd3808.pdf",
+          "CaseName": "DWYER-MAJER v NZ POLICE [2017] NZHC 2824 [17 November 2017]",
+          "id": "jdo/49/alfresco/service/api/node/content/workspace/SpacesStore/b2337e75-c1ca-4b56-8822-7776a2dd3808/b2337e75-c1ca-4b56-8822-7776a2dd3808.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "1d8b12c1-799f-4139-ac28-b42ccc666a8b.pdf",
+          "CaseName": "HUATA v THE QUEEN [2017] NZHC 2833 [17 November 2017]",
+          "id": "jdo/29/alfresco/service/api/node/content/workspace/SpacesStore/1d8b12c1-799f-4139-ac28-b42ccc666a8b/1d8b12c1-799f-4139-ac28-b42ccc666a8b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "be63070f-5965-4e03-b362-bf4558d3c2c0.pdf",
+          "CaseName": "EDWARDS v NEW ZEALAND POLICE [2017] NZHC 2834 [17 November 2017]",
+          "id": "jdo/7b/alfresco/service/api/node/content/workspace/SpacesStore/be63070f-5965-4e03-b362-bf4558d3c2c0/be63070f-5965-4e03-b362-bf4558d3c2c0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "5c5beb8c-78da-491c-baf2-f083eb68b21f.pdf",
+          "CaseName": "R v KINGHAZEL & MATEKUARE [2017] NZHC 2825 [17 November 2017]",
+          "id": "jdo/ca/alfresco/service/api/node/content/workspace/SpacesStore/5c5beb8c-78da-491c-baf2-f083eb68b21f/5c5beb8c-78da-491c-baf2-f083eb68b21f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "273fd3bd-8f89-4615-b674-37beacb65d5c.pdf",
+          "CaseName": "AUTUMN TREE LIMITED v BISHOP WARDEN PROPERTY HOLDINGS LIMITED [2017] NZHC 2838 [17 November 2017]",
+          "id": "jdo/d4/alfresco/service/api/node/content/workspace/SpacesStore/273fd3bd-8f89-4615-b674-37beacb65d5c/273fd3bd-8f89-4615-b674-37beacb65d5c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "b55f652a-8121-4570-94e1-a488d53b7a98.pdf",
+          "CaseName": "TRUSTEES EXECUTORS LIMITED v FUND MANAGERS CANTERBURY LIMITED [2017] NZHC 2792 [17 November 2017]",
+          "id": "jdo/c3/alfresco/service/api/node/content/workspace/SpacesStore/b55f652a-8121-4570-94e1-a488d53b7a98/b55f652a-8121-4570-94e1-a488d53b7a98.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "70c4f543-c8f7-4648-97bb-9adea5cc559e.pdf",
+          "CaseName": "PRESCOTT v THE DISTRICT COURT AT NORTH SHORE [2017] NZHC 2828 [17 November 2017]",
+          "id": "jdo/2d/alfresco/service/api/node/content/workspace/SpacesStore/70c4f543-c8f7-4648-97bb-9adea5cc559e/70c4f543-c8f7-4648-97bb-9adea5cc559e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "4ce9c188-717e-47b6-bd18-de44caa60032.pdf",
+          "CaseName": "JOHNS v WU [2017] NZHC 2831 [17 November 2017]",
+          "id": "jdo/76/alfresco/service/api/node/content/workspace/SpacesStore/4ce9c188-717e-47b6-bd18-de44caa60032/4ce9c188-717e-47b6-bd18-de44caa60032.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "26d35b82-4e16-43fe-b0fa-28ab3911259c.pdf",
+          "CaseName": "IL FORNO LTD v KLEINE & Ors [2017] NZHC 2809 [17 November 2017]",
+          "id": "jdo/1b/alfresco/service/api/node/content/workspace/SpacesStore/26d35b82-4e16-43fe-b0fa-28ab3911259c/26d35b82-4e16-43fe-b0fa-28ab3911259c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-17T13:00:01Z",
+          "DocumentName": "da68b113-3658-443c-b40c-3a56af2af6c0.pdf",
+          "CaseName": "GOTTY v R [2017] NZCA 528 [17 November 2017]",
+          "id": "jdo/c9/alfresco/service/api/node/content/workspace/SpacesStore/da68b113-3658-443c-b40c-3a56af2af6c0/da68b113-3658-443c-b40c-3a56af2af6c0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "3d60cd73-404d-4bd7-bc79-6436b6222f13.pdf",
+          "CaseName": "DICKSON v NEW ZEALAND POLICE [2017] NZHC 2815 [16 November 2017]",
+          "id": "jdo/75/alfresco/service/api/node/content/workspace/SpacesStore/3d60cd73-404d-4bd7-bc79-6436b6222f13/3d60cd73-404d-4bd7-bc79-6436b6222f13.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "07e8f17b-4f17-4404-8f5b-985d903b808f.pdf",
+          "CaseName": "CHESTERFIELDS PRESCHOOLS LIMITED (IN LIQUIDATION) v THE COMMISSIONER OF INLAND REVENUE [2017] NZSC 168 [16 November 2017]",
+          "id": "jdo/75/alfresco/service/api/node/content/workspace/SpacesStore/07e8f17b-4f17-4404-8f5b-985d903b808f/07e8f17b-4f17-4404-8f5b-985d903b808f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "710b1741-33d4-4815-9da2-771a0ae03567.pdf",
+          "CaseName": "GRINDLAY v MEMELINK [2017] NZCA 520 [16 November 2017]",
+          "id": "jdo/d9/alfresco/service/api/node/content/workspace/SpacesStore/710b1741-33d4-4815-9da2-771a0ae03567/710b1741-33d4-4815-9da2-771a0ae03567.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "85a21c65-a201-471b-8077-17dd34950e60.pdf",
+          "CaseName": "EKINS V R [2017] NZCA 518 [16 November 2017]",
+          "id": "jdo/f7/alfresco/service/api/node/content/workspace/SpacesStore/85a21c65-a201-471b-8077-17dd34950e60/85a21c65-a201-471b-8077-17dd34950e60.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "584a5fe2-95c1-4f15-9559-f882c3e60d20.pdf",
+          "CaseName": "RASMUSSEN v THE DISPUTES TRIBUNAL AT PUKEKOHE [2017] NZHC 2812 [16 November 2017]",
+          "id": "jdo/3c/alfresco/service/api/node/content/workspace/SpacesStore/584a5fe2-95c1-4f15-9559-f882c3e60d20/584a5fe2-95c1-4f15-9559-f882c3e60d20.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "f6da2711-5551-432a-8203-2b37fc216f95.pdf",
+          "CaseName": "PADGETT v POLICE [2017] NZHC 2818 [16 November 2017]",
+          "id": "jdo/3e/alfresco/service/api/node/content/workspace/SpacesStore/f6da2711-5551-432a-8203-2b37fc216f95/f6da2711-5551-432a-8203-2b37fc216f95.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "aba3763f-e511-42d1-80a6-0a58d0270e4f.pdf",
+          "CaseName": "LINKLATER v DICKISON [2017] NZHC 2813 [16 November 2017]",
+          "id": "jdo/b6/alfresco/service/api/node/content/workspace/SpacesStore/aba3763f-e511-42d1-80a6-0a58d0270e4f/aba3763f-e511-42d1-80a6-0a58d0270e4f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "481977ed-4b89-4cc0-a094-9f0c3977df40.pdf",
+          "CaseName": "R v KATIPA [2017] NZHC 2811 [16 November 2017]",
+          "id": "jdo/8a/alfresco/service/api/node/content/workspace/SpacesStore/481977ed-4b89-4cc0-a094-9f0c3977df40/481977ed-4b89-4cc0-a094-9f0c3977df40.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "db8a729b-969d-4d34-b145-0a61a802ee3d.pdf",
+          "CaseName": "SMITH v THE ATTORNEY-GENERAL [2017] NZHC 2810 [16 November 2017]",
+          "id": "jdo/36/alfresco/service/api/node/content/workspace/SpacesStore/db8a729b-969d-4d34-b145-0a61a802ee3d/db8a729b-969d-4d34-b145-0a61a802ee3d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "c10ec0ed-93d5-4cec-967a-0d719ea474af.pdf",
+          "CaseName": "LOUGHLIN v THE DIRECTOR OF THE SERIOUS FRAUD OFFICE [2017] NZHC 2820 [16 November 2017]",
+          "id": "jdo/94/alfresco/service/api/node/content/workspace/SpacesStore/c10ec0ed-93d5-4cec-967a-0d719ea474af/c10ec0ed-93d5-4cec-967a-0d719ea474af.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "4ccb2642-7af9-4ff1-bb8b-ba5786dd2a83.pdf",
+          "CaseName": "YU & Anor v BRADLEY & Anor [2017] NZHC 2816 [16 November 2017]",
+          "id": "jdo/2a/alfresco/service/api/node/content/workspace/SpacesStore/4ccb2642-7af9-4ff1-bb8b-ba5786dd2a83/4ccb2642-7af9-4ff1-bb8b-ba5786dd2a83.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "38aa7628-d288-4680-a200-4d2b44fc64f8.pdf",
+          "CaseName": "MAN V R [2017] NZCA 525 [16 November 2017]",
+          "id": "jdo/e3/alfresco/service/api/node/content/workspace/SpacesStore/38aa7628-d288-4680-a200-4d2b44fc64f8/38aa7628-d288-4680-a200-4d2b44fc64f8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "fa0f50f6-7f1d-42ff-a555-6f92dad159d4.pdf",
+          "CaseName": "RE NEW ZEALAND ASSOCIATION OF CREDIT UNIONS [2017] NZHC 2806 [16 November 2017]",
+          "id": "jdo/c1/alfresco/service/api/node/content/workspace/SpacesStore/fa0f50f6-7f1d-42ff-a555-6f92dad159d4/fa0f50f6-7f1d-42ff-a555-6f92dad159d4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "00597a9c-28ed-4872-9b72-b8a543972311.pdf",
+          "CaseName": "HILL v MCIVOR [2017] NZHC 2817 [16 November 2017]",
+          "id": "jdo/32/alfresco/service/api/node/content/workspace/SpacesStore/00597a9c-28ed-4872-9b72-b8a543972311/00597a9c-28ed-4872-9b72-b8a543972311.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "3ed5d9ed-5380-40bd-b47c-fbd7ea80fb6f.pdf",
+          "CaseName": "T (CA221/2017) v R [2017] NZCA 523 [16 November 2017]",
+          "id": "jdo/e6/alfresco/service/api/node/content/workspace/SpacesStore/3ed5d9ed-5380-40bd-b47c-fbd7ea80fb6f/3ed5d9ed-5380-40bd-b47c-fbd7ea80fb6f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-16T13:00:01Z",
+          "DocumentName": "9ebfde16-c8bd-41bf-a79d-822666ed590c.pdf",
+          "CaseName": "HART V R [2017] NZCA 521 [16 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/9ebfde16-c8bd-41bf-a79d-822666ed590c/9ebfde16-c8bd-41bf-a79d-822666ed590c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "b014516d-2c97-49b6-b663-e9458376e3a5.pdf",
+          "CaseName": "R v DANIELS [2017] NZHC 2805 [15 November 2017]",
+          "id": "jdo/62/alfresco/service/api/node/content/workspace/SpacesStore/b014516d-2c97-49b6-b663-e9458376e3a5/b014516d-2c97-49b6-b663-e9458376e3a5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "3e55448c-347c-4b5e-b245-2c0cbe5b8114.pdf",
+          "CaseName": "FAF HOLDINGS LIMITED (IN LIQ) v BETHUNE [2017] NZHC 2796 [15 November 2017]",
+          "id": "jdo/c6/alfresco/service/api/node/content/workspace/SpacesStore/3e55448c-347c-4b5e-b245-2c0cbe5b8114/3e55448c-347c-4b5e-b245-2c0cbe5b8114.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "3fa57e05-79b6-41b7-a105-baa059c3f391.pdf",
+          "CaseName": "OFFICIAL ASSIGNEE v MWA CONSULTANTS LTD & ORS [2017] NZHC 2801 [15 November 2017]",
+          "id": "jdo/88/alfresco/service/api/node/content/workspace/SpacesStore/3fa57e05-79b6-41b7-a105-baa059c3f391/3fa57e05-79b6-41b7-a105-baa059c3f391.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "12e90dce-b287-46d6-aacc-60ab49491c63.pdf",
+          "CaseName": "L AND T V CHIEF EXECUTIVE OF THE MINISTRY FOR VULNERABLE CHILDREN, ORANGA TAMARIKI [2017] NZCA 517 [15 November 2017]",
+          "id": "jdo/13/alfresco/service/api/node/content/workspace/SpacesStore/12e90dce-b287-46d6-aacc-60ab49491c63/12e90dce-b287-46d6-aacc-60ab49491c63.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "0d151165-440c-4f97-939f-e692d90ef2a8.pdf",
+          "CaseName": "TSYAN v POLICE [2017] NZHC 2795 [15 November 2017]",
+          "id": "jdo/39/alfresco/service/api/node/content/workspace/SpacesStore/0d151165-440c-4f97-939f-e692d90ef2a8/0d151165-440c-4f97-939f-e692d90ef2a8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "3dff8062-87b2-4ba4-bc40-98053f6cefda.pdf",
+          "CaseName": "FINDLAY v FINDLAY [2017] NZHC 2797 [15 November 2017]",
+          "id": "jdo/17/alfresco/service/api/node/content/workspace/SpacesStore/3dff8062-87b2-4ba4-bc40-98053f6cefda/3dff8062-87b2-4ba4-bc40-98053f6cefda.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "0c4a387b-5ebe-4151-8749-c9cef9f9947a.pdf",
+          "CaseName": "R v CHEESMAN [2017] NZHC 2800 [15 November 2017]",
+          "id": "jdo/66/alfresco/service/api/node/content/workspace/SpacesStore/0c4a387b-5ebe-4151-8749-c9cef9f9947a/0c4a387b-5ebe-4151-8749-c9cef9f9947a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "3114b51e-3844-4bad-8700-2c9d1c1efd00.pdf",
+          "CaseName": "SU’A v R [2017] NZHC 2794 [15 November 2017]",
+          "id": "jdo/d8/alfresco/service/api/node/content/workspace/SpacesStore/3114b51e-3844-4bad-8700-2c9d1c1efd00/3114b51e-3844-4bad-8700-2c9d1c1efd00.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-15T13:00:01Z",
+          "DocumentName": "e5158772-8ec0-470e-a802-7c1df70288d8.pdf",
+          "CaseName": "EAST v MEDICAL ASSURANCE SOCIETY NEW ZEALAND LIMITED [2017] NZHC 2802 [15 November 2017]",
+          "id": "jdo/16/alfresco/service/api/node/content/workspace/SpacesStore/e5158772-8ec0-470e-a802-7c1df70288d8/e5158772-8ec0-470e-a802-7c1df70288d8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "3437834d-8ade-4ac0-8d7d-f1e4605cc4e8.pdf",
+          "CaseName": "MARTINSON v NEW ZEALAND POLICE [2017] NZHC 2830 [17 November 2017]",
+          "id": "jdo/7e/alfresco/service/api/node/content/workspace/SpacesStore/3437834d-8ade-4ac0-8d7d-f1e4605cc4e8/3437834d-8ade-4ac0-8d7d-f1e4605cc4e8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "a8861feb-8d8e-46e6-8f47-41688ef3358b.pdf",
+          "CaseName": "MCGARRETT v R [2017] NZHC 2785 [14 November 2017]",
+          "id": "jdo/b3/alfresco/service/api/node/content/workspace/SpacesStore/a8861feb-8d8e-46e6-8f47-41688ef3358b/a8861feb-8d8e-46e6-8f47-41688ef3358b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "ca6dbbda-28f7-4df5-85f9-d750841ec7fb.pdf",
+          "CaseName": "SOOIALO-HULBERT v POLICE [2017] NZHC 2786 [14 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/ca6dbbda-28f7-4df5-85f9-d750841ec7fb/ca6dbbda-28f7-4df5-85f9-d750841ec7fb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "bc6a4756-0986-4095-9e76-2d6e9ecd5fda.pdf",
+          "CaseName": "DJILALI v R [2017] NZCA 515 [14 November 2017]",
+          "id": "jdo/68/alfresco/service/api/node/content/workspace/SpacesStore/bc6a4756-0986-4095-9e76-2d6e9ecd5fda/bc6a4756-0986-4095-9e76-2d6e9ecd5fda.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "46aa8c8e-634d-4ac8-b175-13d69dd7ee0a.pdf",
+          "CaseName": "HUDSON v THE ATTORNEY-GENERAL [2017] NZHC 2790 [14 November 2017]",
+          "id": "jdo/5e/alfresco/service/api/node/content/workspace/SpacesStore/46aa8c8e-634d-4ac8-b175-13d69dd7ee0a/46aa8c8e-634d-4ac8-b175-13d69dd7ee0a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "c5e8f662-f889-4c09-b9eb-3d2ca95cf620.pdf",
+          "CaseName": "R v KITE [2017] NZHC 2784 [14 November 2017]",
+          "id": "jdo/86/alfresco/service/api/node/content/workspace/SpacesStore/c5e8f662-f889-4c09-b9eb-3d2ca95cf620/c5e8f662-f889-4c09-b9eb-3d2ca95cf620.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "1a7b4ef7-2e6d-4355-bfe9-b617e2f739af.pdf",
+          "CaseName": "BORLASE V R [2017] NZCA 514 [14 November 2017]",
+          "id": "jdo/ef/alfresco/service/api/node/content/workspace/SpacesStore/1a7b4ef7-2e6d-4355-bfe9-b617e2f739af/1a7b4ef7-2e6d-4355-bfe9-b617e2f739af.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "d548a791-0420-4737-9561-6d3dafcd1791.pdf",
+          "CaseName": "R V TOKI [2017] NZCA 513 [14 November 2017]",
+          "id": "jdo/39/alfresco/service/api/node/content/workspace/SpacesStore/d548a791-0420-4737-9561-6d3dafcd1791/d548a791-0420-4737-9561-6d3dafcd1791.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "6d153526-88f5-4933-9bec-46d50a3c003e.pdf",
+          "CaseName": "NGAVAEVAE v HARRISON [2017] NZHC 2788 [14 November 2017]",
+          "id": "jdo/8f/alfresco/service/api/node/content/workspace/SpacesStore/6d153526-88f5-4933-9bec-46d50a3c003e/6d153526-88f5-4933-9bec-46d50a3c003e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "a82b4f28-007f-46ce-b2e1-27a3d1db1740.pdf",
+          "CaseName": "PIONEER FINANCE LTD v GREEN CARS LTD [2017] NZHC 2782 [14 November 2017]",
+          "id": "jdo/5f/alfresco/service/api/node/content/workspace/SpacesStore/a82b4f28-007f-46ce-b2e1-27a3d1db1740/a82b4f28-007f-46ce-b2e1-27a3d1db1740.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-14T13:00:01Z",
+          "DocumentName": "9ce6c22f-134e-41b0-befa-ecf4a071d3e6.pdf",
+          "CaseName": "McINNESS and ANOR v JONES and ORS [2017] NZHC 2781 [14 November 2017]",
+          "id": "jdo/d3/alfresco/service/api/node/content/workspace/SpacesStore/9ce6c22f-134e-41b0-befa-ecf4a071d3e6/9ce6c22f-134e-41b0-befa-ecf4a071d3e6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "05492fb6-4e08-41a9-90d6-376e68b97178.pdf",
+          "CaseName": "MURRAY v PEPI [2017] NZHC 2774 [13 November 2017]",
+          "id": "jdo/25/alfresco/service/api/node/content/workspace/SpacesStore/05492fb6-4e08-41a9-90d6-376e68b97178/05492fb6-4e08-41a9-90d6-376e68b97178.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "71eaf077-b056-45f9-9242-4aad32a7b07d.pdf",
+          "CaseName": "MUSUKU v COMMISSIONER OF INLAND REVENUE [2017] NZCA 509 [13 November 2017]",
+          "id": "jdo/4f/alfresco/service/api/node/content/workspace/SpacesStore/71eaf077-b056-45f9-9242-4aad32a7b07d/71eaf077-b056-45f9-9242-4aad32a7b07d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "2143f8c7-1d7e-4cb5-b95c-5311c15b05b4.pdf",
+          "CaseName": "STEWART v POLICE [2017] NZHC 2775 [13 November 2017]",
+          "id": "jdo/39/alfresco/service/api/node/content/workspace/SpacesStore/2143f8c7-1d7e-4cb5-b95c-5311c15b05b4/2143f8c7-1d7e-4cb5-b95c-5311c15b05b4.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "41c1af3e-6a58-449b-95ba-d5a92420b63e.pdf",
+          "CaseName": "WALMSLEY v AITCHISON [2017] NZCA 512 [13 November 2017]",
+          "id": "jdo/c5/alfresco/service/api/node/content/workspace/SpacesStore/41c1af3e-6a58-449b-95ba-d5a92420b63e/41c1af3e-6a58-449b-95ba-d5a92420b63e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "fe528553-cf19-498b-a1f5-e649eb263429.pdf",
+          "CaseName": "HOWARD v NEW ZEALAND POLICE [2017] NZHC 2779 [13 November 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/fe528553-cf19-498b-a1f5-e649eb263429/fe528553-cf19-498b-a1f5-e649eb263429.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "8081139b-b9be-4fb1-ad90-1fb0ea46d427.pdf",
+          "CaseName": "GLASSON v SOUTHERN RESPONSE [2017] NZHC 2778 [13 November 2017]",
+          "id": "jdo/e7/alfresco/service/api/node/content/workspace/SpacesStore/8081139b-b9be-4fb1-ad90-1fb0ea46d427/8081139b-b9be-4fb1-ad90-1fb0ea46d427.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "fa3cc143-2e48-4c76-a4c1-e272061e48f1.pdf",
+          "CaseName": "BANK OF NEW ZEALAND v PATRICK [2017] NZHC 2777 [13 November 2017]",
+          "id": "jdo/7e/alfresco/service/api/node/content/workspace/SpacesStore/fa3cc143-2e48-4c76-a4c1-e272061e48f1/fa3cc143-2e48-4c76-a4c1-e272061e48f1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "7f3b41ce-bc0e-4bf9-8e8c-23fbc366ba24.pdf",
+          "CaseName": "BUTCH PET FOODS LTD v MAC MOTORS LTD [2017] NZHC 2776 [13 November 2017]",
+          "id": "jdo/5c/alfresco/service/api/node/content/workspace/SpacesStore/7f3b41ce-bc0e-4bf9-8e8c-23fbc366ba24/7f3b41ce-bc0e-4bf9-8e8c-23fbc366ba24.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "f9a6d35e-0593-4834-8c9e-5cc20e0ea3b7.pdf",
+          "CaseName": "EPIHA v TAURANGA CITY COUNCIL [2017] NZCA 511 [13 November 2017]",
+          "id": "jdo/be/alfresco/service/api/node/content/workspace/SpacesStore/f9a6d35e-0593-4834-8c9e-5cc20e0ea3b7/f9a6d35e-0593-4834-8c9e-5cc20e0ea3b7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-13T13:00:01Z",
+          "DocumentName": "58c476d0-d9f0-4639-9363-b8184a18bac2.pdf",
+          "CaseName": "ANNALINGAM v NEW ZEALAND POLICE [2017] NZHC 2803 [13 November 2017]",
+          "id": "jdo/ea/alfresco/service/api/node/content/workspace/SpacesStore/58c476d0-d9f0-4639-9363-b8184a18bac2/58c476d0-d9f0-4639-9363-b8184a18bac2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "b08905d2-22c4-4943-89e9-4d8a7196dd0e.pdf",
+          "CaseName": "ATTARD v HIGH COURT AUCKLAND Habeas Corpus [2017] NZHC 2766 [10 November 2017]",
+          "id": "jdo/87/alfresco/service/api/node/content/workspace/SpacesStore/b08905d2-22c4-4943-89e9-4d8a7196dd0e/b08905d2-22c4-4943-89e9-4d8a7196dd0e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "4dd6c69b-fd53-49ae-a1fe-b4809552b90d.pdf",
+          "CaseName": "R v WIRA [2017] NZHC 2755 [10 November 2017]",
+          "id": "jdo/d9/alfresco/service/api/node/content/workspace/SpacesStore/4dd6c69b-fd53-49ae-a1fe-b4809552b90d/4dd6c69b-fd53-49ae-a1fe-b4809552b90d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "2e24e390-f9fb-4a5a-837b-ddf770ff0f94.pdf",
+          "CaseName": "R v Taurae [2017] NZHC 2756 [10 November 2017]",
+          "id": "jdo/54/alfresco/service/api/node/content/workspace/SpacesStore/2e24e390-f9fb-4a5a-837b-ddf770ff0f94/2e24e390-f9fb-4a5a-837b-ddf770ff0f94.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "9f9d9d10-f92b-49a2-8b2b-2bd7c08435c0.pdf",
+          "CaseName": "REID-MANUEL v THE QUEEN [2017] NZHC 2768 [10 November 2017]",
+          "id": "jdo/97/alfresco/service/api/node/content/workspace/SpacesStore/9f9d9d10-f92b-49a2-8b2b-2bd7c08435c0/9f9d9d10-f92b-49a2-8b2b-2bd7c08435c0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "05381243-b5cf-496c-91d7-2bdfc8e18fdd.pdf",
+          "CaseName": "CASHMORE v POLICE [2017] NZCA 508 [10 November 2017]",
+          "id": "jdo/81/alfresco/service/api/node/content/workspace/SpacesStore/05381243-b5cf-496c-91d7-2bdfc8e18fdd/05381243-b5cf-496c-91d7-2bdfc8e18fdd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "8a50af2d-97d9-4cf6-b0e1-7736ee912f1d.pdf",
+          "CaseName": "THE COMMISSIONER OF POLICE v MA [2017] NZHC 2754 [10 November 2017]",
+          "id": "jdo/2f/alfresco/service/api/node/content/workspace/SpacesStore/8a50af2d-97d9-4cf6-b0e1-7736ee912f1d/8a50af2d-97d9-4cf6-b0e1-7736ee912f1d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "8f7a4a00-5e01-4f00-8f31-56779f17d438.pdf",
+          "CaseName": "COMMISSIONER OF POLICE v BORLASE [2017] NZHC 2753 [10 November 2017]",
+          "id": "jdo/d5/alfresco/service/api/node/content/workspace/SpacesStore/8f7a4a00-5e01-4f00-8f31-56779f17d438/8f7a4a00-5e01-4f00-8f31-56779f17d438.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "516e3044-6654-4d92-aa18-34055c961579.pdf",
+          "CaseName": "MĀORI TRUSTEE v HILL [2017] NZHC 2758 [10 November 2017]",
+          "id": "jdo/ed/alfresco/service/api/node/content/workspace/SpacesStore/516e3044-6654-4d92-aa18-34055c961579/516e3044-6654-4d92-aa18-34055c961579.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "d222cd08-4f0d-45ed-a95b-ff6f29476fd2.pdf",
+          "CaseName": "YE v DENG – NO 2 COSTS [2017] NZHC 2764 [10 November 2017]",
+          "id": "jdo/72/alfresco/service/api/node/content/workspace/SpacesStore/d222cd08-4f0d-45ed-a95b-ff6f29476fd2/d222cd08-4f0d-45ed-a95b-ff6f29476fd2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "74470393-ad9a-4f55-9d1a-31b10ee74bec.pdf",
+          "CaseName": "RICKUS v R [2017] NZHC 2757 [10 November 2017]",
+          "id": "jdo/fb/alfresco/service/api/node/content/workspace/SpacesStore/74470393-ad9a-4f55-9d1a-31b10ee74bec/74470393-ad9a-4f55-9d1a-31b10ee74bec.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "3fb5bae2-0342-4147-aff0-7487082f25a5.pdf",
+          "CaseName": "ZHAO v WANG [2017] NZHC 2761 [10 November 2017]",
+          "id": "jdo/43/alfresco/service/api/node/content/workspace/SpacesStore/3fb5bae2-0342-4147-aff0-7487082f25a5/3fb5bae2-0342-4147-aff0-7487082f25a5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "896dacf5-e7ea-433e-87c1-4866465b0373.pdf",
+          "CaseName": "R v PIAHANA & MATTHEWS [2017] NZHC 2763 [10 November 2017]",
+          "id": "jdo/64/alfresco/service/api/node/content/workspace/SpacesStore/896dacf5-e7ea-433e-87c1-4866465b0373/896dacf5-e7ea-433e-87c1-4866465b0373.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "b7864282-9c16-4dab-9ff8-04da2b87b5d9.pdf",
+          "CaseName": "NATIONAL ADVANCED DRIVERS SCHOOL LIMITED v BLACK SHEEP ENT. LIMITED [2017] NZHC  2804 [10 November 2017]",
+          "id": "jdo/ab/alfresco/service/api/node/content/workspace/SpacesStore/b7864282-9c16-4dab-9ff8-04da2b87b5d9/b7864282-9c16-4dab-9ff8-04da2b87b5d9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-10T13:00:01Z",
+          "DocumentName": "b055dd8a-657b-4ac6-bfeb-059790dd7a97.pdf",
+          "CaseName": "HUNTER v ATTORNEY-GENERAL SUED ON BEHALF OF THE NEW ZEALAND POLICE AND THE MINISTRY OF JUSTICE [2017] NZHC 2767 [10 November 2017]",
+          "id": "jdo/28/alfresco/service/api/node/content/workspace/SpacesStore/b055dd8a-657b-4ac6-bfeb-059790dd7a97/b055dd8a-657b-4ac6-bfeb-059790dd7a97.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "7a57af6f-7f94-4eb7-b9d4-e7b6a6aa141d.pdf",
+          "CaseName": "BARTLETT & OSBORNE v DISTRICT COURT & COMMISSIONER OF POLICE [2017] NZHC 2848 [9 November 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/7a57af6f-7f94-4eb7-b9d4-e7b6a6aa141d/7a57af6f-7f94-4eb7-b9d4-e7b6a6aa141d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "6238229a-2f8a-456f-91e3-ce9b118df656.pdf",
+          "CaseName": "GLASSON & ORS v SOUTHERN RESPONSE [2017] NZHC 2749 [9 November 2017]",
+          "id": "jdo/cf/alfresco/service/api/node/content/workspace/SpacesStore/6238229a-2f8a-456f-91e3-ce9b118df656/6238229a-2f8a-456f-91e3-ce9b118df656.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "bf942ee8-02dc-41ca-b1fd-a09c51a0328d.pdf",
+          "CaseName": "SKY NETWORK TELEVISION LTD v TELEVISION NZ LTD & ORS & SKY NETWORK TELEVISION LTD v FAIRFAX NZ LTD [2017] NZHC 2750 [9 November 2017]",
+          "id": "jdo/44/alfresco/service/api/node/content/workspace/SpacesStore/bf942ee8-02dc-41ca-b1fd-a09c51a0328d/bf942ee8-02dc-41ca-b1fd-a09c51a0328d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "2838a527-d8f9-4c52-811d-ae0e8af14d6b.pdf",
+          "CaseName": "RENAISSANCE BREWING LIMITED v SHEPHARD & KELLOW [2017] NZHC 2744 [9 November 2017]",
+          "id": "jdo/a5/alfresco/service/api/node/content/workspace/SpacesStore/2838a527-d8f9-4c52-811d-ae0e8af14d6b/2838a527-d8f9-4c52-811d-ae0e8af14d6b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "2c6052d8-3843-4f1e-9b2a-0163168444ca.pdf",
+          "CaseName": "PURE ELITE HOLDINGS LIMITED & Ors v BODCO LIMITED & Ors [2017] NZHC 2746 [9 November 2017]",
+          "id": "jdo/ac/alfresco/service/api/node/content/workspace/SpacesStore/2c6052d8-3843-4f1e-9b2a-0163168444ca/2c6052d8-3843-4f1e-9b2a-0163168444ca.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "e09232ba-829f-4d83-9c5f-0c4853555025.pdf",
+          "CaseName": "WHITTAKER v POLICE [2017] NZHC 2747 [9 November 2017]",
+          "id": "jdo/86/alfresco/service/api/node/content/workspace/SpacesStore/e09232ba-829f-4d83-9c5f-0c4853555025/e09232ba-829f-4d83-9c5f-0c4853555025.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "8cbd5da1-fde0-4a80-9a27-a0455bb8a0fc.pdf",
+          "CaseName": "OʼNEILL v TOOGOOD [2017] NZCA 505 [9 November 2017]",
+          "id": "jdo/14/alfresco/service/api/node/content/workspace/SpacesStore/8cbd5da1-fde0-4a80-9a27-a0455bb8a0fc/8cbd5da1-fde0-4a80-9a27-a0455bb8a0fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "213f0cc2-6c66-4c76-8161-a3756fa935cc.pdf",
+          "CaseName": "HAIG v NEW ZEALAND POLICE [2017] NZHC 2751 [9 November 2017]",
+          "id": "jdo/d3/alfresco/service/api/node/content/workspace/SpacesStore/213f0cc2-6c66-4c76-8161-a3756fa935cc/213f0cc2-6c66-4c76-8161-a3756fa935cc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "9dce9cf5-f9ed-4560-b592-90bf6e72c7be.pdf",
+          "CaseName": "ESPIE v POLICE [2017] NZHC 2741 [9 November 2017]",
+          "id": "jdo/8b/alfresco/service/api/node/content/workspace/SpacesStore/9dce9cf5-f9ed-4560-b592-90bf6e72c7be/9dce9cf5-f9ed-4560-b592-90bf6e72c7be.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-09T13:00:01Z",
+          "DocumentName": "a141e7d4-9072-441c-aab6-8d0806336549.pdf",
+          "CaseName": "LEAN & TARARUA TRUSTEES LIMITED v LEAN [2017] NZHC 2742 [9 November 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/a141e7d4-9072-441c-aab6-8d0806336549/a141e7d4-9072-441c-aab6-8d0806336549.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-08T13:00:01Z",
+          "DocumentName": "49fe3d0a-d6ce-4022-b222-65370fae5cfa.pdf",
+          "CaseName": "INCODO LTD v KOP-COAT NEW ZEALAND LTD & ANOR [2017] NZHC 2737 [8 November 2017]",
+          "id": "jdo/df/alfresco/service/api/node/content/workspace/SpacesStore/49fe3d0a-d6ce-4022-b222-65370fae5cfa/49fe3d0a-d6ce-4022-b222-65370fae5cfa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-08T13:00:01Z",
+          "DocumentName": "a0425407-4405-4d55-924c-25ce1a7eba96.pdf",
+          "CaseName": "LSF TRUSTEES LIMITED v FOOTSTEPS TRUSTEE COMPANY LIMITED (IN LIQUIDATION) [2017] NZHC 2619 [8 November 2017]",
+          "id": "jdo/cc/alfresco/service/api/node/content/workspace/SpacesStore/a0425407-4405-4d55-924c-25ce1a7eba96/a0425407-4405-4d55-924c-25ce1a7eba96.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-08T13:00:01Z",
+          "DocumentName": "9fbeea47-f4a6-4435-9599-526d6106bbd3.pdf",
+          "CaseName": "TODD PETROLEUM MINING COMPANY LIMITED v VECTOR GAS TRADING LIMITED [2017] NZHC 2734 [8 November 2017]",
+          "id": "jdo/63/alfresco/service/api/node/content/workspace/SpacesStore/9fbeea47-f4a6-4435-9599-526d6106bbd3/9fbeea47-f4a6-4435-9599-526d6106bbd3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-08T13:00:01Z",
+          "DocumentName": "f4503655-ec19-4fac-9aaf-a41078333624.pdf",
+          "CaseName": "CATHERINE JANE JOLLANDS AND PETER REGINALD JOLLANDS AS LIQUIDATORS OF TSL NELSON LIMITED (IN LIQUIDATION) v KELSEY GULL AND ANDREAS GULL [2017] NZHC 2733 [8 November 2017]",
+          "id": "jdo/d9/alfresco/service/api/node/content/workspace/SpacesStore/f4503655-ec19-4fac-9aaf-a41078333624/f4503655-ec19-4fac-9aaf-a41078333624.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-08T13:00:01Z",
+          "DocumentName": "7f0c4e40-b757-4d38-bf43-8e900a990d5f.pdf",
+          "CaseName": "MAGEE & ORS v MASON & ORS [2017] NZCA 502 [8 November 2017]",
+          "id": "jdo/3d/alfresco/service/api/node/content/workspace/SpacesStore/7f0c4e40-b757-4d38-bf43-8e900a990d5f/7f0c4e40-b757-4d38-bf43-8e900a990d5f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "1d199561-02c2-44f9-8bf7-1515eb8c8102.pdf",
+          "CaseName": "WALMSLEY v AITCHISON [2017] NZCA 500 [7 November 2017]",
+          "id": "jdo/bd/alfresco/service/api/node/content/workspace/SpacesStore/1d199561-02c2-44f9-8bf7-1515eb8c8102/1d199561-02c2-44f9-8bf7-1515eb8c8102.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "ada5da63-3b4e-4e8b-8fb3-4eaba41b4ba1.pdf",
+          "CaseName": "STUART v LIGHTNING CLEANING SERVICES LIMITED [2017] NZHC 2714 [7 November 2017]",
+          "id": "jdo/f9/alfresco/service/api/node/content/workspace/SpacesStore/ada5da63-3b4e-4e8b-8fb3-4eaba41b4ba1/ada5da63-3b4e-4e8b-8fb3-4eaba41b4ba1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "82094581-a20e-4ed4-9035-fb6cfeebc3a3.pdf",
+          "CaseName": "TRENDS PUBLISHING INTERNATIONAL LIMITED v ADVICEWISE PEOPLE LIMITED [2017] NZSC 167 [7 November 2017]",
+          "id": "jdo/47/alfresco/service/api/node/content/workspace/SpacesStore/82094581-a20e-4ed4-9035-fb6cfeebc3a3/82094581-a20e-4ed4-9035-fb6cfeebc3a3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "cd47677f-eb44-4cc1-b8c0-0ce5692d457d.pdf",
+          "CaseName": "POHUTUHUTU v R [2017] NZCA 501 [7 November 2017]",
+          "id": "jdo/50/alfresco/service/api/node/content/workspace/SpacesStore/cd47677f-eb44-4cc1-b8c0-0ce5692d457d/cd47677f-eb44-4cc1-b8c0-0ce5692d457d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "79aabffe-fdab-4e7a-8023-9453321907fc.pdf",
+          "CaseName": "TANOA v NEW ZEALAND POLICE [2017] NZHC 2722 [7 November 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/79aabffe-fdab-4e7a-8023-9453321907fc/79aabffe-fdab-4e7a-8023-9453321907fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "2ebd3cd6-2c54-448e-a1aa-43b799cd0a84.pdf",
+          "CaseName": "OʼNEILL v ACCIDENT COMPENSATION CORPORATION [2017] NZHC 2713 [7 November 2017]",
+          "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/2ebd3cd6-2c54-448e-a1aa-43b799cd0a84/2ebd3cd6-2c54-448e-a1aa-43b799cd0a84.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "c1a3b145-3031-458b-abff-0065cbdab152.pdf",
+          "CaseName": "FAIRVIEW PROPERTY INVESTMENT [2017] NZHC 2723 [7 November 2017]",
+          "id": "jdo/f9/alfresco/service/api/node/content/workspace/SpacesStore/c1a3b145-3031-458b-abff-0065cbdab152/c1a3b145-3031-458b-abff-0065cbdab152.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "edeb5371-78f0-477a-b86a-d2df9ab50fca.pdf",
+          "CaseName": "AUCKLAND COUNCIL v HER MAJESTY THE QUEEN [2017] NZHC 2724 [7 November 2017]",
+          "id": "jdo/3f/alfresco/service/api/node/content/workspace/SpacesStore/edeb5371-78f0-477a-b86a-d2df9ab50fca/edeb5371-78f0-477a-b86a-d2df9ab50fca.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "06c456c7-5676-497e-b2ce-c95f3c2aaab6.pdf",
+          "CaseName": "HARBOUR CITY CONSTRUCTION 2012 LIMITED v MEMELINK [2017] NZHC 2727 [7 November 2017]",
+          "id": "jdo/89/alfresco/service/api/node/content/workspace/SpacesStore/06c456c7-5676-497e-b2ce-c95f3c2aaab6/06c456c7-5676-497e-b2ce-c95f3c2aaab6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "f63cb4cd-befc-4bb8-a46d-909f57098a2f.pdf",
+          "CaseName": "SEAWARD v BAXTER [2017] NZHC 2719 [7 November 2017]",
+          "id": "jdo/9a/alfresco/service/api/node/content/workspace/SpacesStore/f63cb4cd-befc-4bb8-a46d-909f57098a2f/f63cb4cd-befc-4bb8-a46d-909f57098a2f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-07T13:00:01Z",
+          "DocumentName": "c7bd20e3-e686-4fa3-906a-bedb51d62cf1.pdf",
+          "CaseName": "SLIGHT v ACCIDENT COMPENSATION CORPORATION [2017] NZHC 2716 [7 November 2017]",
+          "id": "jdo/7f/alfresco/service/api/node/content/workspace/SpacesStore/c7bd20e3-e686-4fa3-906a-bedb51d62cf1/c7bd20e3-e686-4fa3-906a-bedb51d62cf1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "c435ca59-b45d-4433-a80e-929ba57de3d1.pdf",
+          "CaseName": "ZHANG v GUAN COSTS [2017] NZHC 2710 [6 November 2017]",
+          "id": "jdo/2f/alfresco/service/api/node/content/workspace/SpacesStore/c435ca59-b45d-4433-a80e-929ba57de3d1/c435ca59-b45d-4433-a80e-929ba57de3d1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "cb76f9d1-f852-49f0-a136-4c42b73964f9.pdf",
+          "CaseName": "ELI DEVOY v R [2017] NZSC 164 [6 November 2017]",
+          "id": "jdo/f8/alfresco/service/api/node/content/workspace/SpacesStore/cb76f9d1-f852-49f0-a136-4c42b73964f9/cb76f9d1-f852-49f0-a136-4c42b73964f9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "d9acef62-560b-4f37-9970-876f96f8384a.pdf",
+          "CaseName": "MALCOLM EDWARD RABSON v ATTORNEY-GENERAL [2017] NZSC 166 [6 November 2017]",
+          "id": "jdo/14/alfresco/service/api/node/content/workspace/SpacesStore/d9acef62-560b-4f37-9970-876f96f8384a/d9acef62-560b-4f37-9970-876f96f8384a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "c5e32747-02d9-41a8-87c7-b0dac5118b94.pdf",
+          "CaseName": "HEREMAIA v THE QUEEN [2017] NZHC 2707 [6 November 2017]",
+          "id": "jdo/75/alfresco/service/api/node/content/workspace/SpacesStore/c5e32747-02d9-41a8-87c7-b0dac5118b94/c5e32747-02d9-41a8-87c7-b0dac5118b94.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "fdb0c2dd-2859-4328-9c06-ca98bc8b9d01.pdf",
+          "CaseName": "NELSON v GIBSON [2017] NZHC 2715 [6 November 2017]",
+          "id": "jdo/f1/alfresco/service/api/node/content/workspace/SpacesStore/fdb0c2dd-2859-4328-9c06-ca98bc8b9d01/fdb0c2dd-2859-4328-9c06-ca98bc8b9d01.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "e31840ed-f9e2-4c81-8993-bd4887a1e857.pdf",
+          "CaseName": "WASLANDER v SOUTHLAND REGIONAL COUNCIL [2017] NZHC 2699 [6 November 2017]",
+          "id": "jdo/52/alfresco/service/api/node/content/workspace/SpacesStore/e31840ed-f9e2-4c81-8993-bd4887a1e857/e31840ed-f9e2-4c81-8993-bd4887a1e857.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "1362647b-db10-436c-b372-c7aa207a0fb1.pdf",
+          "CaseName": "KNUCKEY v NEW ZEALAND POLICE [2017] NZHC 2712 [6 November 2017]",
+          "id": "jdo/86/alfresco/service/api/node/content/workspace/SpacesStore/1362647b-db10-436c-b372-c7aa207a0fb1/1362647b-db10-436c-b372-c7aa207a0fb1.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "53cce90c-d1a6-4a5e-a309-f5d4bcb3b221.pdf",
+          "CaseName": "Neill v Auckland Council [2017] NZHC 2703 [6 November 2017]",
+          "id": "jdo/1c/alfresco/service/api/node/content/workspace/SpacesStore/53cce90c-d1a6-4a5e-a309-f5d4bcb3b221/53cce90c-d1a6-4a5e-a309-f5d4bcb3b221.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "92f4b868-259b-464a-a8a3-ce8432ab61d8.pdf",
+          "CaseName": "CROCKENBERG v NEW ZEALAND POLICE [2017] NZHC 2704 [6 November 2017]",
+          "id": "jdo/82/alfresco/service/api/node/content/workspace/SpacesStore/92f4b868-259b-464a-a8a3-ce8432ab61d8/92f4b868-259b-464a-a8a3-ce8432ab61d8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-06T13:00:01Z",
+          "DocumentName": "9753b8d4-9c7b-4f7d-b685-b6c9f823fc23.pdf",
+          "CaseName": "ROWELL v DISTRICT COURT [2017] NZHC 2706 [6 November 2017]",
+          "id": "jdo/b0/alfresco/service/api/node/content/workspace/SpacesStore/9753b8d4-9c7b-4f7d-b685-b6c9f823fc23/9753b8d4-9c7b-4f7d-b685-b6c9f823fc23.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-03T13:00:01Z",
+          "DocumentName": "1bc33379-79fc-4fd7-8b80-26039d03f37a.pdf",
+          "CaseName": "LAI & ANOR v HUANG AS EXECUTRIX OF THE ESTATE OF HSIU-LIN HUANG & ORS [2017] NZCA 499 [3 November 2017]",
+          "id": "jdo/8c/alfresco/service/api/node/content/workspace/SpacesStore/1bc33379-79fc-4fd7-8b80-26039d03f37a/1bc33379-79fc-4fd7-8b80-26039d03f37a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-03T13:00:01Z",
+          "DocumentName": "c3d48693-ba00-44f1-96c6-4f10d3a094c7.pdf",
+          "CaseName": "WEBSTER v POLICE [2017] NZHC 2685 [3 November 2017]",
+          "id": "jdo/33/alfresco/service/api/node/content/workspace/SpacesStore/c3d48693-ba00-44f1-96c6-4f10d3a094c7/c3d48693-ba00-44f1-96c6-4f10d3a094c7.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-03T13:00:01Z",
+          "DocumentName": "e9f2b50c-3a69-4781-93f2-c5bde4458f5e.pdf",
+          "CaseName": "TAMIHERE v ATTORNEY-GENERAL OF NEW ZEALAND [2017] NZHC 2697 [3 November 2017]",
+          "id": "jdo/1a/alfresco/service/api/node/content/workspace/SpacesStore/e9f2b50c-3a69-4781-93f2-c5bde4458f5e/e9f2b50c-3a69-4781-93f2-c5bde4458f5e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-03T13:00:01Z",
+          "DocumentName": "67ec5da8-1bbb-443a-ae75-602b5929e23b.pdf",
+          "CaseName": "WILL OF GERALD EDWARD JAMES WALSH [2017] NZHC 2693 [3 November 2017]",
+          "id": "jdo/c8/alfresco/service/api/node/content/workspace/SpacesStore/67ec5da8-1bbb-443a-ae75-602b5929e23b/67ec5da8-1bbb-443a-ae75-602b5929e23b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-03T13:00:01Z",
+          "DocumentName": "cdc76234-93e6-4724-a32b-ef50f9a967ce.pdf",
+          "CaseName": "R v PANI-MARSDEN,NUKU & BRIGGS [2017] NZHC 2696 [3 November 2017]",
+          "id": "jdo/de/alfresco/service/api/node/content/workspace/SpacesStore/cdc76234-93e6-4724-a32b-ef50f9a967ce/cdc76234-93e6-4724-a32b-ef50f9a967ce.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "eeb4bcef-c776-49b1-8f7b-23d77c358ded.pdf",
+          "CaseName": "THOMSON v THE MINISTER FOR CLIMATE CHANGE ISSUES [2017] NZHC 733 [2 November 2017]",
+          "id": "jdo/aa/alfresco/service/api/node/content/workspace/SpacesStore/eeb4bcef-c776-49b1-8f7b-23d77c358ded/eeb4bcef-c776-49b1-8f7b-23d77c358ded.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "0bff3eac-ea59-4940-bf99-223aee432690.pdf",
+          "CaseName": "MITCHELL v PRIVACY COMMISSIONER [2017] NZHC 569 [2 November 2017]",
+          "id": "jdo/b2/alfresco/service/api/node/content/workspace/SpacesStore/0bff3eac-ea59-4940-bf99-223aee432690/0bff3eac-ea59-4940-bf99-223aee432690.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "8a3c975e-2ecc-4873-8b1d-484058d2cf7e.pdf",
+          "CaseName": "HAGAMAN v LITTLE [2017] NZCA 447 [2 November 2017]",
+          "id": "jdo/53/alfresco/service/api/node/content/workspace/SpacesStore/8a3c975e-2ecc-4873-8b1d-484058d2cf7e/8a3c975e-2ecc-4873-8b1d-484058d2cf7e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "3fc538a5-bea3-442d-8949-ab062c7e5761.pdf",
+          "CaseName": "R v CARROLL [2017] NZHC 2691 [2 November 2017]",
+          "id": "jdo/fc/alfresco/service/api/node/content/workspace/SpacesStore/3fc538a5-bea3-442d-8949-ab062c7e5761/3fc538a5-bea3-442d-8949-ab062c7e5761.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "4449fb25-3937-4e99-909b-92e2204af9cc.pdf",
+          "CaseName": "KERR v R [2017] NZCA 498 [2 November 2017]",
+          "id": "jdo/7c/alfresco/service/api/node/content/workspace/SpacesStore/4449fb25-3937-4e99-909b-92e2204af9cc/4449fb25-3937-4e99-909b-92e2204af9cc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "bd5c1e80-7d24-4e9f-9f78-f56d1d2ab842.pdf",
+          "CaseName": "AUSTRALASIAN CONFERENCE ASSOCIATION LTD v A LITTLE BIT OF BRITAIN LTD [2017] NZHC 2684 [2 November 2017]",
+          "id": "jdo/27/alfresco/service/api/node/content/workspace/SpacesStore/bd5c1e80-7d24-4e9f-9f78-f56d1d2ab842/bd5c1e80-7d24-4e9f-9f78-f56d1d2ab842.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "0684d81c-66a4-42ac-8761-38d057eb4abd.pdf",
+          "CaseName": "KELLY v NEW ZEALAND POLICE [2017] NZHC 2689 [2 November 2017]",
+          "id": "jdo/d1/alfresco/service/api/node/content/workspace/SpacesStore/0684d81c-66a4-42ac-8761-38d057eb4abd/0684d81c-66a4-42ac-8761-38d057eb4abd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "9e8082e0-4808-44cc-99a7-b3fdb2ccebd9.pdf",
+          "CaseName": "R v Kingi [2017] NZHC 2765 [2 November 2017]",
+          "id": "jdo/b0/alfresco/service/api/node/content/workspace/SpacesStore/9e8082e0-4808-44cc-99a7-b3fdb2ccebd9/9e8082e0-4808-44cc-99a7-b3fdb2ccebd9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "0f924f68-98db-4821-a046-892f0b95da91.pdf",
+          "CaseName": "R v Bhikoo [2017] NZHC 2688 [2 November 2017]",
+          "id": "jdo/ac/alfresco/service/api/node/content/workspace/SpacesStore/0f924f68-98db-4821-a046-892f0b95da91/0f924f68-98db-4821-a046-892f0b95da91.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-02T13:00:01Z",
+          "DocumentName": "28bd2d93-d616-4b7c-8be0-72631f5069fd.pdf",
+          "CaseName": "FITZGERALD v IAG NEW ZEALAND LIMITED [2017] NZHC 2705 [2 November 2017]",
+          "id": "jdo/b7/alfresco/service/api/node/content/workspace/SpacesStore/28bd2d93-d616-4b7c-8be0-72631f5069fd/28bd2d93-d616-4b7c-8be0-72631f5069fd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "7d93c470-b5bb-4af6-9195-7b971038680f.pdf",
+          "CaseName": "MITCHELL v OFFICIAL ASSIGNEE [2017] NZHC 2686 [1 November 2017]",
+          "id": "jdo/dc/alfresco/service/api/node/content/workspace/SpacesStore/7d93c470-b5bb-4af6-9195-7b971038680f/7d93c470-b5bb-4af6-9195-7b971038680f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "0888460b-b336-4f67-bc9f-da296be63aa3.pdf",
+          "CaseName": "SINGH v THE COMMISSIONER OF INLAND REVENUE [2017] NZCA 497 [1 November 2017]",
+          "id": "jdo/f4/alfresco/service/api/node/content/workspace/SpacesStore/0888460b-b336-4f67-bc9f-da296be63aa3/0888460b-b336-4f67-bc9f-da296be63aa3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "c0caf273-75f2-4749-8b73-3be7e3214fb9.pdf",
+          "CaseName": "BUSHLINE TRUSTEES v ANZ BANK NZ LTD [2017] NZHC 829 [1 November 2017]",
+          "id": "jdo/5c/alfresco/service/api/node/content/workspace/SpacesStore/c0caf273-75f2-4749-8b73-3be7e3214fb9/c0caf273-75f2-4749-8b73-3be7e3214fb9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "b081a5b0-8027-462a-8180-fad011b40670.pdf",
+          "CaseName": "RABSON v JUSTICES WILLIAM YOUNG, ARNOLD, GLAZEBROOK, OʼREGAN AND ELLEN FRANCE [2017] NZSC 163 [1 November 2017]",
+          "id": "jdo/b8/alfresco/service/api/node/content/workspace/SpacesStore/b081a5b0-8027-462a-8180-fad011b40670/b081a5b0-8027-462a-8180-fad011b40670.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "800c5a6b-d0af-4696-afba-fade270337a2.pdf",
+          "CaseName": "PEREGRINE ESTATE LIMITED v HAY AND KIM EDWARD HOLLOWS AS TRUSTEES OF THE GREG HAY FAMILY TRUST [2017] NZCA 496 [1 November 2017]",
+          "id": "jdo/4a/alfresco/service/api/node/content/workspace/SpacesStore/800c5a6b-d0af-4696-afba-fade270337a2/800c5a6b-d0af-4696-afba-fade270337a2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "3867cd2f-9309-42dd-bc43-b0657307b73e.pdf",
+          "CaseName": "REEKIE v LEGAL SERVICES COMMISSIONER [2017] NZHC 2677 [1 November 2017]",
+          "id": "jdo/1a/alfresco/service/api/node/content/workspace/SpacesStore/3867cd2f-9309-42dd-bc43-b0657307b73e/3867cd2f-9309-42dd-bc43-b0657307b73e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "69e87677-706d-4c96-a4ed-77b359f53a39.pdf",
+          "CaseName": "SINGH v THE COMMISSIONER OF INLAND REVENUE [2017] NZCA 506 [1 November 2017]",
+          "id": "jdo/9f/alfresco/service/api/node/content/workspace/SpacesStore/69e87677-706d-4c96-a4ed-77b359f53a39/69e87677-706d-4c96-a4ed-77b359f53a39.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "c7b17697-8970-48fc-b011-923ae7f4759a.pdf",
+          "CaseName": "BURROWS v MINISTRY OF JUSTICE [2017] NZHC 2679 [1 November 2017]",
+          "id": "jdo/ae/alfresco/service/api/node/content/workspace/SpacesStore/c7b17697-8970-48fc-b011-923ae7f4759a/c7b17697-8970-48fc-b011-923ae7f4759a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-11-01T13:00:01Z",
+          "DocumentName": "2800b295-eab9-47b0-a7c5-521a2012bfef.pdf",
+          "CaseName": "BAYER NEW ZEALAND LIMITED v MERIAL LIMITED [2017] NZHC 2946 [1 November 2017]",
+          "id": "jdo/21/alfresco/service/api/node/content/workspace/SpacesStore/2800b295-eab9-47b0-a7c5-521a2012bfef/2800b295-eab9-47b0-a7c5-521a2012bfef.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "c54ab1e9-69fe-4363-94d8-b15f2b1c8e3d.pdf",
+          "CaseName": "READING ENTERTAINMENT AUSTRALIA PTY LTD v AMP CAPITAL SHOPPING CENTRES PTY LTD [2017] NZHC 2337 [31 October 2017]",
+          "id": "jdo/ca/alfresco/service/api/node/content/workspace/SpacesStore/c54ab1e9-69fe-4363-94d8-b15f2b1c8e3d/c54ab1e9-69fe-4363-94d8-b15f2b1c8e3d.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "85fae17b-6d50-4f22-ae23-76016427c4fc.pdf",
+          "CaseName": "COOK v HOUSING NEW ZEALAND CORPORATION [2017] NZHC 2661 [31 October 2017]",
+          "id": "jdo/2e/alfresco/service/api/node/content/workspace/SpacesStore/85fae17b-6d50-4f22-ae23-76016427c4fc/85fae17b-6d50-4f22-ae23-76016427c4fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "8a20e293-9c76-40b8-8a60-cf1550061fbd.pdf",
+          "CaseName": "HOME BUILDER BOP LTD v FORMAN & TURNER [2017] NZHC 2155 [31 October 2017]",
+          "id": "jdo/1f/alfresco/service/api/node/content/workspace/SpacesStore/8a20e293-9c76-40b8-8a60-cf1550061fbd/8a20e293-9c76-40b8-8a60-cf1550061fbd.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "4b102169-25b1-44f4-83a1-2cc5432cecb8.pdf",
+          "CaseName": "BROWN v NEW ZEALAND POST LIMITED [2017] NZHC 2670 [31 October 2017]",
+          "id": "jdo/7d/alfresco/service/api/node/content/workspace/SpacesStore/4b102169-25b1-44f4-83a1-2cc5432cecb8/4b102169-25b1-44f4-83a1-2cc5432cecb8.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "e20715ea-8d0e-4dac-811d-e324eceff50c.pdf",
+          "CaseName": "CHEN v ZENG Costs [2017] NZHC 2667 [31 October 2017]",
+          "id": "jdo/e8/alfresco/service/api/node/content/workspace/SpacesStore/e20715ea-8d0e-4dac-811d-e324eceff50c/e20715ea-8d0e-4dac-811d-e324eceff50c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "b7541a68-127b-479f-a3e9-be4e67da0323.pdf",
+          "CaseName": "WENDCO (NZ) LTD v LJCTB TRUSTEES LTD AND ANOR [2017] NZHC 2668 [31 October 2017]",
+          "id": "jdo/32/alfresco/service/api/node/content/workspace/SpacesStore/b7541a68-127b-479f-a3e9-be4e67da0323/b7541a68-127b-479f-a3e9-be4e67da0323.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "a78b3ad3-eb43-4b06-adb6-782b7b91dcf0.pdf",
+          "CaseName": "BROOK VALLEY COMMUNITY GROUP INCORPORATED v BROOK WAIMARAMA SANCTUARY TRUST [2017] NZHC 2665 [31 October 2017]",
+          "id": "jdo/81/alfresco/service/api/node/content/workspace/SpacesStore/a78b3ad3-eb43-4b06-adb6-782b7b91dcf0/a78b3ad3-eb43-4b06-adb6-782b7b91dcf0.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "6a89ac8d-a0c8-447f-ba6c-668bcd1e940b.pdf",
+          "CaseName": "MUNRO v POLICE [2017] NZHC 2202 [31 October 2017]",
+          "id": "jdo/70/alfresco/service/api/node/content/workspace/SpacesStore/6a89ac8d-a0c8-447f-ba6c-668bcd1e940b/6a89ac8d-a0c8-447f-ba6c-668bcd1e940b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "7d5056a1-3317-4eef-8ddf-bcd9a82dcafa.pdf",
+          "CaseName": "PECOTIC v POLICE [2017] NZHC 2660 [31 October 2017]",
+          "id": "jdo/d1/alfresco/service/api/node/content/workspace/SpacesStore/7d5056a1-3317-4eef-8ddf-bcd9a82dcafa/7d5056a1-3317-4eef-8ddf-bcd9a82dcafa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "e79c581e-f1c6-482a-9119-b3d04d2c6c75.pdf",
+          "CaseName": "ZHAO v THE LEGAL COMPLAINTS REVIEW OFFICER [2017] NZHC 1561 [31 October 2017]",
+          "id": "jdo/63/alfresco/service/api/node/content/workspace/SpacesStore/e79c581e-f1c6-482a-9119-b3d04d2c6c75/e79c581e-f1c6-482a-9119-b3d04d2c6c75.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "cacb5bbf-0d27-4260-b340-f42e5fedb6fc.pdf",
+          "CaseName": "MEHTA v R [2017] NZCA 491 [31 October 2017]",
+          "id": "jdo/1f/alfresco/service/api/node/content/workspace/SpacesStore/cacb5bbf-0d27-4260-b340-f42e5fedb6fc/cacb5bbf-0d27-4260-b340-f42e5fedb6fc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "e3741066-59df-4149-9b60-52d680887d93.pdf",
+          "CaseName": "LINFORD v POLICE [2017] NZHC 2166 [31 October 2017]",
+          "id": "jdo/ab/alfresco/service/api/node/content/workspace/SpacesStore/e3741066-59df-4149-9b60-52d680887d93/e3741066-59df-4149-9b60-52d680887d93.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "a6d8c7bc-d7e4-4131-808b-877a7fa61458.pdf",
+          "CaseName": "MCMURDOCK v POLICE [2017] NZHC 1283 [31 October 2017]",
+          "id": "jdo/c6/alfresco/service/api/node/content/workspace/SpacesStore/a6d8c7bc-d7e4-4131-808b-877a7fa61458/a6d8c7bc-d7e4-4131-808b-877a7fa61458.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "cc9ad82a-1af9-4926-8b3a-f0cab7c2b947.pdf",
+          "CaseName": "HWANG v POLICE [2017] NZHC 1171 [31 October 2017]",
+          "id": "jdo/2f/alfresco/service/api/node/content/workspace/SpacesStore/cc9ad82a-1af9-4926-8b3a-f0cab7c2b947/cc9ad82a-1af9-4926-8b3a-f0cab7c2b947.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "154fddcc-1c87-405e-9e36-a1318694e8c3.pdf",
+          "CaseName": "HIGGINS v R [2017] NZCA 486 [31 October 2017]",
+          "id": "jdo/25/alfresco/service/api/node/content/workspace/SpacesStore/154fddcc-1c87-405e-9e36-a1318694e8c3/154fddcc-1c87-405e-9e36-a1318694e8c3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "716d08c4-6ccd-425d-9eef-923d7d958c36.pdf",
+          "CaseName": "MATTHEWS v R [2017] NZCA 493 [31 October 2017]",
+          "id": "jdo/90/alfresco/service/api/node/content/workspace/SpacesStore/716d08c4-6ccd-425d-9eef-923d7d958c36/716d08c4-6ccd-425d-9eef-923d7d958c36.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "cdb28aa5-2703-4d06-935e-822d1186ef1b.pdf",
+          "CaseName": "TRAVIS v NEW ZEALAND POLICE [2017] NZHC 1607 [31 October 2017]",
+          "id": "jdo/69/alfresco/service/api/node/content/workspace/SpacesStore/cdb28aa5-2703-4d06-935e-822d1186ef1b/cdb28aa5-2703-4d06-935e-822d1186ef1b.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "15f16424-801b-4d88-b9f8-b71852b75de9.pdf",
+          "CaseName": "CRAIG v KEITH [2017] NZHC 2664 [31 October 2017]",
+          "id": "jdo/80/alfresco/service/api/node/content/workspace/SpacesStore/15f16424-801b-4d88-b9f8-b71852b75de9/15f16424-801b-4d88-b9f8-b71852b75de9.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "0fd80593-9643-47fb-a5e9-7f691320c332.pdf",
+          "CaseName": "FANG v MINISTRY OF BUSINESS, INNOVATION AND EMPLOYMENT [2017] NZHC 2663 [31 October 2017]",
+          "id": "jdo/7c/alfresco/service/api/node/content/workspace/SpacesStore/0fd80593-9643-47fb-a5e9-7f691320c332/0fd80593-9643-47fb-a5e9-7f691320c332.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "8d8b60c0-ea59-4ef5-b337-7efe61a78466.pdf",
+          "CaseName": "WOOD v ARTHUR [2017] NZHC 1725 [31 October 2017]",
+          "id": "jdo/9e/alfresco/service/api/node/content/workspace/SpacesStore/8d8b60c0-ea59-4ef5-b337-7efe61a78466/8d8b60c0-ea59-4ef5-b337-7efe61a78466.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "2d7b8e44-8afa-48c4-9ecd-c1b7c7f4b801.pdf",
+          "CaseName": "AMG NOMINEES LIMITED v KELLY [2017] NZHC 2725 [31 October 2017]",
+          "id": "jdo/ee/alfresco/service/api/node/content/workspace/SpacesStore/2d7b8e44-8afa-48c4-9ecd-c1b7c7f4b801/2d7b8e44-8afa-48c4-9ecd-c1b7c7f4b801.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-31T13:00:01Z",
+          "DocumentName": "66a0da9d-0df0-4f60-939b-20d93b2e31ac.pdf",
+          "CaseName": "TUKAKI v THE DISTRICT COURT AT TAURANGA & ANOR [2017] NZHC 843 [31 October 2017]",
+          "id": "jdo/6d/alfresco/service/api/node/content/workspace/SpacesStore/66a0da9d-0df0-4f60-939b-20d93b2e31ac/66a0da9d-0df0-4f60-939b-20d93b2e31ac.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "b493d25b-6ec4-4dc8-9428-1b2edb1d6bbb.pdf",
+          "CaseName": "STOCKMAN v NEW ZEALAND ASSOCIATION OF COUNSELLORS INC [2017] NZHC 2223 [30 October 2017]",
+          "id": "jdo/4c/alfresco/service/api/node/content/workspace/SpacesStore/b493d25b-6ec4-4dc8-9428-1b2edb1d6bbb/b493d25b-6ec4-4dc8-9428-1b2edb1d6bbb.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "3d374727-1244-49ad-9471-d2fd8fc1a933.pdf",
+          "CaseName": "CHRIS DE RUYTER PAINTING LIMITED (IN LIQ) v ASB BANK LIMITED [2017] NZHC 2515 [30 October 2017]",
+          "id": "jdo/a2/alfresco/service/api/node/content/workspace/SpacesStore/3d374727-1244-49ad-9471-d2fd8fc1a933/3d374727-1244-49ad-9471-d2fd8fc1a933.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "13064a57-1819-427f-827d-4053308a4efc.pdf",
+          "CaseName": "SOUTHERN RESPONSE EARTHQUAKE SERVICES LIMITED v THE SOUTHERN RESPONSE UNRESOLVED CLAIMS GROUP [2017] NZCA 489 [30 October 2017]",
+          "id": "jdo/a1/alfresco/service/api/node/content/workspace/SpacesStore/13064a57-1819-427f-827d-4053308a4efc/13064a57-1819-427f-827d-4053308a4efc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "89379673-fd20-4b3a-a7d3-6c07765204e6.pdf",
+          "CaseName": "PERI MICAELA FINNIGAN AND BORIS VAN DELDEN AS LIQUIDATORS OF WENZTRO CO-OPERATION LIMITED V BRIAN ROBERT ELLIS [2017] NZCA 488 [30 October 2017]",
+          "id": "jdo/dd/alfresco/service/api/node/content/workspace/SpacesStore/89379673-fd20-4b3a-a7d3-6c07765204e6/89379673-fd20-4b3a-a7d3-6c07765204e6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "fe12f1e1-6caf-49d4-ba2e-358837bab912.pdf",
+          "CaseName": "TOURPLAN PACIFIC LTD & OR v AUSTRALIAN TOURS MANAGEMENT PTY LTD [2017] NZHC 2230 [30 October 2017]",
+          "id": "jdo/df/alfresco/service/api/node/content/workspace/SpacesStore/fe12f1e1-6caf-49d4-ba2e-358837bab912/fe12f1e1-6caf-49d4-ba2e-358837bab912.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "51b403a0-0ea6-42c9-9a46-81ec3b3ad46c.pdf",
+          "CaseName": "NEW HEALTH NEW ZEALAND INCORPORATED v SOUTH TARANAKI DISTRICT COUNCIL [2017] NZSC 162 [30 October 2017]",
+          "id": "jdo/d3/alfresco/service/api/node/content/workspace/SpacesStore/51b403a0-0ea6-42c9-9a46-81ec3b3ad46c/51b403a0-0ea6-42c9-9a46-81ec3b3ad46c.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "6ad97fb0-0ba2-4ac5-b63d-03599d724df2.pdf",
+          "CaseName": "HARDY v WHITCOMBE [2017] NZHC 2382 [30 October 2017]",
+          "id": "jdo/55/alfresco/service/api/node/content/workspace/SpacesStore/6ad97fb0-0ba2-4ac5-b63d-03599d724df2/6ad97fb0-0ba2-4ac5-b63d-03599d724df2.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "bb8675da-1e9f-49c3-85b4-a0481992934e.pdf",
+          "CaseName": "S v ATTORNEY-GENERAL [2017] NZHC 2629 [30 October 2017]",
+          "id": "jdo/a1/alfresco/service/api/node/content/workspace/SpacesStore/bb8675da-1e9f-49c3-85b4-a0481992934e/bb8675da-1e9f-49c3-85b4-a0481992934e.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "4697fd1d-602d-4345-a992-46d69c0d3880.pdf",
+          "CaseName": "FM CUSTODIANS LIMITED v KEAST [2017] NZHC 2654 [30 October 2017]",
+          "id": "jdo/91/alfresco/service/api/node/content/workspace/SpacesStore/4697fd1d-602d-4345-a992-46d69c0d3880/4697fd1d-602d-4345-a992-46d69c0d3880.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "cf534d38-9dce-4246-91a4-93b625dbf6aa.pdf",
+          "CaseName": "BENEFICIAL INSURANCE LTD v THE REGISTRAR OF COMPANIES [2017] NZHC 2437 [30 October 2017]",
+          "id": "jdo/23/alfresco/service/api/node/content/workspace/SpacesStore/cf534d38-9dce-4246-91a4-93b625dbf6aa/cf534d38-9dce-4246-91a4-93b625dbf6aa.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "c525f317-ffba-484c-8d3f-28c785a1268f.pdf",
+          "CaseName": "THOMAS v MACKINTOSH [2017] NZHC 2656 [30 October 2017]",
+          "id": "jdo/4c/alfresco/service/api/node/content/workspace/SpacesStore/c525f317-ffba-484c-8d3f-28c785a1268f/c525f317-ffba-484c-8d3f-28c785a1268f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "36c0b638-86fc-47ca-b1cf-a4f22193d9cc.pdf",
+          "CaseName": "Robinson v New Zealand Police [2017] NZHC 2655 [30 October 2017]",
+          "id": "jdo/85/alfresco/service/api/node/content/workspace/SpacesStore/36c0b638-86fc-47ca-b1cf-a4f22193d9cc/36c0b638-86fc-47ca-b1cf-a4f22193d9cc.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "1f7ffad1-9b0d-4382-b36c-49d5cfaf535a.pdf",
+          "CaseName": "MCBETH v GRAY [2017] NZHC 2653 [30 October 2017]",
+          "id": "jdo/95/alfresco/service/api/node/content/workspace/SpacesStore/1f7ffad1-9b0d-4382-b36c-49d5cfaf535a/1f7ffad1-9b0d-4382-b36c-49d5cfaf535a.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-30T13:00:01Z",
+          "DocumentName": "2983eda4-de0d-4323-b6f2-62def81d4437.pdf",
+          "CaseName": "CORPORATE SURETIES LIMITED v MACKEN AND KEARNEY [2017] NZHC 2700 [30 October 2017]",
+          "id": "jdo/14/alfresco/service/api/node/content/workspace/SpacesStore/2983eda4-de0d-4323-b6f2-62def81d4437/2983eda4-de0d-4323-b6f2-62def81d4437.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "0b361deb-ed44-4218-8898-2ddef525aa35.pdf",
+          "CaseName": "GRAEME MARTIN CONTRACTING LIMITED v DISPUTES TRIBUNAL [2017] NZHC 2636 [27 October 2017]",
+          "id": "jdo/d2/alfresco/service/api/node/content/workspace/SpacesStore/0b361deb-ed44-4218-8898-2ddef525aa35/0b361deb-ed44-4218-8898-2ddef525aa35.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "61afc1b6-eb13-4692-98a2-e43b26114037.pdf",
+          "CaseName": "HOKO v R [2017] NZCA 484 [27 October 2017]",
+          "id": "jdo/1f/alfresco/service/api/node/content/workspace/SpacesStore/61afc1b6-eb13-4692-98a2-e43b26114037/61afc1b6-eb13-4692-98a2-e43b26114037.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "35e8229c-8776-4372-b6b9-dbb7c735f08f.pdf",
+          "CaseName": "LMLW LIMITED v ARMSTRONG MURRAY [2017] NZHC 2635 [27 October 2017]",
+          "id": "jdo/a9/alfresco/service/api/node/content/workspace/SpacesStore/35e8229c-8776-4372-b6b9-dbb7c735f08f/35e8229c-8776-4372-b6b9-dbb7c735f08f.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "0a5b0f6d-059c-4d78-9f1a-f9aa1ad894e5.pdf",
+          "CaseName": "RINTOUL v HARDING [2017] NZHC 2638 [27 October 2017]",
+          "id": "jdo/51/alfresco/service/api/node/content/workspace/SpacesStore/0a5b0f6d-059c-4d78-9f1a-f9aa1ad894e5/0a5b0f6d-059c-4d78-9f1a-f9aa1ad894e5.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "84ffe223-46e1-48f2-98ba-5e4eecd159c6.pdf",
+          "CaseName": "DVORAK V YAMAMOTO [2017] NZCA 485 [27 October 2017]",
+          "id": "jdo/3b/alfresco/service/api/node/content/workspace/SpacesStore/84ffe223-46e1-48f2-98ba-5e4eecd159c6/84ffe223-46e1-48f2-98ba-5e4eecd159c6.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "5f31cc33-9650-4f13-a63a-4dfa7f5612e3.pdf",
+          "CaseName": "SANDILANDS v NEW ZEALAND LAW SOCIETY [2017] NZHC 2640 [27 October 2017]",
+          "id": "jdo/c9/alfresco/service/api/node/content/workspace/SpacesStore/5f31cc33-9650-4f13-a63a-4dfa7f5612e3/5f31cc33-9650-4f13-a63a-4dfa7f5612e3.pdf",
+          "score": 1.0
+        },
+        {
+          "JudgmentDate": "2017-10-27T13:00:01Z",
+          "DocumentName": "09fc1b2f-ff50-4e96-b34f-911457eca9ed.pdf",
+          "CaseName": "OʼCONNOR v THE CHIEF EXECUTIVE, MINISTRY OF VULNERABLE CHILDREN, ORANGA TAMARIKI [2017] NZHC 2646 [27 October 2017]",
+          "id": "jdo/ae/alfresco/service/api/node/content/workspace/SpacesStore/09fc1b2f-ff50-4e96-b34f-911457eca9ed/09fc1b2f-ff50-4e96-b34f-911457eca9ed.pdf",
+          "score": 1.0
+        }
+      ]
+    }

@@ -19,9 +19,9 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var getText = "select case_name, case_text from cases where id = ?";
+var getText = "select case_name, case_text from cases where id = ''";
 
-var query = connection.query(getText, [738]);
+var query = connection.query(getText, [1]);
 
 var i = 1;
 

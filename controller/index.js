@@ -60,11 +60,10 @@ const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDa
 }
 
 download(jsonURL).then(data => {
- data = JSON.parse(data.toString()).response.docs;
+data = JSON.parse(data.toString()).response.docs;
   const newCases = data;
 
   let caseArrays = [];
-
   while(newCases.length > 0) {
     caseArrays.push(newCases.splice(0, Math.min(newCases.length, casesPerInstance)))
   }
