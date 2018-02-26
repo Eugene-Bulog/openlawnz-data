@@ -1,6 +1,5 @@
-// get all citations inside a case
-
-// nb - need to add lookup for each result to see if in database, then add to case-to-case table
+// get all citations inside a case including pinpoint 
+// still need to add lookup for each result to see if in database, then add to case-to-case table
 
 "use strict";
 
@@ -35,8 +34,6 @@ query
         const RegAllCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)([\s\S]at[\s\S]\d{0,16}(((\]|\.)|\;)|([\s\S]\(.{0,20}\))))?/g;
         var citations = case_text.match(RegAllCites);
         console.log(citations);
-
-
     })
     .on('end', function() {
       console.log('end');
