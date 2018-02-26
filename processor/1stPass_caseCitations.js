@@ -25,7 +25,7 @@ connection.query(getText, function(error, results, fields) {
 
 	var insertQueries = [];
 	
-	function findCaseByCitation(citation, orig) {
+	function findCaseByCitation(citation) {
 		return results.find(function(row) {
 			return row.case_neutral_citation === citation
 		})
@@ -41,7 +41,7 @@ connection.query(getText, function(error, results, fields) {
 			
 			Array.from(new Set(citationsMatch)).forEach(function(citation) {
 				
-				var foundCase = findCaseByCitation(citation, row.id)
+				var foundCase = findCaseByCitation(citation)
 			
 				if(foundCase) {
 					insertQueries.push(`insert into case_citations (case_id, citation) values ('${foundCase.id}, ${citation}')`)
