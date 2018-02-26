@@ -28,29 +28,31 @@ var connection = mysql.createConnection({
         // check that case_text exists
         if (cases.case_text) {
             var str = cases.case_text;
-            // console.log(cases.id);
+            console.log(cases.id);
             // get the double citations from case text
             var doubleCites = str.match(regDoubleCites);
             // if there are matches
             if(doubleCites) {
                 // will be array even if just one, need to iterate through
                 _.map(doubleCites, function(doubles) {
+
                     // each result is a string being the combined double citation match
                     // split it into an array containing each individual citation
                     var arrayofDoubleCites = doubles.split(commaOrSemi);
-                    // console.log(arrayofDoubleCites);
-                    _.map(arrayofDoubleCites, function(oneCite) {
-                        oneCite = oneCite.trim(oneCite);
-                        return connection.query('select * from cases where id = 35');
-                    })
+                    console.log("First " + arrayofDoubleCites[0] + "\nSecond " + arrayofDoubleCites[1]);
+
+                    // look up database for arrayofDoubleCites[0]
+                    // if match, add arrayofdoublecites[1] to id of matched arrayofDoubleCites[0] in case_citations
                 });
             } 
         }
     });
 
-}).then(function(results){
-    console.log(results);
+
+}).then(function(result){
+    console.log(result);
 }).then(function(){
+    console.log('done');
     connection.end();
 });
 
