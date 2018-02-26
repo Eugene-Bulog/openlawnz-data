@@ -5,7 +5,9 @@
 // VARIABLES, DEPENDENCIES ETC
 // ---------------------------
 const mysql = require('promise-mysql');
+const _ = require('underscore');
 require('dotenv').config();
+
 
 var connection = mysql.createConnection({
   host      : process.env.DB_HOST,
@@ -20,22 +22,35 @@ var connection = mysql.createConnection({
     return connection.query('select id, case_name, case_text from cases');
 
 }).then(function(rows) {
-    // get first 100 chars of case text
-    // var case_text = rows[0].case_text;
-    for(var i = 0; i < rows.length; i++) { 
-        console.log(rows[i].case_name);
-        // get all double cites
+    _.map(rows, function(cases) {
         const regDoubleCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)(;|,)\s(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)/g;
-        var str = rows[i].case_text;
-        var doubleCites = str.match(regDoubleCites);
-   // if so, add to case_citations table
-        if(doubleCites) {
-        // add match
-        // connection.query('insert into case_citations ........................)
-            console.log(doubleCites);
+        const commaOrSemi = /,|;/g;
+        // check that case_text exists
+        if (cases.case_text) {
+            var str = cases.case_text;
+            // console.log(cases.id);
+            // get the double citations from case text
+            var doubleCites = str.match(regDoubleCites);
+            // if there are matches
+            if(doubleCites) {
+                // will be array even if just one, need to iterate through
+                _.map(doubleCites, function(doubles) {
+                    // each result is a string being the combined double citation match
+                    // split it into an array containing each individual citation
+                    var arrayofDoubleCites = doubles.split(commaOrSemi);
+                    // console.log(arrayofDoubleCites);
+                    _.map(arrayofDoubleCites, function(oneCite) {
+                        oneCite = oneCite.trim(oneCite);
+                        return connection.query('select * from cases where id = 35');
+                    })
+                });
+            } 
         }
-    }
+    });
+
+}).then(function(results){
+    console.log(results);
 }).then(function(){
-        connection.end();
+    connection.end();
 });
 

@@ -16,6 +16,7 @@
     "download": "^6.2.5",
     "mysql": "^2.15.0",
     "promise-mysql": "^3.2.1",
+    "underscore": "^1.8.3",
     "yargs": "^10.1.1"
   }
 }
