@@ -23,10 +23,9 @@ function encodeURIfix(str) {
 const casesPerInstance = 10;
 const mojDataFile = "../cache/mojData.json"
 
-// is is all docs after 17 dec 2017 for testing
-const jsonURL = "https://forms.justice.govt.nz/solr/jdo/select?q=*&facet=true&facet.field=Jurisdiction&facet.limit=-1&facet.mincount=1&rows=50&json.nl=map&fq=JudgmentDate%3A[2017-12-17T00%3A00%3A00Z%20TO%20*%20]&sort=JudgmentDate%20desc&fl=CaseName%2C%20JudgmentDate%2C%20DocumentName%2C%20id%2C%20score&wt=json"
-
-// "cases" array = (mojDATA json).response.docs
+    // is is all docs after 27 feb 2016 for testing
+    const jsonURL = "https://forms.justice.govt.nz/solr/jdo/select?q=*&facet=true&facet.field=Location&facet.field=Jurisdiction&facet.limit=-1&facet.mincount=1&rows=50000&json.nl=map&fq=JudgmentDate%3A%5B2016-2-27T00%3A00%3A00Z%20TO%20*%20%5D&sort=JudgmentDate%20desc&fl=CaseName%2C%20JudgmentDate%2C%20DocumentName%2C%20id%2C%20score&wt=json"
+    // "cases" array = (mojDATA json).response.docs
 
 const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDataFile)).response.docs : []
 
@@ -60,7 +59,8 @@ const cachedJSON = fs.existsSync(mojDataFile) ? JSON.parse(fs.readFileSync(mojDa
 }
 
 download(jsonURL).then(data => {
-data = JSON.parse(data.toString()).response.docs;
+  fs.writeFileSync('../cache/json-27-02-2016-to-27-02-2018.json', data);
+  data = JSON.parse(data.toString()).response.docs;
   const newCases = data;
 
   let caseArrays = [];
