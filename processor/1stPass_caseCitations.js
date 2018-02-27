@@ -19,21 +19,24 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var getText = "select * from cases";
 const regDoubleCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)(;|,)\s(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)/g;
 const commaOrSemi = /,|;/g;
 
-connection.query(getText, function(error, results, fields) {
+// this wont scale but rewrite in sql later cos we cant be fucked right now
+connection.query("select * from cases ; select * from case_citations", function(error, results, fields) {
+	
+	var allCases = results[0];
+	var allCitations = results[1];
 
 	var insertQueries = [];
 	
 	function findCaseByCitation(citation) {
-		return results.find(function(row) {
-			return row.case_neutral_citation === citation
+		return allCitations.find(function(row) {
+			return row.citation === citation
 		})
     }
 
-	results.forEach(function(row) {
+	allCases.forEach(function(row) {
 		
 		if(!row.case_text) { return }
 		
@@ -53,7 +56,7 @@ connection.query(getText, function(error, results, fields) {
 			var foundCase = findCaseByCitation(citation);
 			
 			if(foundCase) {
-				insertQueries.push(`insert into case_citations (case_id, citation) values ('${foundCase.id}, ${separatedCitations[1]}')`)
+				insertQueries.push("insert into case_citations (case_id, citation) values ('" + foundCase.case_id + "', '" + separatedCitations[1] + "')")
 			}
 		}
 		

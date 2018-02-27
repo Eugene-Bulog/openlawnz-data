@@ -19,7 +19,7 @@ var connection = mysql.createConnection({
 }).then(function(conn) {
     connection = conn;
     // get all blank neutral citations ("" instead of NULL due to formatting of initial insert)
-    return connection.query('select * from cases where case_neutral_citation = ""');
+    return connection.query('select * from case_citations where citation = ""');
 
 }).then(function(rows) {
     // get first 100 chars of case text
@@ -29,7 +29,8 @@ var connection = mysql.createConnection({
     var citation = case_text.match(regNeutralCite);
     // if so, add to case_citations table
     if(citation) {
-        var result = connection.query('insert into case_citations(case_id, citation) values("' + rows[0].id + '", "' + citation[0] + '")');
+        console.log(citation);
+        // var result = connection.query('insert into case_citations(case_id, citation) values("' + rows[0].id + '", "' + citation[0] + '")');
     }
     return result;
 

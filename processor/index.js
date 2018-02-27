@@ -29,7 +29,7 @@ console.log("host: " + process.env.DB_HOST);
 connection.connect();
 
 // edit for different computers
-var creds = new AWS.SharedIniFileCredentials({ profile: 'node-s3-laptop' });
+var creds = new AWS.SharedIniFileCredentials({ profile: process.env.PROFILE });
 //var creds = new AWS.SharedIniFileCredentials({profile: argv.s3Profile });
 
 AWS.config.credentials = creds;
@@ -41,6 +41,7 @@ var s3 = new AWS.S3({
 function processCase(caseData, cb) {
 
 	let caseItem = {};
+	let caseCitation = {};
 
 	process.stdout.write("processing case \n")
 	process.stdout.write(JSON.stringify(caseData));
@@ -59,6 +60,7 @@ function processCase(caseData, cb) {
 				fs.writeFileSync('../cache/' + bucket_key, data);
 				cb();
 			})
+			.catch(err => {console.log(err)})
 		},
 
 		// Run program text extract
@@ -87,13 +89,13 @@ function processCase(caseData, cb) {
 
 		// upload to bucket
 		function (cb) {
-			//process.stdout.write("uploading to s3\n");
+			process.stdout.write("uploading to s3\n");
 			try {					
 					s3.upload({
 					Key: caseItem.bucket_key,
 					Body: fs.readFileSync('../cache/' + caseItem.bucket_key)
 				}, cb) 
-				//process.stdout.write("uploaded\n")
+				process.stdout.write("uploaded\n")
 			}  
 				catch (ex) {cb(ex)} 
 		}, 
@@ -114,11 +116,11 @@ function processCase(caseData, cb) {
 
 		// tidy up object
 		function (cb) {
-			//process.stdout.write("tidying object\n");
+			process.stdout.write("tidying object\n");
 			caseItem.pdf_fetch_date = new Date();
 			caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
 			// maybe rename table (and this) to be case_initial_citation ie the first citation found (if any)
-			caseItem.case_neutral_citation = caseData.CaseName ? lib.getCitation(caseData.CaseName) : "";
+			caseCitation.citation = caseData.CaseName ? lib.getCitation(caseData.CaseName) : "";
 			caseItem.case_date = caseData.JudgmentDate;
 
 			cb();
@@ -126,23 +128,19 @@ function processCase(caseData, cb) {
 		
 		// insert case into database
 		function (cb) {
-			//process.stdout.write("inserting into database\n");
+			process.stdout.write("inserting into database\n");
 			try {
 				connection.query('INSERT INTO cases SET ?', caseItem, function (err, result) {
-
-				if (err) { cb(err); return; }
-
-				caseItem.id = result.insertId;
-
-				cb();
-
-				});
-							
-				// connection.query('INSERT INTO case_citations values ?', [caseItem.id, caseItem.case_neutral_citation]);
-
-				// add id as case_citations.case_id and case_neutral_citation as case_citations.citation to case_citations
-				
-		} catch (ex) {cb(ex)}
+					if (err) { cb(err); return; }
+					caseCitation.case_id = result.insertId;
+					caseItem.id = result.insertId;
+					connection.query('INSERT INTO case_citations SET ?', caseCitation, function(err, result) {
+						if (err) { cb(err); return; }
+						cb();
+					});
+				});				
+			} 
+		catch (ex) {cb(ex)}
 		}
 	], cb)
 
@@ -158,7 +156,7 @@ async.parallel(casesToProcess.map(caseItem => {
 	connection.end();
 
 	if (err) {
-		process.stderr.write(`[PROCESSOR_RESULT]${err}`);
+		process.stdout.write(`${err}`);
 	} else { 
 		process.stdout.write(`[PROCESSOR_RESULT]${JSON.stringify(results)}`);
 	}
