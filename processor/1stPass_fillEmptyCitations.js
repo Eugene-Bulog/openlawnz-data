@@ -20,7 +20,8 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-
+//  get all blank citations
+// TODO: get all half-complete citations eg "[2017] NZHC" - run citation fix on those cases too
 connection.query("select * from cases INNER JOIN case_citations ON case_citations.case_id = cases.id WHERE case_citations.citation = ''", function(error, results, fields) {
   
   // array of mysql update statements
@@ -38,11 +39,12 @@ connection.query("select * from cases INNER JOIN case_citations ON case_citation
       })
 
   if(updateCitations.length > 0) {
-		connection.query(updateCitations.join(";"), function(error, results, fields) {
+		 connection.query(updateCitations.join(";"), function(error, results, fields) {
 			console.log("error", error);
       console.log("results", results);
       connection.end();
-		}); 
-
+    }); 
+  // console.log(updateCitations);
   }
+  else connection.end();
 });
