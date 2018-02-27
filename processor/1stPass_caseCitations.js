@@ -13,13 +13,15 @@ var connection = mysql.createConnection({
   user      : process.env.DB_USER,
   password  : process.env.DB_PASS,
   database  : 'cases',
-  charset   : 'UTF8MB4_UNICODE_CI'
+  charset   : 'UTF8MB4_UNICODE_CI',
+  multipleStatements: true
 });
 
 connection.connect();
 
 var getText = "select * from cases";
-var RegAllCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)([\s\S]at[\s\S]\d{0,16}(((\]|\.)|\;)|([\s\S]\(.{0,20}\))))?/g;
+const regDoubleCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)(;|,)\s(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)/g;
+const commaOrSemi = /,|;/g;
 
 connection.query(getText, function(error, results, fields) {
 
@@ -29,30 +31,44 @@ connection.query(getText, function(error, results, fields) {
 		return results.find(function(row) {
 			return row.case_neutral_citation === citation
 		})
-	}
+    }
 
 	results.forEach(function(row) {
 		
 		if(!row.case_text) { return }
 		
-		var citationsMatch = row.case_text.match(RegAllCites);
+		var citationsMatch = row.case_text.match(regDoubleCites);
 		
 		if(citationsMatch) {
+                        
+            var separatedCitations = citationsMatch[0].split(commaOrSemi);
+            
+            // separatedCitations[0] has first of double citation
+            // separatedCitations[1] has second of double citation
+
+            var citation = separatedCitations[0];
+
+            console.log("First = " + citation + " | Second = " + separatedCitations[1]);
 			
-			Array.from(new Set(citationsMatch)).forEach(function(citation) {
-				
-				var foundCase = findCaseByCitation(citation)
+			var foundCase = findCaseByCitation(citation);
 			
-				if(foundCase) {
-					insertQueries.push(`insert into case_citations (case_id, citation) values ('${foundCase.id}, ${citation}')`)
-				}
-			})
-			
+			if(foundCase) {
+				insertQueries.push(`insert into case_citations (case_id, citation) values ('${foundCase.id}, ${separatedCitations[1]}')`)
+			}
 		}
 		
 	})
 	
-	console.log(insertQueries);
+	console.log(insertQueries)
+	
+	if(insertQueries.length > 0) {
+		console.log(insertQueries.join(";"))
+		connection.query(insertQueries.join(";"), function(error, results, fields) {
+			console.log("error", error);
+			console.log("results", results);
+		});
+		
+	}
 	
 });
 
