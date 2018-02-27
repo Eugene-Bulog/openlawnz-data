@@ -1,0 +1,45 @@
+Expected results - pass 2
+
+ID = 1 
+Nottingham
+1. [2017] NZHC 1
+
+ID = 2 
+Unknown case (Hannan v FM Custodians Limited)
+1. [2017] NZHC 2
+2. [2017] 1 NZLR 1234
+
+ID = 3
+COURTENEY v PRATLEY 
+1. [2017] NZHC 3
+2. (2016) 4 NZFLR 23
+
+ID = 4
+COURTENEY v PRATLEY 
+1. [2017] NZHC 4
+
+ID = 5
+SMITh v SMITH
+1. [2017] NZCA 5
+2. (2017) 1 NZLR 2
+
+ID = 6
+WESTERN JOINERY LIMITED v COMMISSIONER OF INLAND REVENUE
+1. [2017] NZHC 6
+
+ID = 7
+WELLINGTON INTERNATIONAL AIRPORT LTD v NEW ZEALAND AIR LINE PILOTSʼ ASSOC INDUSTRIAL UNION OF WORKERS INC
+1. [2017] NZSC 7
+
+--------
+ALSO
+-----------
+Double citation matches of cases not yet in DB or JSOn file:
+
+Wellington International Airport Ltd v New Zealand Airline Pilots' Assoc Industrial Union of Workers Inc
+1. [2017] NZSC 70
+2. [2017] 3 NZLR 43
+
+New Zealand Air Line Pilots' Assoc Industrial Union of Workers Inc v Director of Civil Aviation
+1. [2017] NZCA 27
+2. [2017] 3 NZLR 1
