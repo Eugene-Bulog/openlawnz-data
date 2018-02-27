@@ -1,5 +1,4 @@
 // get all citations inside a case including pinpoint 
-// still need to add lookup for each result to see if in database, then add to case-to-case table
 
 "use strict";
 
@@ -21,8 +20,6 @@ connection.connect();
 var getText = "select case_name, case_text from cases";
 
 var query = connection.query(getText);
-
-var i = 1;
 
 query
     .on('error', function(err) {
