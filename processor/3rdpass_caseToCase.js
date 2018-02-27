@@ -1,5 +1,7 @@
-// get all citations inside a case including pinpoint 
-// still need to add lookup for each result to see if in database, then add to case-to-case table
+// populate the case_to_case table
+// that table has two fields - case_id_1 and case_id_2 both integers and foreign keys referencing ids in the cases table
+// case_id_1 is the referencing case
+// case_id_2 is the case being referenced
 
 "use strict";
 
@@ -28,11 +30,18 @@ connection.query("select * from cases ; select * from case_citations", function(
 	var insertQueries = [];
 
 	allCases.forEach(function(caseRow) {
-		
+		// go through each case, check for blank text
 		if(!caseRow.case_text) { return }
-        
+		// assuming no blank text, inside each case look at all citation records in the db
+		// see if any citations in the db are present in the case text
         allCitations.forEach(function(citationRow){
+			// match against caseRow.case_text, and only match if the ids are not identical (dont need to add a case's reference to itself)
             if(caseRow.case_text.includes(citationRow.citation) && citationRow.case_id != caseRow.id) {
+				// 
+				// here, we need to check for duplicates already in the case_to_case table? 
+				// the script will likely be run regularly across the whole db (to account for new citations being added)
+				// this will result in duplicate entries 
+				//
                 insertQueries.push("insert into case_to_case (case_id_1, case_id_2) values ('" + caseRow.id + "', '" + citationRow.case_id + "')")
             }
         })		

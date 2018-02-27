@@ -89,7 +89,7 @@ function processCase(caseData, cb) {
 
 		// upload to bucket
 		function (cb) {
-			process.stdout.write("uploading to s3\n");
+			// process.stdout.write("uploading to s3\n");
 			try {					
 					s3.upload({
 					Key: caseItem.bucket_key,
@@ -116,7 +116,7 @@ function processCase(caseData, cb) {
 
 		// tidy up object
 		function (cb) {
-			process.stdout.write("tidying object\n");
+			// process.stdout.write("tidying object\n");
 			caseItem.pdf_fetch_date = new Date();
 			caseItem.case_name = caseData.CaseName ? lib.formatName(caseData.CaseName) : "Unknown case";
 			// maybe rename table (and this) to be case_initial_citation ie the first citation found (if any)
@@ -128,7 +128,7 @@ function processCase(caseData, cb) {
 		
 		// insert case into database
 		function (cb) {
-			process.stdout.write("inserting into database\n");
+			// process.stdout.write("inserting into database\n");
 			try {
 				connection.query('INSERT INTO cases SET ?', caseItem, function (err, result) {
 					if (err) { cb(err); return; }
