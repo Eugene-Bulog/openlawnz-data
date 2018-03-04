@@ -1,5 +1,5 @@
-# freelaw
-NZ Case Law and Legislation 
+# Open Law NZ
+Analysis of NZ Case Law and Legislation 
 
 ---
 
