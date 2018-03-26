@@ -96,11 +96,14 @@ legislationReferences.forEach(legislation => {
     }
 
     // check to see if any legislation name is defined as "the Act"
-    /*
-    var theActCheck = new RegExp(RegExp.escape(legislation.name + ' ("the Act")'), "gi");
+    var theActCheckRegex = "/" + RegExp.escape(legislation.name) + " " + "(\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))/";
+    
+    var theActCheck = new RegExp(theActCheckRegex, "gi");
     const found2 = caseText.matchAll(theActCheck);
+    console.log(theActCheckRegex)
     if (found2) {
         console.log('found the act ' + legislation.name)
+        return;
         found2.forEach(f => {
             // console.log(f);
             let theActObject = {
@@ -112,7 +115,8 @@ legislationReferences.forEach(legislation => {
             console.log(theActObject);
             //  HERE - ADD TO ACRONYMS ARRAY? 
         });
-    }  */
+    }
+    return;
 
 })
 
@@ -211,14 +215,21 @@ allIndexes.forEach((actIndex, i) => {
                 })
             }
 
-            // if theres NO following 'under the' or 'of the'
+            // if the forwrad test does include and the backwards test doesn't include
             // ie if between section bounds s 5 ..... s 7 there shouldn't be the words "under the" or "of the" 
             // after the last s 7 since that indicates the following characters will be an acronym or legislation name
             // also there should not be a preceding acronym, eg s 5 .... RMA s7, the RMA should override whatever classified the s5.
+            
+            
+            /*
             if((forwardTest.indexOf('under the') !== -1 || forwardTest.indexOf('of the') !== -1) && !relevantAcronyms2.find(a => {
                 return backwardsTest.indexOf(" " + a.name.toLowerCase()) !== -1
             })) {
+            */
+            
+            if(forwardTest.indexOf('under the') !== -1 || forwardTest.indexOf('of the') !== -1) {
                
+                console.log("Forward test found")
                 // f contains the match
                 // We need to know the acronym of the next thing
                 // Grab the bounds between this section and the next, and look through all the acronyms to find it
@@ -237,20 +248,17 @@ allIndexes.forEach((actIndex, i) => {
                 if(testCurrentReference) {
                     currentReference = testCurrentReference
                 }
+
                 //console.log('set currentReference', currentReference)
-                //console.log('set current reference to ', currentReference.name)
+                console.log('set current reference to ', currentReference.name)
                 //console.log(currentReference)
 
             // if we DO have, then ......
   
-            } else if((forwardTest.indexOf('under the') > -1 || forwardTest.indexOf('of the') > -1) && !relevantAcronyms2.find(a => {
-                return backwardsTest.indexOf(" " + a.name.toLowerCase()) > -1
-            })) {
-               //console.log('set current reference betweenSectionsTest', betweenSectionsTest)
-               //currentReference = betweenSectionsTest;
-               console.log("WHAAAAT");
-               // ????? PROFIT ??????????????????
-
+            } else if(betweenSectionsTest) {
+               console.log('set current reference betweenSectionsTest', betweenSectionsTest)
+               currentReference = betweenSectionsTest;
+               
             }
 
             currentReference.sections.push(f[0])
