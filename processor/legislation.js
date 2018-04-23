@@ -96,22 +96,23 @@ legislationReferences.forEach(legislation => {
     }
 
     // check to see if there's a legislation name, followed by a space then round brackets eg Care of Children Act 2004 (the Act) or (CCA)
-    var theActCheckRegex = legislation.name + " (\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))";
-    const found2 = caseText.match(theActCheckRegex);
-    console.log(theActCheckRegex)
-    if (found2) {
-        console.log("found the act defined as a thing");
-
-        // up to here - tbc, need to add the found thing as an acronym with same legislation id
-        found2.forEach(f => {
+    var explicitDefinitionRegex = legislation.name + " (\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))";
+    const explicitDefinition = caseText.match(theActCheckRegex);
+    console.log(explicitDefinitionRegex)
+    if (explicitDefinition) {
+        console.log("found explicit definition");
+        
+        // ************************************************************
+        // up to here - tbc, need to add the explicit definition as an acronym with same legislation id
+        explicitDefinition.forEach(f => {
             console.log(f);
-            let theActObject = {
+            let explicitObject = {
                 legislationId: legislation.id,
                 name: 'the Act',
                 indexesInCase: f.index,
                 sections: []
             };
-            console.log(theActObject);
+            console.log(explicitObject);
             //  HERE - ADD TO ACRONYMS ARRAY? 
         });
     }
