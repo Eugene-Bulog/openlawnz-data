@@ -66,7 +66,12 @@ Each case should have a table of cited cases and cited legislative provisions. T
 
 ---
 
+**Requirements**
+
 AWS s3 creds needed at ~/.aws
 
 
 mySQL creds needed at .env
+
+
+xpdf required in /xpdf at root directory, install tools from https://www.xpdfreader.com/download.html
