@@ -7,7 +7,7 @@ const lib = require('./lib/functions.js');
 const _ = require('underscore'); 
 
 // get caseText - replace with db query
-var caseText = fs.readFileSync('./test_data/case3.txt', 'utf8');
+var caseText = fs.readFileSync('./test_data/case1.txt', 'utf8');
 
 String.prototype.matchAll = function (regexp) {
     var matches = [];
