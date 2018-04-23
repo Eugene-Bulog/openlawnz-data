@@ -95,17 +95,16 @@ legislationReferences.forEach(legislation => {
         });
     }
 
-    // check to see if any legislation name is defined as "the Act"
-    var theActCheckRegex = "/" + RegExp.escape(legislation.name) + " " + "(\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))/";
-    
-    var theActCheck = new RegExp(theActCheckRegex, "gi");
-    const found2 = caseText.matchAll(theActCheck);
+    // check to see if there's a legislation name, followed by a space then round brackets eg Care of Children Act 2004 (the Act) or (CCA)
+    var theActCheckRegex = legislation.name + " (\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))";
+    const found2 = caseText.match(theActCheckRegex);
     console.log(theActCheckRegex)
     if (found2) {
-        console.log('found the act ' + legislation.name)
-        return;
+        console.log("found the act defined as a thing");
+
+        // up to here - tbc, need to add the found thing as an acronym with same legislation id
         found2.forEach(f => {
-            // console.log(f);
+            console.log(f);
             let theActObject = {
                 legislationId: legislation.id,
                 name: 'the Act',
