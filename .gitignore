@@ -58,5 +58,6 @@ credentials/
 #cache, test files
 cache/
 test.js
+xpdf/
 
 .scratchpad
