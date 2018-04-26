@@ -97,8 +97,8 @@ legislationReferences.forEach(legislation => {
 
     // check to see if there's a legislation name, followed by a space then round brackets eg Care of Children Act 2004 (the Act) or (CCA)
     var explicitDefinitionRegex = legislation.name + " (\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))";
-    const explicitDefinition = caseText.match(theActCheckRegex);
-    console.log(explicitDefinitionRegex)
+    const explicitDefinition = caseText.match(explicitDefinitionRegex);
+    
     if (explicitDefinition) {
         console.log("found explicit definition");
         
@@ -109,10 +109,10 @@ legislationReferences.forEach(legislation => {
             let explicitObject = {
                 legislationId: legislation.id,
                 name: 'the Act',
-                indexesInCase: f.index,
+                indexesInCase: [],
                 sections: []
             };
-            console.log(explicitObject);
+            
             //  HERE - ADD TO ACRONYMS ARRAY? 
         });
     }
