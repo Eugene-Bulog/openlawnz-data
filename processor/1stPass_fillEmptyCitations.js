@@ -32,8 +32,10 @@ connection.query("select * from cases INNER JOIN case_citations ON case_citation
       if(!row.case_text) { return console.log("No text to parse for missing citation") }
       var case_text = (JSON.stringify(row.case_text).substr(0,300));
       // regex for neutral citation
-      const regNeutralCite = /((?:\[\d{4}\]\s*)(?:(NZDC|NZFC|NZHC|NZCA|NZSC))(?:\s*(\w{1,6})))/g;
+      const regNeutralCite = /((?:\[\d{4}\]\s*)(?:(NZDC|NZFC|NZHC|NZCA|NZSC|NZEnvC|NZEmpC|NZACA|NZBSA|NZCC|NZCOP|NZCAA|NZDRT|NZHRRT|NZIACDT|NZIPT|NZIEAA|NZLVT|NZLCDT|NZLAT|NZSHD|NZLLA|NZMVDT|NZPSPLA|NZREADT|NZSSAA|NZSAAA|NZTRA))(?:\s*(\w{1,6})))/g;
       var citation = case_text.match(regNeutralCite);
+      // for now, limit to the first citation found (in case double citation appears in header - deal with double citations in header later)
+      citation = citation[0];
       // add to array of update statements
       updateCitations.push("update case_citations set citation = '" + citation + "' where case_id = '" + row.id + "'");
       })
