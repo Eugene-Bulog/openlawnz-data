@@ -15,9 +15,6 @@ to recover any loss in the form of a reduction in the value of shares in the com
 [123] The law also recognises the distinction between duties owed by a director which are fiduciary in nature, and business decisions within the province of the reasonable director. Self-interest may lead to a finding of breach of the fiduciary obligation of loyalty or fidelity, which constitutes acting in bad faith or contrary to the company's interests.3 Otherwise, s 131(1) has a subjective element to it which reflects the principle that the Courts will not judicially review decisions made by directors.4
 [124] Mr Hunt for the third defendant correctly submits that Mr Wilding largely relies on s 131 under the Companies Act 1993, that a director has a duty to act in good faith and in the best interests of the company, and that is the way the case has been put throughout by s 7 of the Resource Management Act 1991.
 
---- expected results ---
-4 x references to 174 of companies act
-1 x reference to 171, 133, 135, 136, 137, 145, 169 companies act
-3 x references to 131 companies act
-1 x references to 7 of resource management
-9 total section results
+Care of Children Act 2004 (CCA) - irregular => can assume no COCA in text
+Care of Children Act 2004 (COCA) - generated
+

@@ -11,6 +11,7 @@
     "eyespect": "^0.1.10",
     "fs": "0.0.1-security",
     "limits.js": "^0.1.4",
+    "mocha": "^5.1.1",
     "mysql": "^2.15.0",
     "node-dir": "^0.1.16",
     "path": "^0.12.7",

@@ -1,6 +1,6 @@
-But the Resource Management Act 1991 ('the RMA') testing things. Also testing Local Government Act 2002.
+But the Resource Management Act 1991 ("the RMA") testing things. Also testing Local Government Act 2002.
 
-Sections 10 and 12 of the Act says "local governmetn is cool". 
+Sections 10 and 12 of the RM Act says "local governmetn is cool". 
 
 In the RMA, there are lots of cool things.  ss 5 and 56 say cool stuff.
 
@@ -15,9 +15,3 @@ Section 49 says "local government". RMA section 50 days "resource management". C
 In the Property (Relationships) Act 1976, there is more cool stuff. Section 2 says get lots of money in divorce. and 6
 
 [112] Accordingly, the new statute Crimes Act 1961 requirement in section 3 says that william is a dick.	
-
---- expected results ---
-local government - 10, 12, 3, 3, 2, 45B, 4
-resource management - 5, 56, 50, 
-property relationships - 2
-crimes - 3

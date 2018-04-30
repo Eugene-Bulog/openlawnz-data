@@ -1,0 +1,5 @@
+To do - legislation stuff
+ - Backwards search to 0, not the first index
+ - forward test with period instead of fixed 10 characters
+ - at end of full legislation bounds, if preceding 'of the' or 'in the' or 'under the', override bound
+ - write out grammar / logic in plain english
