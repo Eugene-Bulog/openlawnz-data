@@ -55,7 +55,7 @@ connection.query("select * from cases ; select * from case_citations", function(
 			var foundCase = findCaseByCitation(citation);
 			if(foundCase) {
 				// if there's a match - ie if the first citation is in the db, then we know we can add another citation that refers to the same case
-				insertQueries.push("insert into case_citations (case_id, citation) values ('" + foundCase.case_id + "', '" + separatedCitations[1] + "')")
+				insertQueries.push("insert into case_citations (case_id, citation) values ('" + foundCase.case_id + "', '" + separatedCitations[1].trim() + "')")
 			}
 		}
 		
