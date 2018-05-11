@@ -56,7 +56,11 @@ typings/
 credentials/
 
 #cache, test files
-cache/
+.cache/
+
 xpdf/
 
 .scratchpad
+
+*.lock
+*package-lock.json

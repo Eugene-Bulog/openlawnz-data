@@ -1,49 +1,18 @@
 {
-  "name": "openlaw-data",
-  "version": "0.0.1",
-  "description": "NZ Case Law and Legislation management",
-  "main": "index.js",
-  "dependencies": {
-    "async": "^2.6.0",
-    "aws-sdk": "^2.182.0",
-    "dotenv": "^4.0.0",
-    "download": "^6.2.5",
-    "eyespect": "^0.1.10",
-    "fs": "0.0.1-security",
-    "limits.js": "^0.1.4",
-    "mocha": "^5.1.1",
-    "mysql": "^2.15.0",
-    "node-dir": "^0.1.16",
-    "path": "^0.12.7",
-    "pathhash": "^1.0.0",
-    "pdf-extract": "^1.0.11",
-    "pdftohtmljs": "^0.4.2",
-    "rimraf": "^2.6.2",
-    "s3": "4.4.0",
-    "temp": "^0.8.3",
-    "underscore": "^1.8.3",
-    "walk": "^2.3.9"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/openlawnz/openlawnz-data.git"
-  },
-  "author": "Andrew Easterbrook",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/openlawnz/openlawnz-data/issues"
-  },
-  "homepage": "https://github.com/openlawnz/openlawnz-data#readme",
-  "directories": {
-    "lib": "lib"
-  },
-  "keywords": [
-    "law",
-    "research",
-    "data"
-  ],
-  "devDependencies": {}
+	"name": "openlawnz-data",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"postinstall": "cd pdfToDBProcessor && yarn install && cd ../controller && yarn install",
+		"start": "cd controller && node index"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"aws-sdk": "^2.238.1",
+		"dotenv": "^4.0.0",
+		"mysql": "^2.15.0"
+	}
 }

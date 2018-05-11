@@ -1,0 +1,16 @@
+{
+	"name": "processor",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"async": "^2.6.0",
+		"dotenv": "^4.0.0",
+		"download": "^6.2.5",
+		"yargs": "^10.1.1"
+	}
+}
