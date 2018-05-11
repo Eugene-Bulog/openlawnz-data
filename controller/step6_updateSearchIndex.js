@@ -6,7 +6,7 @@ const async = require("async");
  * @param MysqlConnection connection
  * @param {function} cb
  */
-// generate a search index for aws cloudsearch
+// generate a citation search index for aws cloudsearch
 // pull case citations table
 // generate instructions for cloudsearch - delete all records, add from db
 // todo - could generate index for casetext and other data at same time
