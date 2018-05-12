@@ -7,7 +7,7 @@
 // get the full case data including case text
 // trim the case text to first 200 characters and look for a neutral citation there
 // if found, add that citation to case_citations table
-const process = (connection, cb) => {
+const run = (connection, cb) => {
 	console.log("Parse empty citations");
 	connection.query(
 		"select * from cases INNER JOIN case_citations ON case_citations.case_id = cases.id WHERE case_citations.citation = ''",
@@ -69,7 +69,7 @@ if (require.main === module) {
 			console.log("Error connecting");
 			return;
 		}
-		process(connection, err => {
+		run(connection, err => {
 			connection.end();
 			if (err) {
 				console.log(err);
@@ -79,5 +79,5 @@ if (require.main === module) {
 		});
 	});
 } else {
-	module.exports = process;
+	module.exports = run;
 }

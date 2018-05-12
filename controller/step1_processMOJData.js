@@ -70,7 +70,7 @@ const spawnCaseProcessor = (cases, cb) => {
 	});
 };
 
-const process = cb => {
+const run = cb => {
 	console.log("Process MOJ Data");
 	download(jsonURL).then(data => {
 		data = JSON.parse(data.toString()).response.docs;
@@ -99,7 +99,7 @@ const process = cb => {
 };
 
 if (require.main === module) {
-	process(err => {
+	run(err => {
 		connection.end();
 		if (err) {
 			console.log(err);
@@ -108,5 +108,5 @@ if (require.main === module) {
 		console.log("Done");
 	});
 } else {
-	module.exports = process;
+	module.exports = run;
 }

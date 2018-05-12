@@ -1,326 +1,455 @@
-"use strict";
+/**
+ * Case to Case
+ * @param MysqlConnection connection
+ * @param {function} cb
+ */
+// populate the case_to_case table
+// that table has two fields - case_id_1 and case_id_2 both integers and foreign keys referencing ids in the cases table
+// case_id_1 is the referencing case
+// case_id_2 is the case being referenced
 
-String.prototype.matchAll = function (regexp) {
-    var matches = [];
-    this.replace(regexp, function () {
-        var arr = ([]).slice.call(arguments, 0);
-        var extras = arr.splice(-2);
-        arr.index = extras[0];
-        arr.input = extras[1];
-        matches.push(arr);
-    });
-    return matches.length ? matches : null;
+const request = require("request");
+const path = require("path");
+const async = require("async");
+const fs = require("fs");
+require("dotenv").config({
+	path: path.resolve(__dirname + "/../") + "/.env"
+});
+
+/*------------------------------
+ Helpers
+------------------------------*/
+// If legisation name has special characters in it
+RegExp.escape = function(s) {
+	return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
 };
 
-function wordCount(str) {
-    return str.split(" ").length;
-}
+String.prototype.matchAll = function(regexp) {
+	var matches = [];
+	this.replace(regexp, function() {
+		var arr = [].slice.call(arguments, 0);
+		var extras = arr.splice(-2);
+		arr.index = extras[0];
+		arr.input = extras[1];
+		matches.push(arr);
+	});
+	return matches.length ? matches : null;
+};
 
-function maxNameLength(arr) {
-    var max = -1;
-    arr.forEach(r => {
-        max = Math.max(max, r.name.length);
-    })
-    return max;
-}
+/**
+ * Find all legislation title indices in case text
+ * @param {string} legislationTitle
+ * @param {string} caseText
+ */
+const findLegislationTitleIndicesInCaseText = (legislationTitle, caseText) => {
+	const search = new RegExp(RegExp.escape(legislationTitle), "gi");
+	return caseText.matchAll(search);
+};
 
-function acr(s) {
-    var words, acronym, nextWord, index;
-    words = s.replace(/\(|\)/g, '').split(' ');
-    acronym = "";
-    index = 0
-    // only do it for number of words less one to exclude date
-    while (index < (words.length - 1)) {
-        nextWord = words[index];
-        acronym = acronym.toUpperCase() + nextWord.charAt(0);
-        index = index + 1;
-    }
-    return acronym
-}
+/**
+ * Check to see if there's a legislation name, followed by a space then round brackets
+ * e.g. Care of Children Act 2004 (the Act) or (CCA)
+ * @param {string} legislationTitle
+ * @param {string} caseText
+ */
+const findLegislationAcronymnsInCaseText = (legislationTitle, caseText) => {
+	const search = new RegExp(
+		`${RegExp.escape(legislationTitle)} \\((the\\s)?(.*?)\\)`,
+		"gi"
+	);
+	return caseText.matchAll(search);
+};
 
-module.exports = (caseText, allLegislation) => {
+/**
+ * Find all acronym indices in case text
+ * @param {string} acronym
+ * @param {string} caseText
+ */
+const findAcronymIndicesInCaseText = (acronym, caseText) => {
+	const search = new RegExp(RegExp.escape(acronym), "gi");
+	return caseText.matchAll(search);
+};
 
-    let legislations = []; // lol plural
+/**
+ * Find legislation at index
+ * @param {number} index
+ * @param {Array} legisationReferences
+ */
+const findLegislationAtIndex = (index, legisationReferences) => {
+	return legisationReferences.find(legislationReference =>
+		legislationReference.indexesInCase.find(
+			indexInCase => indexInCase === index
+		)
+	);
+};
 
-    var arrayOfLegislation = allLegislation.split("\n").map((l, i) => {
-        return {
-            id: i,
-            name: l.split('\r')[0]
-        }
-    });
+/**
+ * Find legislation by id
+ * @param {number} id
+ * @param {Array} legisationReferences
+ */
+const findLegislationById = (id, legisationReferences) => {
+	return legisationReferences.find(
+		legislationReference => legislationReference.id === id
+	);
+};
 
-    var acronymReferences = []
+/**
+ * Find acronym at index
+ * @param {number} index
+ * @param {Array} acronyms
+ */
+const findAcronymAtIndex = (index, acronyms) => {
+	return acronyms.find(acronym =>
+		acronym.indexesInCase.find(indexInCase => indexInCase === index)
+	);
+};
 
-    // Make our new legislation array
+/**
+ * Find acronym by name
+ * @param {string} name
+ * @param {Array} acronyms
+ */
+const findAcronymByName = (name, acronyms) => {
+	return acronyms.find(acronym => acronym.name === name);
+};
 
-    var legislationReferences = arrayOfLegislation.map(l => {
-        return {
-            ...l,
-            indexesInCase: [],
-            sections: [],
-        }
-    });
-    // if the name has special characters in it
-    RegExp.escape = function (s) {
-        return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-    };
+/**
+ * Whether a legislation title's words has a word at an index
+ * @param {number} index
+ * @param {string} word
+ * @param {Array} legislationTitleWords
+ */
+const legislationTitleHasWordAtWordIndex = (
+	index,
+	word,
+	legislationTitleWords
+) => {
+	if (!legislationTitleWords[index]) {
+		return false;
+	}
+	return word.includes(legislationTitleWords[index].toLowerCase());
+};
 
-    legislationReferences.forEach(legislation => {
+const processCases = (cases, legislation) => {
+	let MAX_LEGISLATION_TITLE_WORDS_LENGTH = -1;
 
-        // Find all references and add
-        var r = new RegExp(RegExp.escape(legislation.name), "gi");
-        const found = caseText.matchAll(r);
-        if (found) {
-            // console.log('found matches for ' + legislation.name)
-            found.forEach(f => {
-                legislation.indexesInCase.push(f.index)
-            });
-        }
+	let caseLegislationReferences = {};
 
-        // check to see if there's a legislation name, followed by a space then round brackets eg Care of Children Act 2004 (the Act) or (CCA)
-        // var explicitDefinitionRegex = legislation.name + " (\\((?:[\"\'](.*)[\"\']\\)|(.*)\\)))";
+	// Iterate through each case text
+	cases.forEach(caseItem => {
+		console.log("Process case ", caseItem.id);
+		//-------------------------------------------------------------
+		// TODO: Load in legislation from database from previous insert
+		// For now, assign arbitrary id
+		//-------------------------------------------------------------
+		let legislationReferences = legislation.map((legislation, i) => {
+			return {
+				id: i,
+				indexesInCase: [],
+				sections: [],
+				legislationTitleWords: legislation.title.split(/\s/),
+				...legislation
+			};
+		});
 
-        var explicitDefinitionRegex = `${RegExp.escape(legislation.name)} \\((the\\s)?(.*?)\\)`;
-        var r2 = new RegExp(explicitDefinitionRegex, "gi");
-        const explicitDefinition = caseText.matchAll(r2);
+		let acronymReferences = [];
 
-        if (explicitDefinition) {
-            //console.log("found explicit definition");
+		// Find legislation title indices and populate acronyms mentioned
+		legislationReferences.forEach(legislation => {
+			// Set max legislation title length. This will be used when doing a forward search later in the code
+			MAX_LEGISLATION_TITLE_WORDS_LENGTH = Math.max(
+				MAX_LEGISLATION_TITLE_WORDS_LENGTH,
+				legislation.legislationTitleWords.length
+			);
 
-            // ************************************************************
-            // up to here - tbc, need to add the explicit definition as an acronym with same legislation id
-            explicitDefinition.forEach(f => {
-                
-                let explicitObject = {
-                    legislationId: legislation.id,
-                    // TODO parsing of curly quotes
-                    name: f[2].trim().replace(/'|"/g, ""),
-                    indexesInCase: [],
-                    sections: []
-                };
+			const foundTitleIndices = findLegislationTitleIndicesInCaseText(
+				legislation.title,
+				caseItem.case_text
+			);
+			if (foundTitleIndices) {
+				foundTitleIndices.forEach(found => {
+					legislation.indexesInCase.push(found.index);
+				});
+			}
 
-                // Override implicit reference
-                //acronymReferences = acronymReferences.filter(existing => existing.name !== explicitObject.name)
+			const foundAcronyms = findLegislationAcronymnsInCaseText(
+				legislation.title,
+				caseItem.case_text
+			);
 
-                acronymReferences.push(explicitObject)
+			if (foundAcronyms) {
+				foundAcronyms.forEach(found => {
+					acronymReferences.push({
+						legislationId: legislation.id,
+						name: found[2].trim().replace(/'|"/g, ""),
+						indexesInCase: [],
+						sections: []
+					});
+				});
+			}
+		});
 
-            });
-        }
-        return;
+		// Find acronym indices
+		acronymReferences.forEach(acronym => {
+			const foundAcronymIndices = findAcronymIndicesInCaseText(
+				acronym.name,
+				caseItem.case_text
+			);
+			if (foundAcronymIndices) {
+				foundAcronymIndices.forEach(found => {
+					acronym.indexesInCase.push(found.index);
+				});
+			}
+		});
 
-    })
+		// Convert case text to word array
+		//const caseWords = caseItem.case_text.match(/[a-z'\-]+/gi);
+		const caseWords = caseItem.case_text.split(/\s/);
 
-    acronymReferences.forEach(acronym => {
+		let currentLegislation;
+		let currentIndex = 0;
 
-        var r = new RegExp(RegExp.escape(acronym.name), "g")
-        const found = caseText.matchAll(r);
-        if (found) {
-            //console.log('found acronyms ' + acronym.name)
-            found.forEach(f => {
-                acronym.indexesInCase.push(f.index)
-            });
-        }
+		for (let i = 0; i < caseWords.length; i++) {
+			const word = caseWords[i].toLowerCase();
+			const nextWord = caseWords[i + 1];
 
-    })
-    console.log('a-')
-    console.log(acronymReferences)
-    console.log('-a')
+			// Find the right legislation at aggregate word index
+			const currentLegislationCheck = findLegislationAtIndex(
+				currentIndex,
+				legislationReferences
+			);
 
-    // Flatten all the indexes
+			if (currentLegislationCheck) {
+				currentLegislation = currentLegislationCheck;
+			} else {
+				const currentAcronymCheck = findAcronymAtIndex(
+					currentIndex,
+					legislationReferences
+				);
+				if (currentAcronymCheck) {
+					currentLegislation = findLegislationById(
+						currentAcronymCheck.legislationId,
+						legislationReferences
+					);
+				}
+			}
 
-    var allIndexes = [];
-    var allAcronymIndexes = [];
-
-    legislationReferences.forEach(l => {
-        allIndexes = allIndexes.concat(l.indexesInCase);
-    })
-
-    acronymReferences.forEach(a => {
-        allAcronymIndexes = allAcronymIndexes.concat(a.indexesInCase);
-    })
-
-    // sort by number not alphabetical
-    allIndexes.sort((a, b) => a - b);
-    allAcronymIndexes.sort((a, b) => a - b);
-
-    const legislationMax = maxNameLength(legislationReferences) + 2;
-    // Filter out acronyms that are not associated with legislation
-    allAcronymIndexes.filter(acronymIndex => {
-        // Get a substring
-        let s = caseText.substring(acronymIndex - legislationMax, acronymIndex);
-        return legislationReferences.find(l => s.indexOf(l.name.toLowerCase() !== -1))
-    })
-
-    //console.log(acronymReferences.filter(a => a.indexesInCase.length > 0))
-    //console.log('----')
-    
-
-    // make array of case substringing on each index
-    var arrayOfCase = [];
-    allIndexes.forEach((actIndex, i) => {
-        // var currentLegisation = legislationReferences.find(l => l.indexesInCase(actIndex) !== -1);
-        // Find acronyms where their index is within allIndexes[i] and allIndexes[i + 1] (bounds)
-        // substring here
-
-        const actText = caseText.substring(allIndexes[i], allIndexes[i + 1])
-
-
-        // Current Reference is of type IReference (which has an indexesInCase array and sections array guaranteed)
-        let currentReference = legislationReferences.find(l => l.indexesInCase.indexOf(actIndex) !== -1);
-        //console.log('currentReference', currentReference)
-
-        // Rename to relevantAcronymIndices
-        let relevantAcronyms = allAcronymIndexes.filter(a => {
-
-            return a > allIndexes[i] && a < allIndexes[i + 1]
-
-        })
-
-        const relevantAcronyms2 = relevantAcronyms.map(aIndex => {
-            return acronymReferences.find(l => l.indexesInCase.indexOf(aIndex) !== -1);
-        })
-
-        // old regex:
-        // var sectionsSearch = new RegExp(/((\bsection(s)*\b|\bs{1,2}\b)( *(\d{1,4}\w*))(\band\b\d{1,4}\w*)*| (and|to) (\d{1,4}\w*))/, "gi")
-        // new regex
-        var sectionsSearch = new RegExp(/(\b((section(s)*)|s{1,2})\b) \b\d{1,4}\w{0,3}\b( (and|to) \b\d*\w{1,3}\b)*/, "gi")
-        const foundSections = actText.matchAll(sectionsSearch);
-
-        var acronymMax = maxNameLength(relevantAcronyms2) + 2;
-        
-
-        if (foundSections) {
-            // console.log(actText)
-            // console.group('found: ' + foundSections.length)
-            foundSections.forEach((f, fI) => {
-
-                // console.log("Start of full legislation bound" + allIndexes[i]);
-                // console.log("Acronyms: " + relevantAcronyms);
-                var forwardTest = actText.substring(f.index + f[0].length, f.index + f[0].length + 10).toLowerCase()
-                var backwardsTest = actText.substring(f.index - acronymMax, f.index).toLowerCase()
-                
-                var prevSectionStart = foundSections[fI - 1];
-                var previousSectionToCurrentSection;
-                var betweenSectionsTest;
-
-                if (prevSectionStart) {
-
-                    previousSectionToCurrentSection = actText.substring(prevSectionStart.index + prevSectionStart[0].length, f.index)
-
-                    betweenSectionsTest = relevantAcronyms2.find(a => {
-                        return previousSectionToCurrentSection.indexOf(" " + a.name + " ") !== -1
-                    })
-                }
-
-                // if the forwrad test does include and the backwards test doesn't include
-                // ie if between section bounds s 5 ..... s 7 there shouldn't be the words "under the" or "of the" 
-                // after the last s 7 since that indicates the following characters will be an acronym or legislation name
-                // also there should not be a preceding acronym, eg s 5 .... RMA s7, the RMA should override whatever classified the s5.
-
-
-                /*
-                if((forwardTest.indexOf('under the') !== -1 || forwardTest.indexOf('of the') !== -1) && !relevantAcronyms2.find(a => {
-                    return backwardsTest.indexOf(" " + a.name.toLowerCase()) !== -1
-                })) {
+			/*
+            Match:
+            - s 57
+            - section 57
+            */
+			if (
+				(word === "s" || word === "section") &&
+				nextWord.match(/[0-9]+/)
+			) {
+				/*
+                Check if it's got "under the" or "of the" following it, then it's not related
+                to the current legislation. Instead put it in the following act name / legislation
+                - s 57 of the
+                - section 57 under the <Legislation Title>
                 */
+				if (
+					(caseWords[i + 2] === "under" ||
+						caseWords[i + 2] === "of") &&
+					caseWords[i + 3] === "the"
+				) {
+					// Add to the current aggregate word index
+					currentIndex += (caseWords[i + 2] === "under" ? 6 : 3) + 4;
 
-                if (forwardTest.indexOf('under the') !== -1 || forwardTest.indexOf('of the') !== -1) {
+					// First test for acronym
+					const foundAcronym = findAcronymByName(
+						caseWords[i + 4],
+						acronymReferences
+					);
 
-                    console.log("Forward test found")
-                    console.log(forwardTest)
-                    // f contains the match
-                    // We need to know the acronym of the next thing
-                    // Grab the bounds between this section and the next, and look through all the acronyms to find it
-                    if (foundSections[fI + 1]) {
-                        var sectionTestBounds = actText.substring(f.index + f[0].length, foundSections[fI + 1].index);
-                    }
-                    else {
-                        var sectionTestBounds = actText.substring(f.index + f[0].length);
-                    }
+					if (foundAcronym) {
+						const associatedLegislation = findLegislationById(
+							foundAcronym.legislationId,
+							legislationReferences
+						);
+						associatedLegislation.sections.push(nextWord);
+						currentIndex += foundAcronym.length + 1;
+						i += 1;
+					} else {
+						// Find the following legislation
+						let subsequentLegislationReference;
+						let startWordIndex = i + 4;
+						let currentTestWordIndex = 0;
+						let maxLegislationTitleLengthFinish = MAX_LEGISLATION_TITLE_WORDS_LENGTH;
+						let allLegislationTitlesAndId = [
+							...legislationReferences
+						].map(legislation => {
+							return {
+								id: legislation.id,
+								legislationTitleWords:
+									legislation.legislationTitleWords
+							};
+						});
+						while (
+							!subsequentLegislationReference &&
+							currentTestWordIndex !==
+								maxLegislationTitleLengthFinish
+						) {
+							// Progressively filter all legislation titles that have the aggregate of words in its title
+							let testWord = caseWords[
+								startWordIndex
+							].toLowerCase();
+							allLegislationTitlesAndId = allLegislationTitlesAndId.filter(
+								legislation =>
+									legislationTitleHasWordAtWordIndex(
+										currentTestWordIndex,
+										testWord,
+										legislation.legislationTitleWords
+									)
+							);
+							currentIndex += testWord.length + 1;
 
-                    console.log('section test bounds')
-                    console.log(sectionTestBounds)
-                    // Found the acronym at index,
-                    // Find the acronym object
-                    var testCurrentReference = relevantAcronyms2.find(a => {
-                        //console.log('relevant acronyms', relevantAcronyms2)
-                        return sectionTestBounds.indexOf(a.name) !== -1
-                    })
-                    
-                    if (testCurrentReference) {
-                        currentReference = testCurrentReference
-                    }
+							if (allLegislationTitlesAndId.length === 1) {
+								subsequentLegislationReference = findLegislationById(
+									allLegislationTitlesAndId[0].id,
+									legislationReferences
+								);
+							}
+							startWordIndex++;
+							currentTestWordIndex++;
+						}
+						// Set i to be the current wordlookahead
+						i = startWordIndex;
 
-                    //console.log('set currentReference', currentReference)
-                    console.log('set current reference to ', currentReference.name)
-                    //console.log(currentReference)
+						if (subsequentLegislationReference) {
+							subsequentLegislationReference.sections.push(
+								nextWord
+							);
+						}
+					}
+				} else {
+					if (currentLegislation) {
+						currentLegislation.sections.push(nextWord);
+					}
+				}
+			}
 
-                    // if we DO have, then ......
+			currentIndex += word.length + 1; // +1 for space
+		}
 
-                } else if (betweenSectionsTest) {
-                    //console.log('set current reference betweenSectionsTest', betweenSectionsTest)
-                    currentReference = betweenSectionsTest;
+		// https://www.jstips.co/en/javascript/deduplicate-an-array/
+		legislationReferences.map(legislationReference => {
+			legislationReference.sections = legislationReference.sections
+				.map(section => {
+					return section.replace(
+						/(~|`|!|@|#|$|%|^|&|\*|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g,
+						""
+					);
+				})
+				.filter((el, i, arr) => {
+					return arr.indexOf(el) === i;
+				});
+		});
 
-                }
+		const totalSections = [...legislationReferences].reduce(
+			(accumulator, legislationReference) =>
+				accumulator + legislationReference.sections.length,
+			0
+		);
+		console.log(
+			`> Found ${totalSections} unique legislation sections including`
+		);
 
-                currentReference.sections.push(f[0])
+		if (totalSections > 0) {
+			caseLegislationReferences[
+				caseItem.id
+			] = legislationReferences.filter(
+				legislationReference => legislationReference.sections.length > 0
+			);
+		}
+	});
 
-                //console.log('at index ' + f.index);
-                //console.log(currentReference);
-            });
-            //console.groupEnd()
-        }
+	return caseLegislationReferences;
+};
 
+const run = (connection, cb) => {
+	console.log("Parse legislation to cases");
 
+	async.parallel(
+		{
+			cases: cb => {
+				connection.query("select * from cases LIMIT 10", function(
+					err,
+					results,
+					fields
+				) {
+					if (err) {
+						cb(err);
+						return;
+					}
 
-        // const found = caseText.matchAll(r);
+					cb(null, results);
+				});
+			},
+			legislation: cb => {
+				request(
+					`https://api.apify.com/v1/${
+						process.env.APIFY_USER_ID
+					}/crawlers/${
+						process.env.APIFY_CRAWLER_ID
+					}/lastExec/results?token=${process.env.APIFY_TOKEN}`,
+					function(err, response, body) {
+						if (err) {
+							cb(err);
+							return;
+						}
 
-        //console.log("relevant acronyms", relevantAcronyms)
+						body = JSON.parse(body);
 
-        // Find section references in actText
-        //
+						const allLegislation = Array.prototype.concat.apply(
+							[],
+							body.map(b => b.pageFunctionResult)
+						);
 
-        //var r = new RegExp(legislation.name, "g")
-        // const found = caseText.matchAll(r);
+						cb(null, allLegislation);
+					}
+				);
+			}
+		},
+		(err, results) => {
+			if (err) {
+				cb(err);
+				return;
+			}
 
-        //  
+			let caseLegislationReferences = processCases(
+				results.cases,
+				results.legislation
+			);
 
+			cb(null, caseLegislationReferences);
+		}
+	);
+};
 
-        // arrayOfCase.push();
-
-        // Find sections within the bounds using regex
-        // Categorise if index < acronym, related to legislation name otherwise related to the acronym
-
-        // We find the legislation that is associated with the index and grab its ID
-        // substring allIndexes[i], allIndexes[i + 1]
-        // current legisation = legislationReferences.find(l => l.indexesInCase(actIndex) !== -1)
-        // create acronym if legislation name >= 3 words
-        // str.match(regex for sections)
-        // any match that is < index of 
-
-
-    })
-
-   
-    acronymReferences.filter(l => l.sections.length > 0).forEach((ar) => {
-        
-        let found = legislationReferences.find((l => l.id == ar.legislationId));
-        if(found) {
-            //console.log('legislation sections', found.sections)
-            //console.log('acronym sections', ar.sections)
-            found.indexesInCase = [...found.indexesInCase, ...ar.indexesInCase];
-            found.sections = [...found.sections, ...ar.sections];
-        } else {
-            console.log('cound not find acronym for ' + ar)
-        }
-    });
-
-    console.log(legislationReferences.filter(l => l.sections.length > 0))
-
-    return legislationReferences.filter(l => l.sections.length > 0)
-
-    //console.log(legislationReferences.filter(l => l.indexesInCase.length > 0))
-
+if (require.main === module) {
+	const connection = require("../lib/db");
+	connection.connect(err => {
+		if (err) {
+			console.log("Error connecting");
+			return;
+		}
+		run(connection, (err, result) => {
+			connection.end();
+			if (err) {
+				console.log(err);
+				return;
+			}
+			const path =
+				__dirname +
+				"/../.cache/step5_parseLegislationToCases_result.json";
+			fs.writeFileSync(path, JSON.stringify(result, null, 4));
+			console.log(`Done. Written result to ${path}`);
+		});
+	});
+} else {
+	module.exports = run;
+	module.exports.processCases = processCases;
 }
-
-
