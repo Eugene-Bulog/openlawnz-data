@@ -12,7 +12,7 @@ const async = require("async");
 // todo - could generate index for casetext and other data at same time
 
 // https://search-citation-domain-1-b24hkvngoviziex6hkbzitcejq.ap-southeast-2.cloudsearch.amazonaws.com/2013-01-01/search?q=[2017]%20NZHC%203297
-const process = (connection, cb) => {
+const run = (connection, cb) => {
 	console.log("Update search index");
 	require("dotenv").config({ path: __dirname + "/../.env" });
 
@@ -162,7 +162,7 @@ if (require.main === module) {
 			console.log("Error connecting");
 			return;
 		}
-		process(connection, err => {
+		run(connection, err => {
 			connection.end();
 			if (err) {
 				console.log(err);
@@ -172,5 +172,5 @@ if (require.main === module) {
 		});
 	});
 } else {
-	module.exports = process;
+	module.exports = run;
 }

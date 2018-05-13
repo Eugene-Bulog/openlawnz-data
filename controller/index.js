@@ -1,11 +1,5 @@
 /**
- * @file Entry point to processing Ministry of Justice (MOJ) case data.
- * This file performs a search on the MOJ website to retrieve links to case pdf's.
- * It will then break the result into batches of (e.g.) 10, and spawn child processors to process them
- */
-
-/**
- * IMPORTANT NOTE: Do not run this multiple times as it may affect the MOJ servers
+ * @file Runs all the steps for processing law data
  */
 
 const async = require("async");
@@ -16,8 +10,9 @@ const step1 = require("./step1_processMOJData");
 const step2 = require("./step2_parseEmptyCitations");
 const step3 = require("./step3_parseCaseCitations");
 const step4 = require("./step4_parseCaseToCase");
-const step5 = require("./step5_parseLegislationToCases");
-const step6 = require("./step6_updateSearchIndex");
+const step5 = require("./step5_parseLegislation");
+const step6 = require("./step6_parseLegislationToCases");
+const step7 = require("./step7_updateSearchIndex");
 
 async.series(
 	[
@@ -36,8 +31,10 @@ async.series(
 		},
 		step2.bind(this, connection),
 		step3.bind(this, connection),
-		step4.bind(this, connection)
-		//step6
+		step4.bind(this, connection),
+		step5.bind(this, connection),
+		step6.bind(this, connection)
+		//step7
 	],
 	err => {
 		connection.end();

@@ -7,7 +7,7 @@
 // that table has two fields - case_id_1 and case_id_2 both integers and foreign keys referencing ids in the cases table
 // case_id_1 is the referencing case
 // case_id_2 is the case being referenced
-const process = (connection, cb) => {
+const run = (connection, cb) => {
 	console.log("Parse case to case");
 	connection.query(
 		"select * from cases; select * from case_citations",
@@ -90,7 +90,7 @@ if (require.main === module) {
 			console.log("Error connecting");
 			return;
 		}
-		process(connection, err => {
+		run(connection, err => {
 			connection.end();
 			if (err) {
 				console.log(err);
@@ -100,5 +100,5 @@ if (require.main === module) {
 		});
 	});
 } else {
-	module.exports = process;
+	module.exports = run;
 }

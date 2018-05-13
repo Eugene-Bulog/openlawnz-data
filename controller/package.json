@@ -12,6 +12,7 @@
   "dependencies": {
     "async": "^2.6.0",
     "dotenv": "^4.0.0",
-    "download": "^6.2.5"
+    "download": "^6.2.5",
+    "request": "^2.85.0"
   }
 }
