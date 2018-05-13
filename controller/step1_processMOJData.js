@@ -1,3 +1,13 @@
+/**
+ * @file Entry point to processing Ministry of Justice (MOJ) case data.
+ * This file performs a search on the MOJ website to retrieve links to case pdf's.
+ * It will then break the result into batches of (e.g.) 10, and spawn child processors to process them
+ */
+
+/**
+ * IMPORTANT NOTE: Do not run this multiple times as it may affect the MOJ servers
+ */
+
 const { exec } = require("child_process");
 const download = require("download");
 const fs = require("fs");

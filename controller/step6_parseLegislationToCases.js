@@ -1,14 +1,8 @@
 /**
- * Case to Case
+ * Legislation to Cases
  * @param MysqlConnection connection
  * @param {function} cb
  */
-// populate the case_to_case table
-// that table has two fields - case_id_1 and case_id_2 both integers and foreign keys referencing ids in the cases table
-// case_id_1 is the referencing case
-// case_id_2 is the case being referenced
-
-const request = require("request");
 const path = require("path");
 const async = require("async");
 const fs = require("fs");
@@ -139,13 +133,8 @@ const processCases = (cases, legislation) => {
 	// Iterate through each case text
 	cases.forEach(caseItem => {
 		console.log("Process case ", caseItem.id);
-		//-------------------------------------------------------------
-		// TODO: Load in legislation from database from previous insert
-		// For now, assign arbitrary id
-		//-------------------------------------------------------------
 		let legislationReferences = legislation.map((legislation, i) => {
 			return {
-				id: i,
 				indexesInCase: [],
 				sections: [],
 				legislationTitleWords: legislation.title.split(/\s/),
@@ -353,9 +342,7 @@ const processCases = (cases, legislation) => {
 				accumulator + legislationReference.sections.length,
 			0
 		);
-		console.log(
-			`> Found ${totalSections} unique legislation sections including`
-		);
+		console.log(`> Found ${totalSections} unique legislation sections`);
 
 		if (totalSections > 0) {
 			caseLegislationReferences[
@@ -389,28 +376,18 @@ const run = (connection, cb) => {
 				});
 			},
 			legislation: cb => {
-				request(
-					`https://api.apify.com/v1/${
-						process.env.APIFY_USER_ID
-					}/crawlers/${
-						process.env.APIFY_CRAWLER_ID
-					}/lastExec/results?token=${process.env.APIFY_TOKEN}`,
-					function(err, response, body) {
-						if (err) {
-							cb(err);
-							return;
-						}
-
-						body = JSON.parse(body);
-
-						const allLegislation = Array.prototype.concat.apply(
-							[],
-							body.map(b => b.pageFunctionResult)
-						);
-
-						cb(null, allLegislation);
+				connection.query("select * from legislation", function(
+					err,
+					results,
+					fields
+				) {
+					if (err) {
+						cb(err);
+						return;
 					}
-				);
+
+					cb(null, results);
+				});
 			}
 		},
 		(err, results) => {
@@ -424,7 +401,36 @@ const run = (connection, cb) => {
 				results.legislation
 			);
 
-			cb(null, caseLegislationReferences);
+			const insertQueries = [];
+
+			Object.keys(caseLegislationReferences).forEach(case_id => {
+				caseLegislationReferences[case_id].forEach(legislation => {
+					legislation.sections.forEach(section => {
+						insertQueries.push(
+							`insert into legislation_to_cases (legislation_id, section, case_id) values ("${
+								legislation.id
+							}", "${section}", "${case_id}")`
+						);
+					});
+				});
+			});
+
+			console.log("Insert", insertQueries.length);
+			if (insertQueries.length > 0) {
+				connection.query(insertQueries.join(";"), function(
+					err,
+					results,
+					fields
+				) {
+					if (err) {
+						cb(err);
+						return;
+					}
+					cb();
+				});
+			} else {
+				cb();
+			}
 		}
 	);
 };
