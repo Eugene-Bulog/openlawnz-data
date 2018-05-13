@@ -279,12 +279,20 @@ const processCases = (cases, legislation) => {
 						while (
 							!subsequentLegislationReference &&
 							currentTestWordIndex !==
-								maxLegislationTitleLengthFinish
+								maxLegislationTitleLengthFinish &&
+							startWordIndex !== caseWords.length
 						) {
 							// Progressively filter all legislation titles that have the aggregate of words in its title
-							let testWord = caseWords[
-								startWordIndex
-							].toLowerCase();
+							let testWord;
+
+							try {
+								testWord = caseWords[
+									startWordIndex
+								].toLowerCase();
+							} catch (ex) {
+								console.log(ex);
+								process.exit();
+							}
 							allLegislationTitlesAndId = allLegislationTitlesAndId.filter(
 								legislation =>
 									legislationTitleHasWordAtWordIndex(
@@ -362,7 +370,7 @@ const run = (connection, cb) => {
 	async.parallel(
 		{
 			cases: cb => {
-				connection.query("select * from cases LIMIT 10", function(
+				connection.query("select * from cases", function(
 					err,
 					results,
 					fields
