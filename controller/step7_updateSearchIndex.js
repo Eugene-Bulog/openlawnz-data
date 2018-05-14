@@ -29,8 +29,7 @@ const run = (connection, cb) => {
 
 	var cloudsearchdomain = new AWS.CloudSearchDomain({
 		region: "ap-southeast-2",
-		endpoint:
-			"search-citation-domain-1-b24hkvngoviziex6hkbzitcejq.ap-southeast-2.cloudsearch.amazonaws.com"
+		endpoint: process.env.AWS_SEARCH_DOMAIN
 	});
 
 	function chunk(arr, chunkSize) {
