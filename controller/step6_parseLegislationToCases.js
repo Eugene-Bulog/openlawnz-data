@@ -48,7 +48,8 @@ const findLegislationTitleIndicesInCaseText = (legislationTitle, caseText) => {
  */
 const findLegislationAcronymnsInCaseText = (legislationTitle, caseText) => {
 	const search = new RegExp(
-		`${RegExp.escape(legislationTitle)} \\((the\\s)?(.*?)\\)`,
+		// `${RegExp.escape(legislationTitle)} \\((the\\s)?(.*?)\\)`,
+		`${RegExp.escape(legislationTitle)} \\((?:“|'|')?((the\\s)?(.*?))(?:”|'|')?\\)`,
 		"gi"
 	);
 	return caseText.matchAll(search);
@@ -133,6 +134,9 @@ const processCases = (cases, legislation) => {
 	// Iterate through each case text
 	cases.forEach(caseItem => {
 		console.log("Process case ", caseItem.id);
+		// change curly brackets to straight
+		caseItem.case_text = caseItem.case_text.replace(/“|”/g, '"');
+
 		let legislationReferences = legislation.map((legislation, i) => {
 			return {
 				indexesInCase: [],
@@ -171,7 +175,7 @@ const processCases = (cases, legislation) => {
 				foundAcronyms.forEach(found => {
 					acronymReferences.push({
 						legislationId: legislation.id,
-						name: found[2].trim().replace(/'|"/g, ""),
+						name: found[1].trim().replace(/'|"/g, ""),
 						indexesInCase: [],
 						sections: []
 					});
@@ -370,7 +374,7 @@ const run = (connection, cb) => {
 	async.parallel(
 		{
 			cases: cb => {
-				connection.query("select * from cases", function(
+				connection.query("select * from cases where id = 186", function(
 					err,
 					results,
 					fields
@@ -410,6 +414,9 @@ const run = (connection, cb) => {
 			);
 
 			const insertQueries = [];
+
+			cb(null, caseLegislationReferences);
+			return;
 
 			Object.keys(caseLegislationReferences).forEach(case_id => {
 				caseLegislationReferences[case_id].forEach(legislation => {
@@ -456,9 +463,10 @@ if (require.main === module) {
 				console.log(err);
 				return;
 			}
-			const path =
-				__dirname +
-				"/../.cache/step5_parseLegislationToCases_result.json";
+			const cachePath = __dirname + "/../.cache/";
+			!fs.existsSync(cachePath) && fs.mkdirSync(cachePath);
+			
+			const path = cachePath + "step5_parseLegislationToCases_result.json";
 			fs.writeFileSync(path, JSON.stringify(result, null, 4));
 			console.log(`Done. Written result to ${path}`);
 		});
