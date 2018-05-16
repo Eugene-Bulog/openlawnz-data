@@ -7,10 +7,10 @@
 // find all double citations in the full text of each case eg R v Smith [2012] NZHC 1234, [2012] 2 NZLR 123.
 // check to see if first part of match already has id in database
 // if so, add second part of match to case_citation database with same id
+const regDoubleCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)(;|,)\s(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)/g;
+
 const run = (connection, cb) => {
 	console.log("Parse case citations");
-
-	const regDoubleCites = /(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)(;|,)\s(\[|\()\d{4}(\]|\))[\s\S](\d{0,3}[\s\S])\w{1,5}[\s\S]\d{1,5}(([\s\S]\(\w*\))?)/g;
 	const commaOrSemi = /,|;/g; // for splitting double citations - delimted by comma or semicolon
 
 	// this wont scale but rewrite in sql later cos we cant be fucked right now
@@ -101,4 +101,5 @@ if (require.main === module) {
 	});
 } else {
 	module.exports = run;
+	module.exports.regDoubleCites = regDoubleCites;
 }

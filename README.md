@@ -24,6 +24,13 @@ yarn install
 yarn start
 ```
 
+## Tests
+
+```
+cd tests
+npx jasmine
+```
+
 ## TODO
 
 *   Write installer
