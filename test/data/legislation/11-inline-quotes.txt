@@ -1,0 +1,8 @@
+[201] Mr O'Callahan's challenge to the admissibility of the SkyCity records was based on the fact that they are hearsay statements and are therefore inadmissible pursuant to s 17 of the Evidence Act 2006. But there are exceptions to the hearsay rule. Alongside the general exception in s 18, s 19 of the Evidence Act provides:
+19 Admissibility of hearsay statements contained in business records
+(1) A hearsay statement contained in a business record is admissible if--
+(a) the person who supplied the information used for the composition of the record is unavailable as a witness; or
+(b) the Judge considers no useful purpose would be served by requiring that person to be a witness as that person cannot reasonably be expected (having regard to the time that has elapsed since he or she supplied the information and to all the other circumstances of the case) to recollect the matters dealt with in the information he or she supplied; or
+(c) the Judge considers that undue expense or delay would be caused if that person were required to be a witness.
+(2) This section is subject to sections 20 and 22.
+[202] Section 19, therefore, provides a means of admitting a hearsay statement contained in a business record even if the general prerequisites for admissibility of a hearsay statement in s 18(1) are not met. There is no prerequisite of reliability.

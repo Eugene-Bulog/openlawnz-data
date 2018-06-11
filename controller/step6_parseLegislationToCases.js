@@ -374,6 +374,7 @@ const run = (connection, cb) => {
 	async.parallel(
 		{
 			cases: cb => {
+				// for testing, just get one case
 				connection.query("select * from cases where id = 186", function(
 					err,
 					results,
@@ -415,6 +416,7 @@ const run = (connection, cb) => {
 
 			const insertQueries = [];
 
+			// for testing, stopping here to stop inserting into db
 			cb(null, caseLegislationReferences);
 			return;
 

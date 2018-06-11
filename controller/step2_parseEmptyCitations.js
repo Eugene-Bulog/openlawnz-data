@@ -7,6 +7,9 @@
 // get the full case data including case text
 // trim the case text to first 200 characters and look for a neutral citation there
 // if found, add that citation to case_citations table
+
+const regNeutralCite = /((?:\[\d{4}\]\s*)(?:(NZDC|NZFC|NZHC|NZCA|NZSC|NZEnvC|NZEmpC|NZACA|NZBSA|NZCC|NZCOP|NZCAA|NZDRT|NZHRRT|NZIACDT|NZIPT|NZIEAA|NZLVT|NZLCDT|NZLAT|NZSHD|NZLLA|NZMVDT|NZPSPLA|NZREADT|NZSSAA|NZSAAA|NZTRA))(?:\s*(\w{1,6})))/g;
+
 const run = (connection, cb) => {
 	console.log("Parse empty citations");
 	connection.query(
@@ -28,7 +31,7 @@ const run = (connection, cb) => {
 
 				const case_text = JSON.stringify(row.case_text).substr(0, 300);
 				// regex for neutral citation
-				const regNeutralCite = /((?:\[\d{4}\]\s*)(?:(NZDC|NZFC|NZHC|NZCA|NZSC|NZEnvC|NZEmpC|NZACA|NZBSA|NZCC|NZCOP|NZCAA|NZDRT|NZHRRT|NZIACDT|NZIPT|NZIEAA|NZLVT|NZLCDT|NZLAT|NZSHD|NZLLA|NZMVDT|NZPSPLA|NZREADT|NZSSAA|NZSAAA|NZTRA))(?:\s*(\w{1,6})))/g;
+				
 				let citation = case_text.match(regNeutralCite);
 				// for now, limit to the first citation found (in case double citation appears in header - deal with double citations in header later)
 				citation = citation[0];
@@ -80,4 +83,5 @@ if (require.main === module) {
 	});
 } else {
 	module.exports = run;
+	module.exports.regNeutralCite = regNeutralCite;
 }

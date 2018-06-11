@@ -1,0 +1,28 @@
+[1] The first and third causes of action alleged misleading and deceptive conduct in trade and a breach of s 9 of the Fair Trading Act 1986.
+
+[2] The starting point in relation to issues of privilege regarding mediation or without prejudice communication is s 57 of the Evidence Act 2006. Section 57(1) provides that:
+
+57 Privilege for settlement negotiations or mediation (1) A person who is a party to, or a mediator in, a dispute of a kind for which relief may be given in a civil proceeding has a privilege in respect of any communication between that person and any other person who is a party to the dispute if the communication-- (a) was intended to be confidential; and (b) was made in connection with an attempt to settle or mediate the dispute between the persons.
+
+[3] This section creates two separate privileges, both related to without prejudice communications or preparations for those communications.1
+
+[4] However, the privilege created by s 57(1) is not absolute. Section 57(3)(b) specially provides that s 57 does not apply to:
+... evidence necessary to prove the existence of [an agreement settling the dispute] in a proceeding in which the conclusion of such an agreement is in issue ...
+
+[5] Section 57 was also amended on 8 January 2017 by s 21(4) of the Evidence Amendment Act 2016 by the insertion of a new subs (3)(d) which provided that s 57 did not apply to:
+
+the use in a proceeding of a communication or document made or prepared in connection with any settlement negotiations or mediation if the court considers that, in the interest of justice, the need for the communication or document to be disclosed in the proceeding outweighs the need for the privilege, taking into account the particular nature and benefit of the settlement negotiations or mediation.
+1 Evidence Act, s 54.
+
+[6] The issue of the impact of the "entire agreement" clause in the deed of settlement is separate to issues arising under s 57 of the Evidence Act. Counsel for the defendant, Mr Grove, in his closing submissions referred to the decision of the Court of Appeal in PAE (New Zealand) Ltd v Brosnahan2 and acknowledged that, in that case, Harrison J delivering the judgment for the Court, had observed that due to s 4(1) of the Contractual Remedies Act 1979, entire agreement clauses are neither absolute nor conclusive, and the courts have a wide discretion to refuse to uphold them where it is not "fair and reasonable that the provision should be conclusive".
+
+[7] Mr Grove referred to sections 5D and 6 of the Fair Trading Act 1986. This section authorises certain parties in trade to contract out of the Fair Trading Act and specifically, in sub (2), refers to "entire agreement" clauses.
+2 [2013] NZHC 2618.
+
+[8] It is not alleged that the plaintiff was misled or deceived by any of the representations made by the defendant but that third parties were. It therefore needs to be established whether the Fair Trading Act permits an entity other than the person to whom the misleading or deceptive conduct is addressed to seek a remedy for it and, if so, what remedy is authorised by the statute.
+
+[9] There is no doubt that third parties (i.e those other than the people to whom the misleading and deceptive conduct is addressed) can bring proceedings under s 9.3
+
+[10] In the case of Red Eagle Corp Ltd v Ellis, the Supreme Court formulated a test for ascertaining a breach of s 9 which deals consecutively with the requirements of ss 9 and 43 of the Fair Trading Act. Sections 43 - 45 are relevant once a breach of s 9 has been proved, enabling the court to provide remedies where someone has suffered loss.
+
+3 See Fair Trading Act 1986, s 10.
