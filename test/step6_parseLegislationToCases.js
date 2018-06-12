@@ -482,7 +482,7 @@ Therefore section references that appear in footnotes should either be ignored, 
 
 See the test file for an example, where the first footnote is in paragraph 2 ("claim against the creditor.1") and the content of that first footnote appears after paragraph 4. But in paragraph 3, a different Act is mentioned.
 
-One possibility is to split the text into paragraphs deliniated by (1) strictly sequential numbers in square brackets or (2) if no such structure in the present document (not all judgments have paragraph numbers), double new line breaks, to assist in ordering and identifying footnote location.
+One possibility is to split the text into paragraphs deliniated by (1) strictly sequential numbers in square brackets or (2) if no such structure in the present document (not all judgments have paragraph numbers), then on double line breaks, to assist in ordering and identifying footnote location.
 
 Expected results: 
 Section 17, Insolvency Act 2006 ( x3 )
