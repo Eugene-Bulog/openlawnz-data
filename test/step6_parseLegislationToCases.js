@@ -527,7 +527,7 @@ File Name: data/legislation/11-inline-quotes.txt
 --------------------------------------------------- 
 */
 
-describe("Footnotes", function() {
+describe("Inline quotes", function() {
 	it("Should return sections 17, 18, 19, 31 and 32 of the Evidence Act and not sections 20 and 22", done => {
 		getTestResult("11-inline-quotes.txt", (err, results) => {
 			if (err) {
@@ -563,7 +563,7 @@ File Name: data/legislation/12-block-quote-that-defines-term.txt
 --------------------------------------------------- 
 */
 
-describe("Footnotes", function() {
+describe("Block quotes with contradictory defined term", function() {
 	it("Should return sections 17 and 16 of the Insolvency Act and section 11 of the Credit Contracts and Consumer Finance Act 2003", done => {
 		getTestResult("12-block-quote-that-defines-term.txt", (err, results) => {
 			if (err) {
