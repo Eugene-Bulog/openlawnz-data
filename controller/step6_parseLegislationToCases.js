@@ -245,7 +245,8 @@ const processCases = (cases, legislation) => {
                 */
 				if (
 					(caseWords[i + 2] === "under" ||
-						caseWords[i + 2] === "of") &&
+						caseWords[i + 2] === "of" ||
+						caseWords[i + 2] === "in" ) &&
 					caseWords[i + 3] === "the"
 				) {
 					// Add to the current aggregate word index
