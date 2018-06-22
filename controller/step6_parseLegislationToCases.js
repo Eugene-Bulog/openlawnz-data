@@ -234,8 +234,10 @@ const processCases = (cases, legislation) => {
             - section 57
             */
 			if (
-				(word === "s" || word === "section") &&
-				nextWord.match(/[0-9]+/)
+				((word === "s" || word === "section") &&
+				nextWord.match(/[0-9]+/)) 
+				// catch cases with no space between s and number e.g s47 instead of s 47
+				|| (nextWord && nextWord.match(/s[0-9]+/)) 
 			) {
 				/*
                 Check if it's got "under the" or "of the" following it, then it's not related
