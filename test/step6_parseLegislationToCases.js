@@ -101,7 +101,6 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 				return;
 			}
 			try {
-				// fails due to currently not matching "in the" - only "under" and "of"
 				expect(results.length).equal(3);
 			} catch (ex) {
 				done(ex);
@@ -109,7 +108,7 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 			}
 			done();
 		});
-	});
+	}); // passing (19/06)
 
 	it("Should return Protection of Personal and Property Rights Act 1988, Evidence Act 2006, Care of Children Act 2004", done => {
 		getTestResult("1-basic-references.txt", (err, results) => {
@@ -117,20 +116,11 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 				done(err);
 				return;
 			}
-
+			console.log(results);
 			try {
-				results.should.contain.a.thing.with.property(
-					"title",
-					"Protection of Personal and Property Rights Act 1988"
-				);
-				results.should.contain.a.thing.with.property(
-					"title",
-					"Evidence Act 2006"
-				);
-				results.should.contain.a.thing.with.property(
-					"title",
-					"Care of Children Act 2004"
-				);
+				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988")).equal(true);
+				expect(results.some(ref => ref.title === "Evidence Act 2006")).equal(true);
+				expect(results.some(ref => ref.title === "Care of Children Act 2004")).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -138,17 +128,23 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 
 			done();
 		});
-	});
+	}); // passing (19/06)
 
-	it("Should return section 5 of the PPPR Act, and sections 57 and 58 of the Evidence Act", done => {
+	it("Should return section 5 of the PPPR Act, sections 57 and 58 of the Evidence Act, s47 of the Care of Children Act", done => {
 		getTestResult("1-basic-references.txt", (err, results) => {
 			if (err) {
 				done(err);
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
+					JSON.stringify(ref.sections) === '["5"]' )).equal(true);
+
+				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
+					JSON.stringify(ref.sections) === '["47A"]' )).equal(true);
+
+				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
+					JSON.stringify(ref.sections) === '["57","58"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
