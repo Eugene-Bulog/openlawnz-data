@@ -108,7 +108,7 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 			}
 			done();
 		});
-	}); // passing (19/06)
+	});
 
 	it("Should return Protection of Personal and Property Rights Act 1988, Evidence Act 2006, Care of Children Act 2004", done => {
 		getTestResult("1-basic-references.txt", (err, results) => {
@@ -116,7 +116,6 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 				done(err);
 				return;
 			}
-			console.log(results);
 			try {
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988")).equal(true);
 				expect(results.some(ref => ref.title === "Evidence Act 2006")).equal(true);
@@ -128,7 +127,7 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 
 			done();
 		});
-	}); // passing (19/06)
+	});
 
 	it("Should return section 5 of the PPPR Act, sections 57 and 58 of the Evidence Act, s47 of the Care of Children Act", done => {
 		getTestResult("1-basic-references.txt", (err, results) => {

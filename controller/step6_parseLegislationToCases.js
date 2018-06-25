@@ -342,7 +342,14 @@ const processCases = (cases, legislation) => {
 		legislationReferences.map(legislationReference => {
 			legislationReference.sections = legislationReference.sections
 				.map(section => {
-					return section.replace(
+					var str = section;
+					if (str[0].toLowerCase() === 's') {
+						str = str.substring(1);
+					}
+					if (str.match(/\.|\(|\)/)) {
+						str = str.substring(0,str.indexOf(str.match(/\.|\(|\)/)));
+					}
+					return str.replace(
 						/(~|`|!|@|#|$|%|^|&|\*|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g,
 						""
 					);
