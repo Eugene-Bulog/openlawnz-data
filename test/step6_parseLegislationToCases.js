@@ -342,8 +342,10 @@ describe("Testing delayed reference", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
+				JSON.stringify(ref.sections) === '["5","6"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
+				JSON.stringify(ref.sections) === '["11"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;

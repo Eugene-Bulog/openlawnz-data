@@ -342,6 +342,8 @@ const processCases = (cases, legislation) => {
 							subsequentLegislationReference.sections.push(
 								nextWord
 							);
+							// Update current legislation
+							currentLegislation = subsequentLegislationReference;
 						}
 					}
 				} else {
