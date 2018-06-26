@@ -255,10 +255,18 @@ const processCases = (cases, legislation) => {
 					currentIndex += (caseWords[i + 2] === "under" ? 6 : 3) + 4;
 
 					// First test for acronym
-					const foundAcronym = findAcronymByName(
+					var foundAcronym = findAcronymByName(
 						caseWords[i + 4],
 						acronymReferences
 					);
+
+					// Handles edge case where acronym is "the <acronym>" eg "the act", so 2 words including "the"
+					if (!foundAcronym) {
+						foundAcronym = findAcronymByName(
+							(caseWords[i + 3] + " " + caseWords[i + 4]),
+							acronymReferences
+						);
+					}
 
 					if (foundAcronym) {
 						const associatedLegislation = findLegislationById(
