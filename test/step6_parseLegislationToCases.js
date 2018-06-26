@@ -207,15 +207,18 @@ File Name: data/legislation/3-defined-term.txt
 */
 
 describe("Testing defined terms", function() {
-	it("Should return sections 5 and 6 of the Protection of Personal and Property Rights Act, and section 48 of Care of Children Act 2004", done => {
+	fit("Should return sections 5 and 6 of the Protection of Personal and Property Rights Act, and section 48 of Care of Children Act 2004", done => {
 		getTestResult("3-defined-term.txt", (err, results) => {
 			if (err) {
 				done(err);
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
+				JSON.stringify(ref.sections) === '["5","6"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
+				JSON.stringify(ref.sections) === '["48"]' )).equal(true);
+				
 			} catch (ex) {
 				done(ex);
 				return;
