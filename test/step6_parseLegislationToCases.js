@@ -285,8 +285,10 @@ describe("Testing subsequent reference with defined terms", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
+				JSON.stringify(ref.sections) === '["48"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
+				JSON.stringify(ref.sections) === '["11"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
