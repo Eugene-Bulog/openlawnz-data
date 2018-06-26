@@ -250,8 +250,8 @@ describe("Testing subsequent reference", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
+				JSON.stringify(ref.sections) === '["12"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
