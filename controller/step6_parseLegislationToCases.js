@@ -200,8 +200,16 @@ const processCases = (cases, legislation) => {
 		//const caseWords = caseItem.case_text.match(/[a-z'\-]+/gi);
 		const caseWords = caseItem.case_text.split(/\s/);
 
-		let currentLegislation;
+		// Save starting char index of each word (to allow easy conversion from word index to char index)
+		let wordIndices = [];
 		let currentIndex = 0;
+		for (let i = 0; i < caseWords.length; i++) {
+			wordIndices[i] = currentIndex;
+			currentIndex += caseWords[i].length + 1;
+		}
+
+		let currentLegislation;
+		currentIndex = 0;
 
 		for (let i = 0; i < caseWords.length; i++) {
 			const word = caseWords[i].toLowerCase();
@@ -254,16 +262,16 @@ const processCases = (cases, legislation) => {
 					// Add to the current aggregate word index
 					currentIndex += (caseWords[i + 2] === "under" ? 6 : 3) + 4;
 
-					// First test for acronym
-					var foundAcronym = findAcronymByName(
-						caseWords[i + 4],
+					// First test for acronym --- changed to search by index to account for multi-word terms
+					var foundAcronym = findAcronymAtIndex(
+						wordIndices[i + 4],
 						acronymReferences
 					);
 
-					// Handles edge case where acronym is "the <acronym>" eg "the act", so 2 words including "the"
+					// Handles edge case where acronym is "the <acronym>" eg "the act", so first word includes "the"
 					if (!foundAcronym) {
-						foundAcronym = findAcronymByName(
-							(caseWords[i + 3] + " " + caseWords[i + 4]),
+						foundAcronym = findAcronymAtIndex(
+							wordIndices[i + 3],
 							acronymReferences
 						);
 					}

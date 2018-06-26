@@ -207,7 +207,7 @@ File Name: data/legislation/3-defined-term.txt
 */
 
 describe("Testing defined terms", function() {
-	fit("Should return sections 5 and 6 of the Protection of Personal and Property Rights Act, and section 48 of Care of Children Act 2004", done => {
+	it("Should return sections 5 and 6 of the Protection of Personal and Property Rights Act, and section 48 of Care of Children Act 2004", done => {
 		getTestResult("3-defined-term.txt", (err, results) => {
 			if (err) {
 				done(err);
