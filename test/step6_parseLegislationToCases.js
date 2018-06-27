@@ -378,8 +378,10 @@ describe("Testing missing years", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
+				JSON.stringify(ref.sections) === '["57"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Contractual Remedies Act 1979" &&
+				JSON.stringify(ref.sections) === '["4"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;

@@ -79,6 +79,19 @@ const findLegislationAtIndex = (index, legisationReferences) => {
 };
 
 /**
+ * Find legislation at index with missing year
+ * @param {number} index
+ * @param {Array} legisationReferences
+ */
+const findLegislationMissingYearAtIndex = (index, legisationReferences) => {
+	return legisationReferences.find(legislationReference =>
+		legislationReference.indexesMissingYear.find(
+			indexesMissingYear => indexesMissingYear === index
+		)
+	);
+};
+
+/**
  * Find legislation by id
  * @param {number} id
  * @param {Array} legisationReferences
@@ -140,6 +153,7 @@ const processCases = (cases, legislation) => {
 		let legislationReferences = legislation.map((legislation, i) => {
 			return {
 				indexesInCase: [],
+				indexesMissingYear: [],
 				sections: [],
 				legislationTitleWords: legislation.title.split(/\s/),
 				...legislation
@@ -164,13 +178,28 @@ const processCases = (cases, legislation) => {
 				foundTitleIndices.forEach(found => {
 					legislation.indexesInCase.push(found.index);
 				});
+
+				// If this legislation is referenced, treat all following references
+				// for a legislation with this title but no year as referring to this
+				const foundMissingYear =  findLegislationTitleIndicesInCaseText(
+					legislation.title.substring(0,legislation.title.indexOf(legislation.title.match(/\s[0-9]+/))),
+					caseItem.case_text
+				);
+
+				if (foundMissingYear) {
+					foundMissingYear.forEach(missing => {
+						if (!legislation.indexesInCase.includes(missing.index)) {
+							legislation.indexesMissingYear.push(missing.index);
+						}
+					});
+				}
 			}
 
 			const foundAcronyms = findLegislationAcronymnsInCaseText(
 				legislation.title,
 				caseItem.case_text
 			);
-
+			
 			if (foundAcronyms) {
 				foundAcronyms.forEach(found => {
 					acronymReferences.push({
@@ -214,13 +243,13 @@ const processCases = (cases, legislation) => {
 		for (let i = 0; i < caseWords.length; i++) {
 			const word = caseWords[i].toLowerCase();
 			const nextWord = caseWords[i + 1];
-
+			
 			// Find the right legislation at aggregate word index
 			const currentLegislationCheck = findLegislationAtIndex(
 				currentIndex,
 				legislationReferences
 			);
-
+			
 			if (currentLegislationCheck) {
 				currentLegislation = currentLegislationCheck;
 			} else {
@@ -262,6 +291,12 @@ const processCases = (cases, legislation) => {
 					// Add to the current aggregate word index
 					currentIndex += (caseWords[i + 2] === "under" ? 6 : 3) + 4;
 
+					// Check if the index matches that of a missing year index
+					const checkForMissingYear = findLegislationMissingYearAtIndex(
+						wordIndices[i + 4],
+						legislationReferences
+					);
+
 					// First test for acronym --- changed to search by index to account for multi-word terms
 					var foundAcronym = findAcronymAtIndex(
 						wordIndices[i + 4],
@@ -284,6 +319,9 @@ const processCases = (cases, legislation) => {
 						associatedLegislation.sections.push(nextWord);
 						currentIndex += foundAcronym.length + 1;
 						i += 1;
+						// Missing year legislation check
+					} else if (checkForMissingYear){
+						checkForMissingYear.sections.push(nextWord);
 					} else {
 						// Find the following legislation
 						let subsequentLegislationReference;
@@ -325,7 +363,7 @@ const processCases = (cases, legislation) => {
 									)
 							);
 							currentIndex += testWord.length + 1;
-
+							
 							if (allLegislationTitlesAndId.length === 1) {
 								subsequentLegislationReference = findLegislationById(
 									allLegislationTitlesAndId[0].id,
