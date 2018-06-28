@@ -462,8 +462,10 @@ describe("Combination test, basic reference broken by subsections", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Credit Contracts and Consumer Finance Act 2003" &&
+				JSON.stringify(ref.sections) === '["7","13","11"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Gambling Act 2003" &&
+				JSON.stringify(ref.sections) === '["15","308"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;

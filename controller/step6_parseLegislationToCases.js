@@ -157,7 +157,7 @@ const iterateThroughMultipleSections = (
 	let j = 2;
 	while (j < offset) {
 		if (
-			caseWords[oldi + j].match(/[0-9]+/)
+			caseWords[oldi + j].match(/^[0-9]+/)
 		){
 			legislation.sections.push(
 				caseWords[oldi + j]
@@ -301,29 +301,31 @@ const processCases = (cases, legislation) => {
 			let offset = 2;
 
 			if (
-				((word === "s" || word === "section") &&
+				((word === "s" || 
+					word === "section" || 
+					word === "ss" || 
+					word === "sections") &&
 				nextWord.match(/[0-9]+/)) 
 				// catch cases with no space between s and number e.g s47 instead of s 47
-				|| (nextWord && nextWord.match(/s[0-9]+/)) 
+				|| (nextWord && nextWord.match(/^s[0-9]+/)) 
 			) {
 				singleSection = true
-			}
-
-			// multiple sections check
-			if (
-				(word === "ss" || word === "sections") &&
-				nextWord.match(/[0-9]+/)
-			) {
-				multiSection = true
+				
+				// Check if there are multiple sections being referenced, and
+				// find the point where the list ends
 				while(
-					(caseWords[i + offset] != "under" &&
-					caseWords[i + offset] != "of" &&
-					caseWords[i + offset] != "in") &&
-					i + offset < caseWords.length
+					i + offset < caseWords.length &&
+					(caseWords[i + offset].match(/[0-9]+/) ||
+					 caseWords[i + offset] === "and" ||
+					 caseWords[i + offset] === "to" ||
+					 caseWords[i + offset] === "-")
 				) {
+					multiSection = true;
+					singleSection = false;
 					offset ++;
 				}
 			}
+
 
 			/*
             Match:
@@ -384,6 +386,7 @@ const processCases = (cases, legislation) => {
 						i += 1;
 						// Accounts for "acronyms" containing spaces
 						currentIndex = wordIndices[i];
+						currentLegislation = associatedLegislation;
 						
 					// Missing year legislation check
 					} else if (checkForMissingYear){
@@ -397,6 +400,7 @@ const processCases = (cases, legislation) => {
 								caseWords
 							);
 						}
+						currentLegislation = checkForMissingYear;
 					} else {
 						// Find the following legislation
 						let subsequentLegislationReference;
