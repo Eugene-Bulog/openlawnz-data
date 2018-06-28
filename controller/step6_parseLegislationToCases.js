@@ -139,6 +139,35 @@ const legislationTitleHasWordAtWordIndex = (
 	return word.includes(legislationTitleWords[index].toLowerCase());
 };
 
+/**
+ * Iterates through the next few words until the "under" "of" or
+ * "in" part of a section reference (or equivalent for non standard refs)
+ * is encountered. 
+ * @param {number} offset 
+ * @param {number} oldi 
+ * @param {Array} legislation 
+ * @param {Array} caseWords
+ */
+const iterateThroughMultipleSections = (
+	offset,
+	oldi,
+	legislation,
+	caseWords
+) => {
+	let j = 2;
+	while (j < offset) {
+		if (
+			caseWords[oldi + j].match(/[0-9]+/)
+		){
+			legislation.sections.push(
+				caseWords[oldi + j]
+			);
+		}
+		j++;
+	}
+}
+
+
 const processCases = (cases, legislation) => {
 	let MAX_LEGISLATION_TITLE_WORDS_LENGTH = -1;
 
@@ -267,6 +296,7 @@ const processCases = (cases, legislation) => {
 
 			let singleSection = false;
 			let multiSection = false;
+			// i needs to be retained for multiple section checking
 			let oldi = i;
 			let offset = 2;
 
@@ -342,6 +372,15 @@ const processCases = (cases, legislation) => {
 							legislationReferences
 						);
 						associatedLegislation.sections.push(nextWord);
+						// If multiple sections, iterate through each one
+						if (multiSection) {
+							iterateThroughMultipleSections(
+								offset, 
+								oldi, 
+								associatedLegislation,
+								caseWords
+							);
+						}
 						i += 1;
 						// Accounts for "acronyms" containing spaces
 						currentIndex = wordIndices[i];
@@ -349,6 +388,15 @@ const processCases = (cases, legislation) => {
 					// Missing year legislation check
 					} else if (checkForMissingYear){
 						checkForMissingYear.sections.push(nextWord);
+						// If multiple sections, iterate through each one
+						if (multiSection) {
+							iterateThroughMultipleSections(
+								offset, 
+								oldi, 
+								checkForMissingYear,
+								caseWords
+							);
+						}
 					} else {
 						// Find the following legislation
 						let subsequentLegislationReference;
@@ -407,18 +455,15 @@ const processCases = (cases, legislation) => {
 							subsequentLegislationReference.sections.push(
 								nextWord
 							);
+
+							// If multiple sections, iterate through each one
 							if (multiSection) {
-								let j = 2;
-								while (j < offset) {
-									if (
-										caseWords[oldi + j].match(/[0-9]+/)
-									){
-										subsequentLegislationReference.sections.push(
-											caseWords[oldi + j]
-										);
-									}
-									j++;
-								}
+								iterateThroughMultipleSections(
+									offset, 
+									oldi, 
+									subsequentLegislationReference,
+									caseWords
+								);
 							}
 							// Update current legislation
 							currentLegislation = subsequentLegislationReference;
@@ -427,6 +472,15 @@ const processCases = (cases, legislation) => {
 				} else {
 					if (currentLegislation) {
 						currentLegislation.sections.push(nextWord);
+						// If multiple sections, iterate through each one
+						if (multiSection) {
+							iterateThroughMultipleSections(
+								offset, 
+								oldi, 
+								currentLegislation,
+								caseWords
+							);
+						}
 					}
 				}
 			}
