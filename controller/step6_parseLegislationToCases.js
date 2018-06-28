@@ -265,17 +265,42 @@ const processCases = (cases, legislation) => {
 				}
 			}
 
-			/*
-            Match:
-            - s 57
-            - section 57
-            */
+			let singleSection = false;
+			let multiSection = false;
+			let oldi = i;
+			let offset = 2;
+
 			if (
 				((word === "s" || word === "section") &&
 				nextWord.match(/[0-9]+/)) 
 				// catch cases with no space between s and number e.g s47 instead of s 47
 				|| (nextWord && nextWord.match(/s[0-9]+/)) 
 			) {
+				singleSection = true
+			}
+
+			// multiple sections check
+			if (
+				(word === "ss" || word === "sections") &&
+				nextWord.match(/[0-9]+/)
+			) {
+				multiSection = true
+				while(
+					(caseWords[i + offset] != "under" &&
+					caseWords[i + offset] != "of" &&
+					caseWords[i + offset] != "in") &&
+					i + offset < caseWords.length
+				) {
+					offset ++;
+				}
+			}
+
+			/*
+            Match:
+            - s 57
+            - section 57
+            */
+			if ( singleSection || multiSection) {
 				/*
                 Check if it's got "under the" or "of the" following it, then it's not related
                 to the current legislation. Instead put it in the following act name / legislation
@@ -283,30 +308,30 @@ const processCases = (cases, legislation) => {
                 - section 57 under the <Legislation Title>
                 */
 				if (
-					(caseWords[i + 2] === "under" ||
-						caseWords[i + 2] === "of" ||
-						caseWords[i + 2] === "in" ) &&
-					caseWords[i + 3] === "the"
+					(caseWords[i + offset] === "under" ||
+						caseWords[i + offset] === "of" ||
+						caseWords[i + offset] === "in" ) &&
+						caseWords[i + offset + 1] === "the"
 				) {
 					// Add to the current aggregate word index
-					currentIndex += (caseWords[i + 2] === "under" ? 6 : 3) + 4;
+					currentIndex += (caseWords[i + offset] === "under" ? 6 : 3) + 4;
 
 					// Check if the index matches that of a missing year index
 					const checkForMissingYear = findLegislationMissingYearAtIndex(
-						wordIndices[i + 4],
+						wordIndices[i + offset + 2],
 						legislationReferences
 					);
 
 					// First test for acronym --- changed to search by index to account for multi-word terms
 					var foundAcronym = findAcronymAtIndex(
-						wordIndices[i + 4],
+						wordIndices[i + offset + 2],
 						acronymReferences
 					);
 
 					// Handles edge case where acronym is "the <acronym>" eg "the act", so first word includes "the"
 					if (!foundAcronym) {
 						foundAcronym = findAcronymAtIndex(
-							wordIndices[i + 3],
+							wordIndices[i + offset + 1],
 							acronymReferences
 						);
 					}
@@ -317,15 +342,17 @@ const processCases = (cases, legislation) => {
 							legislationReferences
 						);
 						associatedLegislation.sections.push(nextWord);
-						currentIndex += foundAcronym.length + 1;
 						i += 1;
-						// Missing year legislation check
+						// Accounts for "acronyms" containing spaces
+						currentIndex = wordIndices[i];
+						
+					// Missing year legislation check
 					} else if (checkForMissingYear){
 						checkForMissingYear.sections.push(nextWord);
 					} else {
 						// Find the following legislation
 						let subsequentLegislationReference;
-						let startWordIndex = i + 4;
+						let startWordIndex = i + offset + 2;
 						let currentTestWordIndex = 0;
 						let maxLegislationTitleLengthFinish = MAX_LEGISLATION_TITLE_WORDS_LENGTH;
 						let allLegislationTitlesAndId = [
@@ -380,6 +407,19 @@ const processCases = (cases, legislation) => {
 							subsequentLegislationReference.sections.push(
 								nextWord
 							);
+							if (multiSection) {
+								let j = 2;
+								while (j < offset) {
+									if (
+										caseWords[oldi + j].match(/[0-9]+/)
+									){
+										subsequentLegislationReference.sections.push(
+											caseWords[oldi + j]
+										);
+									}
+									j++;
+								}
+							}
 							// Update current legislation
 							currentLegislation = subsequentLegislationReference;
 						}

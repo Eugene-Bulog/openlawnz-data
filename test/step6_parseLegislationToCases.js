@@ -425,8 +425,8 @@ describe("Testing multiple sections and ranges", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Fair Trading Act 1986" &&
+				JSON.stringify(ref.sections) === '["9","10","43","11","13","42","45"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
