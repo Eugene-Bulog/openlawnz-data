@@ -167,6 +167,28 @@ const iterateThroughMultipleSections = (
 	}
 }
 
+/**
+ * Checks if the given index falls within a footnote,
+ * i.e is the work at this index part of a footnote.
+ * If so, returns the footnote
+ * @param {number} index 
+ * @param {Array} footnotes 
+ */
+const findFootnoteAtIndex = (
+	index,
+	footnotes
+) => {
+	let returnVal = null;
+	footnotes.forEach(footnote => {
+
+		if (index <= footnote.end &&
+			index >= footnote.start) {
+				returnVal = footnote;
+		}
+	});
+	
+	return returnVal;
+}
 
 const processCases = (cases, legislation) => {
 	let MAX_LEGISLATION_TITLE_WORDS_LENGTH = -1;
@@ -254,11 +276,35 @@ const processCases = (cases, legislation) => {
 			}
 		});
 
+		// Find and remember locations of footnotes (content)
+		let footnotes = [];
+		let footnoteMatches = caseItem.case_text.matchAll(/\n[0-9]+\s.*/gi);
+		let currentN = 0;
+
+		if (footnoteMatches) {
+			footnoteMatches.forEach(match => {
+				// record start and end indices for each found footnote
+				let submatches = match[0].split(/\.\s(?=[0-9]+)/);
+				submatches.forEach(subMatch => {
+					let thisN = subMatch.replace(/\n/,"").substring(0,subMatch.indexOf(subMatch.match(/\s/)));
+
+					// Check this potential footnote is in order based on seen footnotes (if yes, likely a footnote)
+					if (thisN = currentN + 1) {
+						let startInd = caseItem.case_text.indexOf(subMatch);
+						footnotes.push({start: startInd, end: startInd + subMatch.length + 1, n: thisN, legAtIndex: null});
+						currentN++;
+					}
+				});
+			});
+		}
+
 		// Convert case text to word array
 		//const caseWords = caseItem.case_text.match(/[a-z'\-]+/gi);
 		const caseWords = caseItem.case_text.split(/\s/);
 
 		// Save starting char index of each word (to allow easy conversion from word index to char index)
+		// using a running count of currentIndex inside the foreach word loop proved unreliable due to how it was updated,
+		// use this array instead (e.g wordIndices[i])
 		let wordIndices = [];
 		let currentIndex = 0;
 		for (let i = 0; i < caseWords.length; i++) {
@@ -266,31 +312,65 @@ const processCases = (cases, legislation) => {
 			currentIndex += caseWords[i].length + 1;
 		}
 
+		// currentLegislation is used for non-block text (outside footnotes, quotes etc)
 		let currentLegislation;
-		currentIndex = 0;
+		// currentLegislationBlock is a version of currentLegislation used exclusively for the current block
+		// so that the parser returns to the old value of currentLegislation after exiting the block
+		let currentLegislationBlock;
+		let currentFootnoteN = 1;
 
 		for (let i = 0; i < caseWords.length; i++) {
 			const word = caseWords[i].toLowerCase();
 			const nextWord = caseWords[i + 1];
 			
+			// Check if parser is currently inside footnote content
+			const footnoteCheck = findFootnoteAtIndex(
+				wordIndices[i],
+				footnotes
+			);
+
+			if (footnoteCheck) {
+				// only set currentLegislationBlock at the start of block - allows changing within block
+				if (findFootnoteAtIndex(wordIndices[i - 1],footnotes) != footnoteCheck) {
+					currentLegislationBlock = footnoteCheck.legAtIndex;
+				}
+			}
+			//reset currentLegislationBlock when not inside a block to ensure no carry-over between blocks
+			else {
+				currentLegislationBlock = null;
+			}
+
 			// Find the right legislation at aggregate word index
 			const currentLegislationCheck = findLegislationAtIndex(
-				currentIndex,
+				wordIndices[i],
 				legislationReferences
 			);
 			
 			if (currentLegislationCheck) {
-				currentLegislation = currentLegislationCheck;
+				if (footnoteCheck) {
+					currentLegislationBlock = currentLegislationCheck;
+				}
+				else {
+					currentLegislation = currentLegislationCheck;
+				}
 			} else {
 				const currentAcronymCheck = findAcronymAtIndex(
-					currentIndex,
+					wordIndices[i],
 					legislationReferences
 				);
 				if (currentAcronymCheck) {
-					currentLegislation = findLegislationById(
-						currentAcronymCheck.legislationId,
-						legislationReferences
-					);
+					if (footnoteCheck) {
+						currentLegislationBlock = findLegislationById(
+							currentAcronymCheck.legislationId,
+							legislationReferences
+						);
+					}
+					else {
+						currentLegislation = findLegislationById(
+							currentAcronymCheck.legislationId,
+							legislationReferences
+						);
+					}
 				}
 			}
 
@@ -318,7 +398,8 @@ const processCases = (cases, legislation) => {
 					(caseWords[i + offset].match(/[0-9]+/) ||
 					 caseWords[i + offset] === "and" ||
 					 caseWords[i + offset] === "to" ||
-					 caseWords[i + offset] === "-")
+					 caseWords[i + offset] === "-") &&
+					 !caseWords[i + offset - 1].match(/\.$/) // terminate if word ends on full stop (won't terminate on subsection period)
 				) {
 					multiSection = true;
 					singleSection = false;
@@ -345,8 +426,6 @@ const processCases = (cases, legislation) => {
 						caseWords[i + offset] === "in" ) &&
 						caseWords[i + offset + 1] === "the"
 				) {
-					// Add to the current aggregate word index
-					currentIndex += (caseWords[i + offset] === "under" ? 6 : 3) + 4;
 
 					// Check if the index matches that of a missing year index
 					const checkForMissingYear = findLegislationMissingYearAtIndex(
@@ -384,10 +463,14 @@ const processCases = (cases, legislation) => {
 							);
 						}
 						i += 1;
-						// Accounts for "acronyms" containing spaces
-						currentIndex = wordIndices[i];
-						currentLegislation = associatedLegislation;
-						
+
+						if (footnoteCheck) {
+							currentLegislationBlock = associatedLegislation;
+						}
+						else {
+							currentLegislation = associatedLegislation;
+						}
+
 					// Missing year legislation check
 					} else if (checkForMissingYear){
 						checkForMissingYear.sections.push(nextWord);
@@ -400,7 +483,12 @@ const processCases = (cases, legislation) => {
 								caseWords
 							);
 						}
-						currentLegislation = checkForMissingYear;
+						if (footnoteCheck) {
+							currentLegislationBlock = checkForMissingYear;
+						}
+						else {
+							currentLegislation = checkForMissingYear;
+						}
 					} else {
 						// Find the following legislation
 						let subsequentLegislationReference;
@@ -441,7 +529,6 @@ const processCases = (cases, legislation) => {
 										legislation.legislationTitleWords
 									)
 							);
-							currentIndex += testWord.length + 1;
 							
 							if (allLegislationTitlesAndId.length === 1) {
 								subsequentLegislationReference = findLegislationById(
@@ -469,12 +556,17 @@ const processCases = (cases, legislation) => {
 									caseWords
 								);
 							}
-							// Update current legislation
-							currentLegislation = subsequentLegislationReference;
+							// Update current legislation (or block current legislation)
+							if (footnoteCheck) {
+								currentLegislationBlock = subsequentLegislationReference;
+							}
+							else {
+								currentLegislation = subsequentLegislationReference;
+							}
 						}
 					}
 				} else {
-					if (currentLegislation) {
+					if (currentLegislation && !footnoteCheck) {
 						currentLegislation.sections.push(nextWord);
 						// If multiple sections, iterate through each one
 						if (multiSection) {
@@ -486,12 +578,30 @@ const processCases = (cases, legislation) => {
 							);
 						}
 					}
+					else if (footnoteCheck && currentLegislationBlock) {
+						currentLegislationBlock.sections.push(nextWord);
+						// If multiple sections, iterate through each one
+						if (multiSection) {
+							iterateThroughMultipleSections(
+								offset, 
+								oldi, 
+								currentLegislationBlock,
+								caseWords
+							);
+							
+						}
+					}
 				}
 			}
 
-			currentIndex += word.length + 1; // +1 for space
-		}
+			if (word.match(new RegExp("\\." + currentFootnoteN + "$"))) {
+				let referencedFootnote = footnotes.find(footnote => footnote.n === currentFootnoteN);
+				referencedFootnote.legAtIndex = currentLegislation;
+				currentFootnoteN++;
+			}
 
+		}
+		
 		// https://www.jstips.co/en/javascript/deduplicate-an-array/
 		legislationReferences.map(legislationReference => {
 			legislationReference.sections = legislationReference.sections

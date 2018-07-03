@@ -506,8 +506,10 @@ describe("Footnotes", function() {
 				return;
 			}
 			try {
-				// test not implemented
-				console.error("test not implemented yet");
+				expect(results.some(ref => ref.title === "Insolvency Act 2006" &&
+				JSON.stringify(ref.sections) === '["17"]' )).equal(true);
+				expect(results.some(ref => ref.title === "Gambling Act 2003" &&
+				JSON.stringify(ref.sections) === '["310"]' )).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
