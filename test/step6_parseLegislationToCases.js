@@ -137,13 +137,14 @@ describe('Full, basic references: "in the", under the", and "of the" with follow
 			}
 			try {
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
-					JSON.stringify(ref.sections) === '["5"]' )).equal(true);
+					ref.sections.some(section => section.id == "5" && section.count === 1))).equal(true);
 
 				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
-					JSON.stringify(ref.sections) === '["47A"]' )).equal(true);
+				ref.sections.some(section => section.id == "47A" && section.count === 1))).equal(true);
 
 				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
-					JSON.stringify(ref.sections) === '["57","58"]' )).equal(true);
+				ref.sections.some(section => section.id == "57" && section.count === 1) &&
+				ref.sections.some(section => section.id == "58" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -178,7 +179,7 @@ describe('Testing "the Act" definition', function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
-					JSON.stringify(ref.sections) === '["5"]' )).equal(true);
+				ref.sections.some(section => section.id == "5" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -215,9 +216,10 @@ describe("Testing defined terms", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
-				JSON.stringify(ref.sections) === '["5","6"]' )).equal(true);
+				ref.sections.some(section => section.id == "5" && section.count === 1) &&
+				ref.sections.some(section => section.id == "6" && section.count === 1))).equal(true);
 				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
-				JSON.stringify(ref.sections) === '["48"]' )).equal(true);
+				ref.sections.some(section => section.id == "48" && section.count === 1))).equal(true);
 				
 			} catch (ex) {
 				done(ex);
@@ -251,7 +253,7 @@ describe("Testing subsequent reference", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
-				JSON.stringify(ref.sections) === '["12"]' )).equal(true);
+				ref.sections.some(section => section.id == "12" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -286,9 +288,9 @@ describe("Testing subsequent reference with defined terms", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Care of Children Act 2004" &&
-				JSON.stringify(ref.sections) === '["48"]' )).equal(true);
+				ref.sections.some(section => section.id == "48" && section.count === 1))).equal(true);
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
-				JSON.stringify(ref.sections) === '["11"]' )).equal(true);
+				ref.sections.some(section => section.id == "11" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -343,9 +345,10 @@ describe("Testing delayed reference", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
-				JSON.stringify(ref.sections) === '["5","6"]' )).equal(true);
+				ref.sections.some(section => section.id == "5" && section.count === 1) &&
+				ref.sections.some(section => section.id == "6" && section.count === 1))).equal(true);
 				expect(results.some(ref => ref.title === "Protection of Personal and Property Rights Act 1988" &&
-				JSON.stringify(ref.sections) === '["11"]' )).equal(true);
+				ref.sections.some(section => section.id == "11" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -379,9 +382,9 @@ describe("Testing missing years", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Evidence Act 2006" &&
-				JSON.stringify(ref.sections) === '["57"]' )).equal(true);
+				ref.sections.some(section => section.id == "57" && section.count === 1))).equal(true);
 				expect(results.some(ref => ref.title === "Contractual Remedies Act 1979" &&
-				JSON.stringify(ref.sections) === '["4"]' )).equal(true);
+				ref.sections.some(section => section.id == "4" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -426,7 +429,13 @@ describe("Testing multiple sections and ranges", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Fair Trading Act 1986" &&
-				JSON.stringify(ref.sections) === '["9","10","43","11","13","42","45"]' )).equal(true);
+				ref.sections.some(section => section.id == "9" && section.count === 1) &&
+				ref.sections.some(section => section.id == "10" && section.count === 1) &&
+				ref.sections.some(section => section.id == "43" && section.count === 1) &&
+				ref.sections.some(section => section.id == "11" && section.count === 1) &&
+				ref.sections.some(section => section.id == "13" && section.count === 1) &&
+				ref.sections.some(section => section.id == "42" && section.count === 1) &&
+				ref.sections.some(section => section.id == "45" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -463,9 +472,12 @@ describe("Combination test, basic reference broken by subsections", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Credit Contracts and Consumer Finance Act 2003" &&
-				JSON.stringify(ref.sections) === '["7","13","11"]' )).equal(true);
+				ref.sections.some(section => section.id == "7" && section.count === 1) &&
+				ref.sections.some(section => section.id == "13" && section.count === 1) &&
+				ref.sections.some(section => section.id == "11" && section.count === 1))).equal(true);
 				expect(results.some(ref => ref.title === "Gambling Act 2003" &&
-				JSON.stringify(ref.sections) === '["15","308"]' )).equal(true);
+				ref.sections.some(section => section.id == "15" && section.count === 1) &&
+				ref.sections.some(section => section.id == "308" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;
@@ -507,9 +519,9 @@ describe("Footnotes", function() {
 			}
 			try {
 				expect(results.some(ref => ref.title === "Insolvency Act 2006" &&
-				JSON.stringify(ref.sections) === '["17"]' )).equal(true);
+				ref.sections.some(section => section.id == "17" && section.count === 3))).equal(true);
 				expect(results.some(ref => ref.title === "Gambling Act 2003" &&
-				JSON.stringify(ref.sections) === '["310"]' )).equal(true);
+				ref.sections.some(section => section.id == "310" && section.count === 1))).equal(true);
 			} catch (ex) {
 				done(ex);
 				return;

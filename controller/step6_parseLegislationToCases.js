@@ -600,6 +600,7 @@ const processCases = (cases, legislation) => {
 			}
 			
 			// https://www.jstips.co/en/javascript/deduplicate-an-array/
+			// Instead of dedupe, using section count field, increment for every dupe encountered
 			legislationReferences.map(legislationReference => {
 				legislationReference.sections = legislationReference.sections
 					.map(section => {
@@ -610,13 +611,24 @@ const processCases = (cases, legislation) => {
 						if (str.match(/\.|\(|\)/)) {
 							str = str.substring(0,str.indexOf(str.match(/\.|\(|\)/)));
 						}
-						return str.replace(
+						str = str.replace(
 							/(~|`|!|@|#|$|%|^|&|\*|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=)/g,
 							""
 						);
+						return {id: str, count: 1};
 					})
 					.filter((el, i, arr) => {
-						return arr.indexOf(el) === i;
+						var firstIndex = arr.findIndex(element => {
+							return element.id === el.id;
+						});
+
+						var isNotDupe = (firstIndex === i);
+
+						if (!isNotDupe) {
+							arr[firstIndex].count++;
+						}
+
+						return isNotDupe;
 					});
 			});
 
